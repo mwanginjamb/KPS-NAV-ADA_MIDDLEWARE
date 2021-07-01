@@ -349,16 +349,18 @@ class SiteController extends Controller
 			{
 				continue;
 			}
-			$vendor_array[] = [
-				'No' => $res->No,
-				'Name' => $res->Name,
-				'DMS_Url' => !empty($res->DMS_Url)?$res->DMS_Url:''
-			];
+			if(property_exists($res,'DMS_Url') ){
+				$vendor_array[] = [
+					'No' => $res->No,
+					'Name' => $res->Name,
+					'DMS_Url' => !empty($res->DMS_Url)?$res->DMS_Url:''
+				];
+			}
 		}
 		
 		echo 'Vendors with DMS Url: '.count($vendor_array);
 		print('<pre>');
-		print_r($vendor_array);
+		var_dump($result);
 		exit;
 		
 		
@@ -367,12 +369,14 @@ class SiteController extends Controller
 			
 	}
 	
+	/*For Unprocessed vendors metrics only*/
+	
 	public function actionUnlinkedvendors()
 	{
 		$service = Yii::$app->params['ServiceName']['VendorList'];
 		
-		
-		$result = Yii::$app->navHelper->getData($service);
+		$filter = ['DMS_Url' => " "];
+		$result = Yii::$app->navHelper->getData($service,$filter);
 		
 		$vendor_array = [];
 		
@@ -388,15 +392,67 @@ class SiteController extends Controller
 			}
 			
 		}
-		return 'Vendors without DMS Url: '.count($vendor_array);
+		echo 'Vendors without DMS Url: '.count($vendor_array);
 		print('<pre>');
-		print_r($vendor_array);
-		exit;
+		var_dump($vendor_array);
+		exit;	
+			
+	}
+	
+	
+	/*For Capturing unprocessed vendors - for integration purposes only, similar to metrics one by design and intention */
+	
+	
+	public function actionUnprocessedvendors()
+	{
+		$service = Yii::$app->params['ServiceName']['VendorList'];
+		
+		$filter = ['DMS_Url' => " "];
+		$result = Yii::$app->navHelper->getData($service,$filter);
+		
+		$vendor_array = [];
 		
 		
-
+		foreach($result as $res) {
+			if(!empty($res->Name) && !isset($res->DMS_Url)) //Has a name and doesnt have a  dms url
+			{
+				$vendor_array[] = [
+				'No' => $res->No,
+				'Name' => $res->Name,
+				'DMS_Url' => !empty($res->DMS_Url)?$res->DMS_Url:''
+				];
+			}
+			
+		}
+		
+		return $vendor_array;
 		
 			
+	}
+	
+	
+	// Specifi action for only creating new vendors - No updates
+	
+	public function actionNewVendor()
+	{
+		$vendors = $this->actionUnprocessedvendors();
+		foreach($vendors as $vendor)
+		{
+			
+				//Create Vendor and Update their link
+				$createVendor = $this->actionCreateVendor($vendor['Name'],$vendor['No']);
+				if($createVendor->success)
+				{
+					return $this->updateLink($createVendor->F_SUPP_ID);
+				}else{
+					return $this->updateLink($vendor['No']);
+				}
+				
+				exit;
+			
+		
+		}
+		
 	}
 
     /**
