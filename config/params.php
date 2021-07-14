@@ -21,5 +21,9 @@ return [
 	'ServiceName' => [
 		'VendorList' => 'VendorList', // 27
 		'SupplierCard' => 'SupplierCard', //26
+		'Chart_of_Accounts' => 'Chart_of_Accounts', //16
+		'GL_Account' => 'GL_Account',//17
+		'ChartOfAccount' => 'ChartOfAccount', //65012
+		'Imprest_Profits' => 'Imprest_Profits'
 	]
 ];

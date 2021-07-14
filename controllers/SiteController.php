@@ -274,7 +274,7 @@ class SiteController extends Controller
 	}
 	
 	public function log($message) {
-		$filename = 'log/'.(string)time().'_requests.txt';
+		$filename = 'log/requests.txt';
 		$fp = fopen($filename, 'a');
 		fwrite($fp, $message);
 		fclose($fp);
@@ -443,16 +443,25 @@ class SiteController extends Controller
 				$createVendor = $this->actionCreateVendor($vendor['Name'],$vendor['No']);
 				if($createVendor->success)
 				{
-					return $this->updateLink($createVendor->F_SUPP_ID);
+					$result =  $this->updateLink($createVendor->F_SUPP_ID);
 				}else{
-					return $this->updateLink($vendor['No']);
+					$result = $this->updateLink($vendor['No']);
 				}
-				
+				$this->logger($result);
 				exit;
 			
 		
 		}
 		
+	}
+	
+	private function logger($message)
+	{
+		$filename = 'log/ada.txt';
+		$req_dump = print_r($message, TRUE);
+		$fp = fopen($filename, 'a');
+		fwrite($fp, $req_dump);
+		fclose($fp);
 	}
 
     /**
