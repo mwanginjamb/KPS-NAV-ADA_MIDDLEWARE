@@ -436,22 +436,28 @@ class SiteController extends Controller
 	public function actionNewVendor()
 	{
 		$vendors = $this->actionUnprocessedvendors();
-		foreach($vendors as $vendor)
-		{
-			
-				//Create Vendor and Update their link
-				$createVendor = $this->actionCreateVendor($vendor['Name'],$vendor['No']);
-				if($createVendor->success)
-				{
-					$result =  $this->updateLink($createVendor->F_SUPP_ID);
-				}else{
-					$result = $this->updateLink($vendor['No']);
-				}
-				$this->logger($result);
-				exit;
-			
 		
+		
+		if(is_array($vendors))
+		{
+			foreach($vendors as $vendor)
+				{
+					
+						//Create Vendor and Update their link
+						$createVendor = $this->actionCreateVendor($vendor['Name'],$vendor['No']);
+						if($createVendor->success)
+						{
+							$result =  $this->updateLink($createVendor->F_SUPP_ID);
+						}else{
+							$result = $this->updateLink($vendor['No']);
+						}
+						$this->logger($result);
+						exit;
+					
+				}
 		}
+		return Json_encode(['State' => 'No New Vendors to Synchronize.']);
+		
 		
 	}
 	

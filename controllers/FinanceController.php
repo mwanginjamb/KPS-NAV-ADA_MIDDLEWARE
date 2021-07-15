@@ -94,9 +94,9 @@ class FinanceController extends Controller
 					<CI3499V_GetAuthorized xmlns="http://www.intrasoft-internatinal.com/GatewayService/ProfitsExt">
 					  <import />
 					  <executionParameters>
-						<ChannelId>9912</ChannelId>
-						<Password>!*#IANSOFT*#!</Password>
-						<ExtUniqueUserId>ERPDEVNAV01\\KPSADMIN</ExtUniqueUserId>
+						<ChannelId>'.env('CHANNEL_ID').'</ChannelId>
+						<Password>'.env('PROF_PASSWORD').'</Password>
+						<ExtUniqueUserId>'.env('NAV_USER').'</ExtUniqueUserId>
 					  </executionParameters>
 					</CI3499V_GetAuthorized>
 				  </soap:Body>
@@ -629,7 +629,7 @@ curl_close($curl);
 		
 		$filter = [
 			'TrxDate' => "0001-01-01",
-			'TrxUnit' => "0"
+			'Status' => "Pending"
 		];
 		$result = Yii::$app->navHelper->getData($service,$filter);
 		
@@ -672,7 +672,8 @@ curl_close($curl);
 							'TrxDate' => $this->processDate($result->Tun->TrxDate) ,
 							'TrxSn' => $result->Tun->TunInternalSn ,
 							'TrxUnit' => $result->Tun->TrxUnit ,
-							'TrxUsr' => $result->Tun->TrxUser
+							'TrxUsr' => $result->Tun->TrxUser,
+							'Status' => 'Completed', 
 							
 						];
 						
@@ -680,10 +681,24 @@ curl_close($curl);
 						print '<pre>';
 						print_r($update);
 						$this->imprestLogger($update);
-					}else 
+					}elseif($result->Result->Type == 'Error')
 					{
-						print_r($result);
-						$this->imprestLogger($result);
+						
+						// Update Imprest Transaction on ERP
+						$params = [
+							'Key' => $account->Key,
+							'TrxDate' => $this->processDate($result->Tun->TrxDate) ,
+							'TrxSn' => $result->Tun->TunInternalSn ,
+							'TrxUnit' => $result->Tun->TrxUnit ,
+							'TrxUsr' => $result->Tun->TrxUser,
+							'Status' => 'Failed', 
+							
+						];
+						
+						$update = Yii::$app->navHelper->updateData($service, $params);
+						print '<pre>';
+						print_r($update);
+						$this->imprestLogger($update);
 					}				
 					
 					exit;	
