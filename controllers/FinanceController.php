@@ -356,7 +356,7 @@ curl_close($curl);
 				$curl = curl_init();
 
 				curl_setopt_array($curl, array(
-				  CURLOPT_URL => 'http://10.1.4.12/iProfits2.GatewayService/ProfitsExtGateway.asmx',
+				  CURLOPT_URL => env('PROFT_TEST_BASEURL'),
 				  CURLOPT_RETURNTRANSFER => true,
 				  CURLOPT_ENCODING => '',
 				  CURLOPT_MAXREDIRS => 10,
@@ -628,7 +628,6 @@ curl_close($curl);
 		$service = Yii::$app->params['ServiceName']['Imprest_Profits'];
 		
 		$filter = [
-			'TrxDate' => "0001-01-01",
 			'Status' => "Pending"
 		];
 		$result = Yii::$app->navHelper->getData($service,$filter);
@@ -669,11 +668,12 @@ curl_close($curl);
 						// Update Imprest Transaction on ERP
 						$params = [
 							'Key' => $account->Key,
-							'TrxDate' => $this->processDate($result->Tun->TrxDate) ,
-							'TrxSn' => $result->Tun->TunInternalSn ,
-							'TrxUnit' => $result->Tun->TrxUnit ,
-							'TrxUsr' => $result->Tun->TrxUser,
-							'Status' => 'Completed', 
+							'TrxDate' => $this->processDate($result->OutDuplicateFxFtRecordingTrxDate) ,
+							'TrxSn' => $result->OutDuplicateFxFtRecordingTrxSn ,
+							'TrxUnit' => $result->OutDuplicateFxFtRecordingTrxUnit ,
+							'TrxUsr' => $result->OutDuplicateFxFtRecordingTrxUsr,
+							'Status' => 'Completed',
+							//'Reversal' => true, //For testing reversals only
 							
 						];
 						
@@ -710,6 +710,198 @@ curl_close($curl);
 	}
 	
 	
+	// Get Reversals
+	
+	public function actionGetReversals()
+	{
+		$service = Yii::$app->params['ServiceName']['Imprest_Profits'];
+		
+		$filter = [
+			'Reversal' => true,
+			'Reversed' => "Pending"
+		];
+		$result = Yii::$app->navHelper->getData($service,$filter);
+		
+		/*print '<pre>';
+		print_r($result);
+		exit;*/
+		
+		return $result;
+	}
+	
+	
+	// Sync and Process Reversals
+	
+		public function actionSyncReversal()
+	{
+		$service = Yii::$app->params['ServiceName']['Imprest_Profits'];
+		$ImprestRecords = $this->actionGetReversals();
+		/*print '<pre>';
+		print_r($ImprestRecords);
+		exit;*/
+		
+		if(is_array($ImprestRecords)) {
+				foreach($ImprestRecords as $account) {
+				
+					$result = json_decode($this->actionPostReversal($account));
+					/*print '<pre>';
+					print_r($result);
+					exit;*/
+					
+					
+					$this->reversalLogger($result);
+					
+					if($result)
+					{
+						if($result->Result->Type == 'Success')
+							{
+								// Update Imprest Transaction on ERP
+								$params = [
+									'Key' => $account->Key,
+									'Reversed' => 'Sent'
+									
+								];
+								
+								$update = Yii::$app->navHelper->updateData($service, $params);
+								print '<pre>';
+								print_r($update);
+								$this->reversalLogger($update);
+							}else
+							{
+								
+								// Update Imprest Transaction on ERP
+								$params = [
+									'Key' => $account->Key,
+									'Reversed' => 'Failed', 
+									
+								];
+								
+								$update = Yii::$app->navHelper->updateData($service, $params);
+								print '<pre>';
+								print_r($update);
+								$this->reversalLogger($update);
+							}
+					}else{
+						
+						$params = [
+									'Key' => $account->Key,
+									'Reversed' => 'Failed', 
+									
+								];
+								
+						$account = Yii::$app->navHelper->updateData($service, $params);
+						
+						print '<pre>';
+						print_r($result);
+						
+						
+						$logData = Json_encode($result);
+						
+						$this->reversalLogger($logData);
+					}
+									
+					
+					exit;	
+				}
+		}
+		$this->reversalLogger(Json_encode(['State' => 'No Reversal transactions to synchronize.']));
+		return Json_encode(['State' => 'No Reversal transactions to synchronize.']);
+			
+	}
+	
+	// Post Reversal
+	
+	public function actionPostReversal($record = '')
+	{
+		
+
+							
+
+				$curl = curl_init();
+
+				curl_setopt_array($curl, array(
+				  CURLOPT_URL => 'http://10.1.4.12/iProfits2.GatewayService/ProfitsExtGateway.asmx',
+				  CURLOPT_RETURNTRANSFER => true,
+				  CURLOPT_ENCODING => '',
+				  CURLOPT_MAXREDIRS => 10,
+				  CURLOPT_TIMEOUT => 0,
+				  CURLOPT_FOLLOWLOCATION => true,
+				  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+				  CURLOPT_CUSTOMREQUEST => 'POST',
+				  CURLOPT_POSTFIELDS =>'<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prof="http://www.intrasoft-internatinal.com/GatewayService/ProfitsExt">
+					<soapenv:Header/>
+					<soapenv:Body>
+						<prof:ADDS03_CancelAdditionalTransactions>
+							<!--Optional:-->
+							<prof:import>
+								<!--Optional:-->
+								<prof:Command>INSERT</prof:Command>
+								<!--Optional:-->
+								<prof:InCommandIefSuppliedCommand/>
+								<!--Optional:-->
+								<prof:InFxFtRecordingComments/>
+								<prof:InFxFtRecordingTrxDate>'.$this->processProfitsDate($record->TrxDate).'</prof:InFxFtRecordingTrxDate>
+								<prof:InFxFtRecordingTrxSn>'.$record->TrxSn.'</prof:InFxFtRecordingTrxSn>
+								<prof:InFxFtRecordingTrxUnit>'.$record->TrxUnit.'</prof:InFxFtRecordingTrxUnit>
+								<!--Optional:-->
+								<prof:InFxFtRecordingTrxUsr>'.$record->TrxUsr.'</prof:InFxFtRecordingTrxUsr>
+								<prof:InPrftTransactionIdTransact>12511</prof:InPrftTransactionIdTransact>
+								<!--Optional:-->
+								<prof:InTerminalTerminalNumber></prof:InTerminalTerminalNumber>
+							</prof:import>
+							<!--Optional:-->
+							<prof:executionParameters>
+								<prof:ChannelId>'.env('CHANNEL_ID').'</prof:ChannelId>
+								<!--Optional:-->
+								<prof:Password>'.env('PROF_PASSWORD').'</prof:Password>
+								<!--Optional:-->
+								<prof:UniqueId>'.$this->token().'</prof:UniqueId>
+								<!--Optional:-->
+								<prof:CultureName>en</prof:CultureName>
+								<prof:ForcastFlag>false</prof:ForcastFlag>
+								<!--Optional:-->
+								<prof:ReferenceKey>J888888BaX8$*8*8W</prof:ReferenceKey>
+								<!--Optional:-->
+								<prof:SotfOtp/>
+								<!--Optional:-->
+								<prof:BranchCode/>
+								<!--Optional:-->
+								<prof:ExtUniqueUserId>'.env('NAV_USER').'</prof:ExtUniqueUserId>
+								<!--Optional:-->
+								<prof:ExtDeviceAuthCode/>
+							</prof:executionParameters>
+						</prof:ADDS03_CancelAdditionalTransactions>
+					</soapenv:Body>
+				</soapenv:Envelope>',
+				  CURLOPT_HTTPHEADER => array(
+					'Content-Type: text/xml'
+				  ),
+				));
+
+				$response = curl_exec($curl);
+
+				curl_close($curl);
+				echo $response;
+
+
+				
+				
+				if(!empty($response))
+				{
+					$xml_object = simplexml_load_string($response); 
+
+					// register your used namespace prefixes
+					$xml_object->registerXPathNamespace('xsi', 'http://www.w3.org/2001/XMLSchema-instance'); 
+					$xml_object->registerXPathNamespace('soap', 'http://schemas.xmlsoap.org/soap/envelope'); 
+					$nodes = $xml_object->xpath("/soap:Envelope/soap:Body");
+					// $nodes[0]->ADDS03_CancelAdditionalTransactionsResponse->ADDS03_CancelAdditionalTransactionsResult
+			return json_encode($nodes[0]->ADDS03_CancelAdditionalTransactionsResponse->ADDS03_CancelAdditionalTransactionsResult);
+				}
+
+	
+	}
+	
+	
 	private function logger($message)
 	{
 		$filename = 'log/glaccounts.txt';
@@ -728,10 +920,28 @@ curl_close($curl);
 		fclose($fp);
 	}
 	
+	private function reversalLogger($message)
+	{
+		$filename = 'log/reversal.txt';
+		$req_dump = print_r($message, TRUE);
+		$fp = fopen($filename, 'a');
+		fwrite($fp, $req_dump);
+		fclose($fp);
+	}
+	
+	/*Creates a Nav compatible date*/
 	private function processDate($date)
 	{
 		list($date,$time) = explode('T',$date);
 		return date('Y-m-d',strtotime($date));
+	}
+	
+	/* Create a Profits compatible timestamp for reversals*/
+	private function processProfitsDate($date)
+	{
+		//2021-05-31T00:00:00
+		return $date.'T00:00:00';
+		
 	}
 	
 	

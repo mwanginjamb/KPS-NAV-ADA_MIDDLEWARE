@@ -1,0 +1,602 @@
+stdClass Object
+(
+    [Tun] => stdClass Object
+        (
+            [TrxDate] => 2021-06-01T00:00:00
+            [TrxUnit] => 1
+            [TrxUser] => 99120003
+            [TrxUserSn] => 0
+            [TunInternalSn] => 0
+        )
+
+    [Result] => stdClass Object
+        (
+            [Type] => Success
+            [Id] => 10958
+            [Message] => success
+            [StackTrace] => stdClass Object
+                (
+                )
+
+        )
+
+    [OutClientProfitsExitStateWorkActualMessage] => stdClass Object
+        (
+        )
+
+    [OutClientProfitsExitStateWorkId] => 0
+    [OutClientProfitsExitStateWorkLanguage] => 0
+    [OutClientProfitsExitStateWorkMessageType] => stdClass Object
+        (
+        )
+
+    [OutClientProfitsExitStateWorkPrftSystem] => 0
+    [OutClientProfitsExitStateWorkRoutineSn] => 0
+    [OutClientProfitsExitStateWorkTerminationAction] => stdClass Object
+        (
+        )
+
+    [OutClientProfitsExitStateWorkValruleId] => 0
+    [OutClientProfitsExitStateWorkValruleSnum] => 0
+    [OutCreditCashIefSuppliedPayableAmount] => 0
+    [OutCreditVouchersIefSuppliedPayableAmount] => 0
+    [OutDebitCashIefSuppliedPayableAmount] => 0
+    [OutDebitVouchersIefSuppliedPayableAmount] => 0
+    [OutIefSuppliedActionEntryDesc] => OK                  
+    [OutPrftCodeIefSuppliedNumber5] => 0
+    [OutPrftdescrIefSuppliedChar40] => stdClass Object
+        (
+        )
+
+    [OutProddescrIefSuppliedChar40] => stdClass Object
+        (
+        )
+
+    [OutProductCodeIefSuppliedNumber5] => 0
+    [OutTrxCountTrxCounter] => 6406
+    [OutLogfileGroupList] => stdClass Object
+        (
+        )
+
+    [OutGrpVoucherList] => stdClass Object
+        (
+        )
+
+)
+stdClass Object
+(
+    [Key] => 12;YOoAAACHQAQ=10;16668247790;
+    [Imprest_No] => PCRV-00365
+    [Amount] => 22200
+    [Fosa_Account] => 0000172144001
+    [Bosa_Account] => 59727
+    [Member_Id] => 0
+    [GL_Account] => 3.14.3.1.000001
+    [Employee_No] => KPSS136
+    [Employee_Name] => STANLEY NJERU NYAGAH
+    [Status] => Completed
+    [Date_Sent] => 0001-01-01T00:00:00
+    [Global_Dimension_1_Code] => FIN
+    [Global_Dimesnion_2_Code] => 0
+    [Line_No] => 1088
+    [Transaction_Type] => _blank_
+    [Reversal] => 1
+    [TrxDate] => 2021-06-01
+    [TrxSn] => 147
+    [TrxUnit] => 1
+    [TrxUsr] => 99120005
+    [Reversed] => Sent
+)
+stdClass Object
+(
+    [Tun] => stdClass Object
+        (
+            [TrxDate] => 2021-06-01T00:00:00
+            [TrxUnit] => 1
+            [TrxUser] => 99120003
+            [TrxUserSn] => 0
+            [TunInternalSn] => 0
+        )
+
+    [Result] => stdClass Object
+        (
+            [Type] => Success
+            [Id] => 10958
+            [Message] => success
+            [StackTrace] => stdClass Object
+                (
+                )
+
+        )
+
+    [OutClientProfitsExitStateWorkActualMessage] => stdClass Object
+        (
+        )
+
+    [OutClientProfitsExitStateWorkId] => 0
+    [OutClientProfitsExitStateWorkLanguage] => 0
+    [OutClientProfitsExitStateWorkMessageType] => stdClass Object
+        (
+        )
+
+    [OutClientProfitsExitStateWorkPrftSystem] => 0
+    [OutClientProfitsExitStateWorkRoutineSn] => 0
+    [OutClientProfitsExitStateWorkTerminationAction] => stdClass Object
+        (
+        )
+
+    [OutClientProfitsExitStateWorkValruleId] => 0
+    [OutClientProfitsExitStateWorkValruleSnum] => 0
+    [OutCreditCashIefSuppliedPayableAmount] => 0
+    [OutCreditVouchersIefSuppliedPayableAmount] => 0
+    [OutDebitCashIefSuppliedPayableAmount] => 0
+    [OutDebitVouchersIefSuppliedPayableAmount] => 0
+    [OutIefSuppliedActionEntryDesc] => OK                  
+    [OutPrftCodeIefSuppliedNumber5] => 0
+    [OutPrftdescrIefSuppliedChar40] => stdClass Object
+        (
+        )
+
+    [OutProddescrIefSuppliedChar40] => stdClass Object
+        (
+        )
+
+    [OutProductCodeIefSuppliedNumber5] => 0
+    [OutTrxCountTrxCounter] => 6408
+    [OutLogfileGroupList] => stdClass Object
+        (
+        )
+
+    [OutGrpVoucherList] => stdClass Object
+        (
+        )
+
+)
+stdClass Object
+(
+    [Key] => 12;YOoAAACHQQQ=10;16668247950;
+    [Imprest_No] => PCRV-00366
+    [Amount] => 5400
+    [Fosa_Account] => 0000172144001
+    [Bosa_Account] => 88613
+    [Member_Id] => 0
+    [GL_Account] => 3.14.3.1.000001
+    [Employee_No] => KPSS198
+    [Employee_Name] => KEVIN DERICK LUBANGA
+    [Status] => Completed
+    [Date_Sent] => 0001-01-01T00:00:00
+    [Global_Dimension_1_Code] => FIN
+    [Global_Dimesnion_2_Code] => 0
+    [Line_No] => 1089
+    [Transaction_Type] => _blank_
+    [Reversal] => 1
+    [TrxDate] => 2021-06-01
+    [TrxSn] => 2953
+    [TrxUnit] => 1
+    [TrxUsr] => 99120004
+    [Reversed] => Sent
+)
+stdClass Object
+(
+    [Tun] => stdClass Object
+        (
+            [TrxDate] => 2021-06-01T00:00:00
+            [TrxUnit] => 1
+            [TrxUser] => 99120003
+            [TrxUserSn] => 0
+            [TunInternalSn] => 0
+        )
+
+    [Result] => stdClass Object
+        (
+            [Type] => Success
+            [Id] => 10958
+            [Message] => success
+            [StackTrace] => stdClass Object
+                (
+                )
+
+        )
+
+    [OutClientProfitsExitStateWorkActualMessage] => stdClass Object
+        (
+        )
+
+    [OutClientProfitsExitStateWorkId] => 0
+    [OutClientProfitsExitStateWorkLanguage] => 0
+    [OutClientProfitsExitStateWorkMessageType] => stdClass Object
+        (
+        )
+
+    [OutClientProfitsExitStateWorkPrftSystem] => 0
+    [OutClientProfitsExitStateWorkRoutineSn] => 0
+    [OutClientProfitsExitStateWorkTerminationAction] => stdClass Object
+        (
+        )
+
+    [OutClientProfitsExitStateWorkValruleId] => 0
+    [OutClientProfitsExitStateWorkValruleSnum] => 0
+    [OutCreditCashIefSuppliedPayableAmount] => 0
+    [OutCreditVouchersIefSuppliedPayableAmount] => 0
+    [OutDebitCashIefSuppliedPayableAmount] => 0
+    [OutDebitVouchersIefSuppliedPayableAmount] => 0
+    [OutIefSuppliedActionEntryDesc] => OK                  
+    [OutPrftCodeIefSuppliedNumber5] => 0
+    [OutPrftdescrIefSuppliedChar40] => stdClass Object
+        (
+        )
+
+    [OutProddescrIefSuppliedChar40] => stdClass Object
+        (
+        )
+
+    [OutProductCodeIefSuppliedNumber5] => 0
+    [OutTrxCountTrxCounter] => 6415
+    [OutLogfileGroupList] => stdClass Object
+        (
+        )
+
+    [OutGrpVoucherList] => stdClass Object
+        (
+        )
+
+)
+stdClass Object
+(
+    [Key] => 12;YOoAAACHQgQ=10;16668248110;
+    [Imprest_No] => PCRV-00368
+    [Amount] => 13800
+    [Fosa_Account] => 0000172144001
+    [Bosa_Account] => 59739
+    [Member_Id] => 0
+    [GL_Account] => 3.14.3.1.000001
+    [Employee_No] => KPSS135
+    [Employee_Name] => DAVID ALLAN ODUOR
+    [Status] => Completed
+    [Date_Sent] => 0001-01-01T00:00:00
+    [Global_Dimension_1_Code] => FIN
+    [Global_Dimesnion_2_Code] => 0
+    [Line_No] => 1090
+    [Transaction_Type] => _blank_
+    [Reversal] => 1
+    [TrxDate] => 2021-06-01
+    [TrxSn] => 6351
+    [TrxUnit] => 1
+    [TrxUsr] => 99120003
+    [Reversed] => Sent
+)
+stdClass Object
+(
+    [Tun] => stdClass Object
+        (
+            [TrxDate] => 2021-06-01T00:00:00
+            [TrxUnit] => 1
+            [TrxUser] => 99120003
+            [TrxUserSn] => 0
+            [TunInternalSn] => 0
+        )
+
+    [Result] => stdClass Object
+        (
+            [Type] => Success
+            [Id] => 10958
+            [Message] => success
+            [StackTrace] => stdClass Object
+                (
+                )
+
+        )
+
+    [OutClientProfitsExitStateWorkActualMessage] => stdClass Object
+        (
+        )
+
+    [OutClientProfitsExitStateWorkId] => 0
+    [OutClientProfitsExitStateWorkLanguage] => 0
+    [OutClientProfitsExitStateWorkMessageType] => stdClass Object
+        (
+        )
+
+    [OutClientProfitsExitStateWorkPrftSystem] => 0
+    [OutClientProfitsExitStateWorkRoutineSn] => 0
+    [OutClientProfitsExitStateWorkTerminationAction] => stdClass Object
+        (
+        )
+
+    [OutClientProfitsExitStateWorkValruleId] => 0
+    [OutClientProfitsExitStateWorkValruleSnum] => 0
+    [OutCreditCashIefSuppliedPayableAmount] => 0
+    [OutCreditVouchersIefSuppliedPayableAmount] => 0
+    [OutDebitCashIefSuppliedPayableAmount] => 0
+    [OutDebitVouchersIefSuppliedPayableAmount] => 0
+    [OutIefSuppliedActionEntryDesc] => OK                  
+    [OutPrftCodeIefSuppliedNumber5] => 0
+    [OutPrftdescrIefSuppliedChar40] => stdClass Object
+        (
+        )
+
+    [OutProddescrIefSuppliedChar40] => stdClass Object
+        (
+        )
+
+    [OutProductCodeIefSuppliedNumber5] => 0
+    [OutTrxCountTrxCounter] => 6422
+    [OutLogfileGroupList] => stdClass Object
+        (
+        )
+
+    [OutGrpVoucherList] => stdClass Object
+        (
+        )
+
+)
+stdClass Object
+(
+    [Key] => 12;YOoAAACHQwQ=10;16668248270;
+    [Imprest_No] => PCRV-00369
+    [Amount] => 2500
+    [Fosa_Account] => 0000172144001
+    [Bosa_Account] => 58948
+    [Member_Id] => 0
+    [GL_Account] => 3.14.3.1.000001
+    [Employee_No] => KPSS123
+    [Employee_Name] => SIMON KIPROTICH TANUI
+    [Status] => Completed
+    [Date_Sent] => 0001-01-01T00:00:00
+    [Global_Dimension_1_Code] => FIN
+    [Global_Dimesnion_2_Code] => 0
+    [Line_No] => 1091
+    [Transaction_Type] => _blank_
+    [Reversal] => 1
+    [TrxDate] => 2021-06-01
+    [TrxSn] => 2958
+    [TrxUnit] => 1
+    [TrxUsr] => 99120004
+    [Reversed] => Sent
+)
+stdClass Object
+(
+    [Tun] => stdClass Object
+        (
+            [TrxDate] => 2021-06-01T00:00:00
+            [TrxUnit] => 1
+            [TrxUser] => 99120003
+            [TrxUserSn] => 0
+            [TunInternalSn] => 0
+        )
+
+    [Result] => stdClass Object
+        (
+            [Type] => Success
+            [Id] => 10958
+            [Message] => success
+            [StackTrace] => stdClass Object
+                (
+                )
+
+        )
+
+    [OutClientProfitsExitStateWorkActualMessage] => stdClass Object
+        (
+        )
+
+    [OutClientProfitsExitStateWorkId] => 0
+    [OutClientProfitsExitStateWorkLanguage] => 0
+    [OutClientProfitsExitStateWorkMessageType] => stdClass Object
+        (
+        )
+
+    [OutClientProfitsExitStateWorkPrftSystem] => 0
+    [OutClientProfitsExitStateWorkRoutineSn] => 0
+    [OutClientProfitsExitStateWorkTerminationAction] => stdClass Object
+        (
+        )
+
+    [OutClientProfitsExitStateWorkValruleId] => 0
+    [OutClientProfitsExitStateWorkValruleSnum] => 0
+    [OutCreditCashIefSuppliedPayableAmount] => 0
+    [OutCreditVouchersIefSuppliedPayableAmount] => 0
+    [OutDebitCashIefSuppliedPayableAmount] => 0
+    [OutDebitVouchersIefSuppliedPayableAmount] => 0
+    [OutIefSuppliedActionEntryDesc] => OK                  
+    [OutPrftCodeIefSuppliedNumber5] => 0
+    [OutPrftdescrIefSuppliedChar40] => stdClass Object
+        (
+        )
+
+    [OutProddescrIefSuppliedChar40] => stdClass Object
+        (
+        )
+
+    [OutProductCodeIefSuppliedNumber5] => 0
+    [OutTrxCountTrxCounter] => 6429
+    [OutLogfileGroupList] => stdClass Object
+        (
+        )
+
+    [OutGrpVoucherList] => stdClass Object
+        (
+        )
+
+)
+stdClass Object
+(
+    [Key] => 12;YOoAAACHRAQ=10;16668248450;
+    [Imprest_No] => PCRV-00370
+    [Amount] => 4700
+    [Fosa_Account] => 0000172144001
+    [Bosa_Account] => 35368
+    [Member_Id] => 0
+    [GL_Account] => 3.14.3.1.000001
+    [Employee_No] => KPSS054
+    [Employee_Name] => ROSE WAITHIRA MAINA
+    [Status] => Completed
+    [Date_Sent] => 0001-01-01T00:00:00
+    [Global_Dimension_1_Code] => FIN
+    [Global_Dimesnion_2_Code] => 0
+    [Line_No] => 1092
+    [Transaction_Type] => _blank_
+    [Reversal] => 1
+    [TrxDate] => 2021-06-01
+    [TrxSn] => 6356
+    [TrxUnit] => 1
+    [TrxUsr] => 99120003
+    [Reversed] => Sent
+)
+stdClass Object
+(
+    [Tun] => stdClass Object
+        (
+            [TrxDate] => 2021-06-01T00:00:00
+            [TrxUnit] => 1
+            [TrxUser] => 99120004
+            [TrxUserSn] => 0
+            [TunInternalSn] => 0
+        )
+
+    [Result] => stdClass Object
+        (
+            [Type] => Success
+            [Id] => 10958
+            [Message] => success
+            [StackTrace] => stdClass Object
+                (
+                )
+
+        )
+
+    [OutClientProfitsExitStateWorkActualMessage] => stdClass Object
+        (
+        )
+
+    [OutClientProfitsExitStateWorkId] => 0
+    [OutClientProfitsExitStateWorkLanguage] => 0
+    [OutClientProfitsExitStateWorkMessageType] => stdClass Object
+        (
+        )
+
+    [OutClientProfitsExitStateWorkPrftSystem] => 0
+    [OutClientProfitsExitStateWorkRoutineSn] => 0
+    [OutClientProfitsExitStateWorkTerminationAction] => stdClass Object
+        (
+        )
+
+    [OutClientProfitsExitStateWorkValruleId] => 0
+    [OutClientProfitsExitStateWorkValruleSnum] => 0
+    [OutCreditCashIefSuppliedPayableAmount] => 0
+    [OutCreditVouchersIefSuppliedPayableAmount] => 0
+    [OutDebitCashIefSuppliedPayableAmount] => 0
+    [OutDebitVouchersIefSuppliedPayableAmount] => 0
+    [OutIefSuppliedActionEntryDesc] => OK                  
+    [OutPrftCodeIefSuppliedNumber5] => 0
+    [OutPrftdescrIefSuppliedChar40] => stdClass Object
+        (
+        )
+
+    [OutProddescrIefSuppliedChar40] => stdClass Object
+        (
+        )
+
+    [OutProductCodeIefSuppliedNumber5] => 0
+    [OutTrxCountTrxCounter] => 2978
+    [OutLogfileGroupList] => stdClass Object
+        (
+        )
+
+    [OutGrpVoucherList] => stdClass Object
+        (
+        )
+
+)
+stdClass Object
+(
+    [Key] => 12;YOoAAACHRQQ=10;16668248720;
+    [Imprest_No] => IMP00037
+    [Amount] => 21000
+    [Fosa_Account] => 50201449100
+    [Bosa_Account] => 47735
+    [Member_Id] => 0
+    [GL_Account] => 3.14.3.1.000001
+    [Employee_No] => KPSS167
+    [Employee_Name] => PAUL LOITANGIRO RIKILEM
+    [Status] => Completed
+    [Date_Sent] => 0001-01-01T00:00:00
+    [Global_Dimension_1_Code] => ADMIN
+    [Global_Dimesnion_2_Code] => 0
+    [Line_No] => 1093
+    [Transaction_Type] => _blank_
+    [Reversal] => 1
+    [TrxDate] => 2021-06-01
+    [TrxSn] => 6361
+    [TrxUnit] => 1
+    [TrxUsr] => 99120003
+    [Reversed] => Sent
+)
+stdClass Object
+(
+    [Tun] => stdClass Object
+        (
+            [TrxDate] => 2021-06-01T00:00:00
+            [TrxUnit] => 1
+            [TrxUser] => 99120004
+            [TrxUserSn] => 0
+            [TunInternalSn] => 0
+        )
+
+    [Result] => stdClass Object
+        (
+            [Type] => Unknown
+            [Id] => 12001
+            [Message] => ERROR
+            [StackTrace] => stdClass Object
+                (
+                )
+
+        )
+
+    [OutClientProfitsExitStateWorkId] => 0
+    [OutClientProfitsExitStateWorkLanguage] => 0
+    [OutClientProfitsExitStateWorkPrftSystem] => 0
+    [OutClientProfitsExitStateWorkRoutineSn] => 0
+    [OutClientProfitsExitStateWorkValruleId] => 0
+    [OutClientProfitsExitStateWorkValruleSnum] => 0
+    [OutCreditCashIefSuppliedPayableAmount] => 0
+    [OutCreditVouchersIefSuppliedPayableAmount] => 0
+    [OutDebitCashIefSuppliedPayableAmount] => 0
+    [OutDebitVouchersIefSuppliedPayableAmount] => 0
+    [OutPrftCodeIefSuppliedNumber5] => 0
+    [OutProductCodeIefSuppliedNumber5] => 0
+    [OutTrxCountTrxCounter] => 0
+    [OutLogfileGroupList] => stdClass Object
+        (
+        )
+
+    [OutGrpVoucherList] => stdClass Object
+        (
+        )
+
+)
+stdClass Object
+(
+    [Key] => 12;YOoAAACHRgQ=10;16668248870;
+    [Imprest_No] => PV/11/00668
+    [Amount] => 750180
+    [Fosa_Account] => 50202177200
+    [Bosa_Account] => 59727
+    [Member_Id] => 0
+    [GL_Account] => 4.11.1.2.000010
+    [Employee_No] => KPSS136
+    [Employee_Name] => STANLEY NJERU NYAGAH
+    [Status] => Completed
+    [Date_Sent] => 0001-01-01T00:00:00
+    [Global_Dimension_1_Code] => FIN
+    [Global_Dimesnion_2_Code] => 0
+    [Line_No] => 1094
+    [Transaction_Type] => _blank_
+    [Reversal] => 1
+    [TrxDate] => 2021-06-01
+    [TrxSn] => 6366
+    [TrxUnit] => 1
+    [TrxUsr] => 99120003
+    [Reversed] => Failed
+)
