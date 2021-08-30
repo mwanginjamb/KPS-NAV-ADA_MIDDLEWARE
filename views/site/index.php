@@ -7,11 +7,11 @@ $this->title = 'My Yii Application';
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>ADA Integrations Middleware!</h1>
+        <h1>ADA & FINANCE Integrations TEST Middleware!</h1>
 
         <p class="lead">Successfully created by Njambi.</p>
 
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+        <p><a class="btn btn-lg btn-success" href="https://twitter.com/francnjamb">Created With Love By @francnjamb</a></p>
     </div>
 
     <div class="body-content">

@@ -1,0 +1,329 @@
+stdClass Object
+(
+    [Tun] => stdClass Object
+        (
+            [TrxDate] => 2021-06-01T00:00:00
+            [TrxUnit] => 1
+            [TrxUser] => 99120003
+            [TrxUserSn] => 0
+            [TunInternalSn] => 0
+        )
+
+    [Result] => stdClass Object
+        (
+            [Type] => Error
+            [Id] => 1746959430
+            [Message] => The Account was not found
+            [StackTrace] => stdClass Object
+                (
+                )
+
+        )
+
+    [OutAvailabilityWorkDatesProductionDate] => 0001-01-01T00:00:00
+    [OutCharCurrencyIdCurrency] => 0
+    [OutComCurrencyIdCurrency] => 0
+    [OutCustomerCustId] => 0
+    [OutDomComchataxIefSuppliedFinalCharges] => 0
+    [OutDomComchataxIefSuppliedFinalCommission] => 0
+    [OutDomComchataxIefSuppliedGenAmount] => 0
+    [OutDomCurrencyIdCurrency] => 0
+    [OutFwdSwapContractsContractDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsCurrencyRate] => 0
+    [OutFwdSwapContractsMaturityDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsNotificationDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsOrgSourceAmount] => 0
+    [OutFwdSwapContractsOrgTargetAmount] => 0
+    [OutFwdSwapContractsReferenceNo] => 0
+    [OutFwdSwapContractsSourceUtilBal] => 0
+    [OutFwdSwapContractsSourceValueDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsStartDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsTargetAvailDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsTargetValueDate] => 0001-01-01T00:00:00
+    [OutRoundingFxFtRecordingAccAmount29] => 0
+    [OutRoundingFxFtRecordingAccAmount30] => 0
+    [OutRoundingFxFtRecordingAccAmount43] => 0
+    [OutRoundingFxFtRecordingAccAmount44] => 0
+    [OutSourceIefSuppliedPayableAmount] => 0
+    [OutSourceRateWorkDatesProductionDate] => 0001-01-01T00:00:00
+    [OutSuccessfulTransactionWorkAdviceCounter] => 0
+    [OutSuccessfulTransactionWorkTrxDate] => 0001-01-01T00:00:00
+    [OutSuccessfulTransactionWorkTrxUnit] => 0
+    [OutSuccessfulTransactionWorkTrxUsrSn] => 0
+    [OutSuccessfulTransactionWorkTunInternalSn] => 0
+    [OutTargetIefSuppliedPayableAmount] => 0
+    [OutTaxCharTotIefSuppliedFinalCharges] => 0
+    [OutTaxCharTotIefSuppliedFinalCommission] => 0
+    [OutTaxCharTotIefSuppliedGenAmount] => 0
+    [OutTaxCharTotIefSuppliedRate] => 0
+    [OutTaxCurrencyIdCurrency] => 0
+    [OutTrxTrxCountTrxCounter] => 0
+    [OutValueWorkDatesProductionDate] => 0001-01-01T00:00:00
+    [OutAuthGrp] => stdClass Object
+        (
+        )
+
+    [OutDetailGroup] => stdClass Object
+        (
+        )
+
+    [OutGrpCustomerActAppr] => stdClass Object
+        (
+        )
+
+    [OutGrpUserTotal] => stdClass Object
+        (
+        )
+
+    [BankTransactionDate] => 0001-01-01T00:00:00
+)
+stdClass Object
+(
+    [Key] => 40;3F8BAAJ7/0IAUgBEAC0AMAAwADAAMgAAAACHfiU=9;1450529780;
+    [Entry_No] => 9598
+    [Document_No] => BRD-0002
+    [Posting_Date] => 2020-06-02
+    [Member_No] => 02382
+    [Member_Name] => MESHACK ODHIAMBO  
+    [ID_Number] => 22497839
+    [Posting_Description] => DINNER & BREAKFAST ALLOWANCE
+    [Amount] => -2400
+    [Source_Code] => BRDPAY
+    [Memo] => BRDPAY
+    [Created_On] => 2020-06-03T06:29:31.297Z
+    [Created_By] => POLICESACCO0\MESHACK.ODHIAMBO
+    [Posted] => 1
+    [Posted_On] => 0001-01-01T00:00:00
+    [Integration_Account] => L02-02382
+    [Int_Direction] => Outgoing
+    [Sent] => Failed
+    [Integration_Source] => KPS_CBS
+    [Profits_Member_No] => 102001
+    [Profits_Debit_Account] => 50304389900
+    [Reversal] => 
+    [TrxDate] => 2021-06-01
+    [TrxSn] => 0
+    [TrxUnit] => 1
+    [TrxUsr] => 99120003
+    [Reversed] => Pending
+)
+stdClass Object
+(
+    [Tun] => stdClass Object
+        (
+            [TrxDate] => 2021-06-01T00:00:00
+            [TrxUnit] => 1
+            [TrxUser] => 99120003
+            [TrxUserSn] => 0
+            [TunInternalSn] => 0
+        )
+
+    [Result] => stdClass Object
+        (
+            [Type] => Error
+            [Id] => 1746959430
+            [Message] => The Account was not found
+            [StackTrace] => stdClass Object
+                (
+                )
+
+        )
+
+    [OutAvailabilityWorkDatesProductionDate] => 0001-01-01T00:00:00
+    [OutCharCurrencyIdCurrency] => 0
+    [OutComCurrencyIdCurrency] => 0
+    [OutCustomerCustId] => 0
+    [OutDomComchataxIefSuppliedFinalCharges] => 0
+    [OutDomComchataxIefSuppliedFinalCommission] => 0
+    [OutDomComchataxIefSuppliedGenAmount] => 0
+    [OutDomCurrencyIdCurrency] => 0
+    [OutFwdSwapContractsContractDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsCurrencyRate] => 0
+    [OutFwdSwapContractsMaturityDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsNotificationDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsOrgSourceAmount] => 0
+    [OutFwdSwapContractsOrgTargetAmount] => 0
+    [OutFwdSwapContractsReferenceNo] => 0
+    [OutFwdSwapContractsSourceUtilBal] => 0
+    [OutFwdSwapContractsSourceValueDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsStartDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsTargetAvailDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsTargetValueDate] => 0001-01-01T00:00:00
+    [OutRoundingFxFtRecordingAccAmount29] => 0
+    [OutRoundingFxFtRecordingAccAmount30] => 0
+    [OutRoundingFxFtRecordingAccAmount43] => 0
+    [OutRoundingFxFtRecordingAccAmount44] => 0
+    [OutSourceIefSuppliedPayableAmount] => 0
+    [OutSourceRateWorkDatesProductionDate] => 0001-01-01T00:00:00
+    [OutSuccessfulTransactionWorkAdviceCounter] => 0
+    [OutSuccessfulTransactionWorkTrxDate] => 0001-01-01T00:00:00
+    [OutSuccessfulTransactionWorkTrxUnit] => 0
+    [OutSuccessfulTransactionWorkTrxUsrSn] => 0
+    [OutSuccessfulTransactionWorkTunInternalSn] => 0
+    [OutTargetIefSuppliedPayableAmount] => 0
+    [OutTaxCharTotIefSuppliedFinalCharges] => 0
+    [OutTaxCharTotIefSuppliedFinalCommission] => 0
+    [OutTaxCharTotIefSuppliedGenAmount] => 0
+    [OutTaxCharTotIefSuppliedRate] => 0
+    [OutTaxCurrencyIdCurrency] => 0
+    [OutTrxTrxCountTrxCounter] => 0
+    [OutValueWorkDatesProductionDate] => 0001-01-01T00:00:00
+    [OutAuthGrp] => stdClass Object
+        (
+        )
+
+    [OutDetailGroup] => stdClass Object
+        (
+        )
+
+    [OutGrpCustomerActAppr] => stdClass Object
+        (
+        )
+
+    [OutGrpUserTotal] => stdClass Object
+        (
+        )
+
+    [DebitCurrency] => KES  
+    [BankTransactionDate] => 0001-01-01T00:00:00
+)
+stdClass Object
+(
+    [Key] => 40;3F8BAAJ7/0IAUgBEAC0AMAAwADAAMgAAAACHfyU=9;1450530550;
+    [Entry_No] => 9599
+    [Document_No] => BRD-0002
+    [Posting_Date] => 2020-06-02
+    [Member_No] => 02382
+    [Member_Name] => MESHACK ODHIAMBO  
+    [ID_Number] => 22497839
+    [Posting_Description] => TRANSPORT
+    [Amount] => -1000
+    [Source_Code] => BRDPAY
+    [Memo] => BRDPAY
+    [Created_On] => 2020-06-03T06:29:31.297Z
+    [Created_By] => POLICESACCO0\MESHACK.ODHIAMBO
+    [Posted] => 1
+    [Posted_On] => 0001-01-01T00:00:00
+    [Integration_Account] => L02-02382
+    [Int_Direction] => Outgoing
+    [Sent] => Failed
+    [Integration_Source] => KPS_CBS
+    [Profits_Member_No] => 102001
+    [Profits_Debit_Account] => 50304389900
+    [Reversal] => 
+    [TrxDate] => 2021-06-01
+    [TrxSn] => 0
+    [TrxUnit] => 1
+    [TrxUsr] => 99120003
+    [Reversed] => Pending
+)
+stdClass Object
+(
+    [Tun] => stdClass Object
+        (
+            [TrxDate] => 2021-06-01T00:00:00
+            [TrxUnit] => 1
+            [TrxUser] => 99120003
+            [TrxUserSn] => 0
+            [TunInternalSn] => 0
+        )
+
+    [Result] => stdClass Object
+        (
+            [Type] => Error
+            [Id] => 1746959430
+            [Message] => The Account was not found
+            [StackTrace] => stdClass Object
+                (
+                )
+
+        )
+
+    [OutAvailabilityWorkDatesProductionDate] => 0001-01-01T00:00:00
+    [OutCharCurrencyIdCurrency] => 0
+    [OutComCurrencyIdCurrency] => 0
+    [OutCustomerCustId] => 0
+    [OutDomComchataxIefSuppliedFinalCharges] => 0
+    [OutDomComchataxIefSuppliedFinalCommission] => 0
+    [OutDomComchataxIefSuppliedGenAmount] => 0
+    [OutDomCurrencyIdCurrency] => 0
+    [OutFwdSwapContractsContractDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsCurrencyRate] => 0
+    [OutFwdSwapContractsMaturityDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsNotificationDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsOrgSourceAmount] => 0
+    [OutFwdSwapContractsOrgTargetAmount] => 0
+    [OutFwdSwapContractsReferenceNo] => 0
+    [OutFwdSwapContractsSourceUtilBal] => 0
+    [OutFwdSwapContractsSourceValueDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsStartDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsTargetAvailDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsTargetValueDate] => 0001-01-01T00:00:00
+    [OutRoundingFxFtRecordingAccAmount29] => 0
+    [OutRoundingFxFtRecordingAccAmount30] => 0
+    [OutRoundingFxFtRecordingAccAmount43] => 0
+    [OutRoundingFxFtRecordingAccAmount44] => 0
+    [OutSourceIefSuppliedPayableAmount] => 0
+    [OutSourceRateWorkDatesProductionDate] => 0001-01-01T00:00:00
+    [OutSuccessfulTransactionWorkAdviceCounter] => 0
+    [OutSuccessfulTransactionWorkTrxDate] => 0001-01-01T00:00:00
+    [OutSuccessfulTransactionWorkTrxUnit] => 0
+    [OutSuccessfulTransactionWorkTrxUsrSn] => 0
+    [OutSuccessfulTransactionWorkTunInternalSn] => 0
+    [OutTargetIefSuppliedPayableAmount] => 0
+    [OutTaxCharTotIefSuppliedFinalCharges] => 0
+    [OutTaxCharTotIefSuppliedFinalCommission] => 0
+    [OutTaxCharTotIefSuppliedGenAmount] => 0
+    [OutTaxCharTotIefSuppliedRate] => 0
+    [OutTaxCurrencyIdCurrency] => 0
+    [OutTrxTrxCountTrxCounter] => 0
+    [OutValueWorkDatesProductionDate] => 0001-01-01T00:00:00
+    [OutAuthGrp] => stdClass Object
+        (
+        )
+
+    [OutDetailGroup] => stdClass Object
+        (
+        )
+
+    [OutGrpCustomerActAppr] => stdClass Object
+        (
+        )
+
+    [OutGrpUserTotal] => stdClass Object
+        (
+        )
+
+    [DebitCurrency] => KES  
+    [BankTransactionDate] => 0001-01-01T00:00:00
+)
+stdClass Object
+(
+    [Key] => 40;3F8BAAJ7/0IAUgBEAC0AMAAwADAAMgAAAACHgCU=9;1450530670;
+    [Entry_No] => 9600
+    [Document_No] => BRD-0002
+    [Posting_Date] => 2020-06-02
+    [Member_No] => 03738
+    [Member_Name] => KINYAGU JOHN KINUTHIA  
+    [ID_Number] => 27254382
+    [Posting_Description] => DINNER & BREAKFAST ALLOWANCE
+    [Amount] => -3600
+    [Source_Code] => BRDPAY
+    [Memo] => BRDPAY
+    [Created_On] => 2020-06-03T06:29:31.297Z
+    [Created_By] => POLICESACCO0\MESHACK.ODHIAMBO
+    [Posted] => 1
+    [Posted_On] => 0001-01-01T00:00:00
+    [Integration_Account] => L02-03738
+    [Int_Direction] => Outgoing
+    [Sent] => Failed
+    [Integration_Source] => KPS_CBS
+    [Profits_Member_No] => 120865
+    [Profits_Debit_Account] => 50304389900
+    [Reversal] => 
+    [TrxDate] => 2021-06-01
+    [TrxSn] => 0
+    [TrxUnit] => 1
+    [TrxUsr] => 99120003
+    [Reversed] => Pending
+)

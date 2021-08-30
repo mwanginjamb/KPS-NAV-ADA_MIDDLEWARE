@@ -389,7 +389,7 @@ curl_close($curl);
 							<!--Optional:-->
 							<prof:InInputCurrencyShortDescr></prof:InInputCurrencyShortDescr>
 							<!--Optional:-->
-							<prof:InMainFxftFxFtRecordingComments>'.$record->Comments.'</prof:InMainFxftFxFtRecordingComments>
+							<prof:InMainFxftFxFtRecordingComments>'.$record->Posting_Desricption.'</prof:InMainFxftFxFtRecordingComments>
 							<prof:InMainFxftPrftTransactionIdTransact>12501</prof:InMainFxftPrftTransactionIdTransact>
 							<prof:InRecordCaseFxFtRecordingIDrCrFlag>0</prof:InRecordCaseFxFtRecordingIDrCrFlag>
 							<prof:InRecordCaseFxFtRecordingISegmentType>0</prof:InRecordCaseFxFtRecordingISegmentType>
@@ -652,7 +652,7 @@ curl_close($curl);
 		if(is_array($ImprestRecords)) {
 				foreach($ImprestRecords as $account) {
 				
-				$account->Posting_Desricption = property_exists($account,'Posting_Desricption')?$account->Posting_Desricption:'Posting_Desricption Not Set';
+				$account->Posting_Desricption = property_exists($account,'Posting_Desricption')?$account->Posting_Desricption:'';
 				
 				$account->Comments = property_exists($account,'Comments')?$account->Comments:'Comments Not Set';
 					
@@ -742,8 +742,11 @@ curl_close($curl);
 		
 		if(is_array($ImprestRecords)) {
 				foreach($ImprestRecords as $account) {
+					
+					$account->Posting_Desricption = property_exists($account,'Posting_Desricption')?$account->Posting_Desricption:'';
 				
-					$result = json_decode($this->actionPostReversal($account));
+					$result = json_decode($this->actionReverse($account));
+					
 					/*print '<pre>';
 					print_r($result);
 					exit;*/
@@ -839,7 +842,7 @@ curl_close($curl);
 								<!--Optional:-->
 								<prof:InCommandIefSuppliedCommand/>
 								<!--Optional:-->
-								<prof:InFxFtRecordingComments/>
+								<prof:InFxFtRecordingComments />
 								<prof:InFxFtRecordingTrxDate>'.$this->processProfitsDate($record->TrxDate).'</prof:InFxFtRecordingTrxDate>
 								<prof:InFxFtRecordingTrxSn>'.$record->TrxSn.'</prof:InFxFtRecordingTrxSn>
 								<prof:InFxFtRecordingTrxUnit>'.$record->TrxUnit.'</prof:InFxFtRecordingTrxUnit>
@@ -897,6 +900,101 @@ curl_close($curl);
 					// $nodes[0]->ADDS03_CancelAdditionalTransactionsResponse->ADDS03_CancelAdditionalTransactionsResult
 			return json_encode($nodes[0]->ADDS03_CancelAdditionalTransactionsResponse->ADDS03_CancelAdditionalTransactionsResult);
 				}
+
+	
+	}
+	
+	
+	/*Reversal function V2*/
+	
+	public function actionReverse($record = '')
+	{
+		
+
+							
+
+				$curl = curl_init();
+
+				curl_setopt_array($curl, array(
+				  CURLOPT_URL => env('PROFT_TEST_BASEURL'),
+				  CURLOPT_RETURNTRANSFER => true,
+				  CURLOPT_ENCODING => '',
+				  CURLOPT_MAXREDIRS => 10,
+				  CURLOPT_TIMEOUT => 0,
+				  CURLOPT_FOLLOWLOCATION => true,
+				  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+				  CURLOPT_CUSTOMREQUEST => 'POST',
+				  CURLOPT_POSTFIELDS =>'<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prof="http://www.intrasoft-internatinal.com/GatewayService/ProfitsExt">
+								<soapenv:Header/>
+								<soapenv:Body>
+									<prof:ADDS03_CancelAdditionalTransactions>
+										<!--Optional:-->
+										<prof:import>
+											<!--Optional:-->
+											<prof:Command>INSERT</prof:Command>
+											<!--Optional:-->
+											<prof:InCommandIefSuppliedCommand/>
+											<!--Optional:-->
+											<prof:InFxFtRecordingComments>'.$record->Posting_Desricption.'</prof:InFxFtRecordingComments>
+											<prof:InFxFtRecordingTrxDate>'.$this->processProfitsDate($record->TrxDate).'</prof:InFxFtRecordingTrxDate>
+											<prof:InFxFtRecordingTrxSn>'.$record->TrxSn.'</prof:InFxFtRecordingTrxSn>
+											<prof:InFxFtRecordingTrxUnit>'.$record->TrxUnit.'</prof:InFxFtRecordingTrxUnit>
+											<!--Optional:-->
+											<prof:InFxFtRecordingTrxUsr>'.$record->TrxUsr.'</prof:InFxFtRecordingTrxUsr>
+											<prof:InPrftTransactionIdTransact>12511</prof:InPrftTransactionIdTransact>
+											<!--Optional:-->
+											<prof:InTerminalTerminalNumber></prof:InTerminalTerminalNumber>
+										</prof:import>
+										<!--Optional:-->
+										<prof:executionParameters>
+											<prof:ChannelId>'.env('CHANNEL_ID').'</prof:ChannelId>
+											<!--Optional:-->
+											<prof:Password>'.env('PROF_PASSWORD').'</prof:Password>
+											<!--Optional:-->
+											<prof:UniqueId>'.$this->token().'</prof:UniqueId>
+											<!--Optional:-->
+											<prof:CultureName>en</prof:CultureName>
+											<prof:ForcastFlag>false</prof:ForcastFlag>
+											<!--Optional:-->
+											<prof:ReferenceKey>J8888888BaX8$*8*8W</prof:ReferenceKey>
+											<!--Optional:-->
+											<prof:SotfOtp/>
+											<!--Optional:-->
+											<prof:BranchCode/>
+											<!--Optional:-->
+											<prof:ExtUniqueUserId>'.env('NAV_USER').'</prof:ExtUniqueUserId>
+											<!--Optional:-->
+											<prof:ExtDeviceAuthCode/>
+										</prof:executionParameters>
+									</prof:ADDS03_CancelAdditionalTransactions>
+								</soapenv:Body>
+							</soapenv:Envelope>',
+				  CURLOPT_HTTPHEADER => array(
+					'Content-Type: text/xml'
+				  ),
+				));
+
+				$response = curl_exec($curl);
+
+				curl_close($curl);
+				echo $response;
+
+
+				
+				
+				if(!empty($response))
+				{
+					$xml_object = simplexml_load_string($response); 
+
+					// register your used namespace prefixes
+					$xml_object->registerXPathNamespace('xsi', 'http://www.w3.org/2001/XMLSchema-instance'); 
+					$xml_object->registerXPathNamespace('soap', 'http://schemas.xmlsoap.org/soap/envelope'); 
+					$nodes = $xml_object->xpath("/soap:Envelope/soap:Body");
+					// $nodes[0]->ADDS03_CancelAdditionalTransactionsResponse->ADDS03_CancelAdditionalTransactionsResult
+					return json_encode($nodes[0]->ADDS03_CancelAdditionalTransactionsResponse->ADDS03_CancelAdditionalTransactionsResult);
+				}
+				
+				
 
 	
 	}

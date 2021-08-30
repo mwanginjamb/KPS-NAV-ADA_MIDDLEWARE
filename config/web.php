@@ -55,6 +55,10 @@ $config = [
             'class' => 'app\Library\Navhelper'
         ],
 
+        'investment' => [
+            'class' => 'app\Library\Investmenthelper'
+        ],
+
         'navision' => [
             'class' => 'app\Library\Navision'
         ],
