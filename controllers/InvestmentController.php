@@ -28,7 +28,7 @@ class InvestmentController extends Controller
                         'roles' => ['@'],
                     ],
 					[
-                        'actions' => ['index','investments','fetch-vendor','vendors','sync-vendor','token'],
+                        'actions' => ['index','investments','fetch-vendor','vendors','sync-vendor','token','list-accounts'],
                         'allow' => true,
                         'roles' => ['?'],
                     ],
@@ -713,6 +713,93 @@ curl_close($curl);
 				
 
 	
+	}
+
+	public function actionListAccounts($memberNo)
+	{
+	
+
+			$curl = curl_init();
+
+			curl_setopt_array($curl, array(
+			CURLOPT_URL => env('PROFT_TEST_BASEURL'),
+			CURLOPT_RETURNTRANSFER => true,
+			CURLOPT_ENCODING => '',
+			CURLOPT_MAXREDIRS => 10,
+			CURLOPT_TIMEOUT => 0,
+			CURLOPT_FOLLOWLOCATION => true,
+			CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+			CURLOPT_CUSTOMREQUEST => 'POST',
+			CURLOPT_POSTFIELDS =>'<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+			<soap:Body>
+				<PRT099V_WebCustomerAccountsList xmlns="http://www.intrasoft-internatinal.com/GatewayService/ProfitsExt">
+				<import>
+					<InCriteriaCustomerTypeCustomerSearch>1</InCriteriaCustomerTypeCustomerSearch>
+					<InCustomerCustomerCustId>'.$memberNo.'</InCustomerCustomerCustId>
+					<InSelectedProductProductIdProduct>0</InSelectedProductProductIdProduct>
+					<InSelectedSystemProfitsAccountPrftSystem>3</InSelectedSystemProfitsAccountPrftSystem>
+					<InCommandIefSuppliedCommand>CREATE</InCommandIefSuppliedCommand>
+					<InFilterUnitCode>0</InFilterUnitCode>
+					<InTrxPrftTransactionIdTransact>0</InTrxPrftTransactionIdTransact>
+				</import>
+				<executionParameters>
+					<ChannelId>'.env('CHANNEL_ID').'</ChannelId>
+					<Password>'.env('PROF_PASSWORD').'</Password>
+					<UniqueId>'.$this->token().'</UniqueId>
+					<CultureName>en</CultureName>
+					<ForcastFlag>false</ForcastFlag>
+					<ReferenceKey>'.time().'</ReferenceKey>
+					<SotfOtp></SotfOtp>
+					<BranchCode></BranchCode>
+					<ExtUniqueUserId>'.env('NAV_USER').'</ExtUniqueUserId>
+					<ExtDeviceAuthCode></ExtDeviceAuthCode>
+				</executionParameters>
+				</PRT099V_WebCustomerAccountsList>
+			</soap:Body>
+			</soap:Envelope>',
+			CURLOPT_HTTPHEADER => array(
+				'Content-Type: text/xml'
+			),
+			));
+
+			$response = curl_exec($curl);
+
+			curl_close($curl);
+			// echo $response;
+
+			if(!empty($response))
+				{
+					$xml_object = simplexml_load_string($response); 
+
+					// register your used namespace prefixes
+					$xml_object->registerXPathNamespace('xsi', 'http://www.w3.org/2001/XMLSchema-instance'); 
+					$xml_object->registerXPathNamespace('soap', 'http://schemas.xmlsoap.org/soap/envelope'); 
+					$nodes = $xml_object->xpath("/soap:Envelope/soap:Body");
+
+					
+					$accounts = ($nodes[0]->PRT099V_WebCustomerAccountsListResponse->PRT099V_WebCustomerAccountsListResult->OutSelectedGrp);
+					$fosa = null;
+
+					
+					foreach($accounts->PRT099V_WebOutSelectedGrpItem as $account) 
+					{
+						if($account->OutSelectedGrpOutGrmProductDescription == 'FOSA MAIN SAVINGS ACCOUNT')
+						{
+							$fosa = $account;
+						}
+							
+
+							
+					}
+
+					
+					return $fosa->OutSelectedGrpOutGrmProfitsAccountAccountNumber[0];
+					
+					
+				}
+
+				return false;
+
 	}
 	
 	
