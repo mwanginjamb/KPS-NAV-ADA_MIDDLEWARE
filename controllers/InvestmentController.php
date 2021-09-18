@@ -79,7 +79,7 @@ class InvestmentController extends Controller
 		
 		$filter = [
 			'Int_Direction' => 'Outgoing',
-			'Sent' => "Pending",
+			'Sent' => 'Failed', //"Pending",
 			'Posted' => false
 		];
 		$result = Yii::$app->investment->getData($service, $filter);
@@ -153,189 +153,193 @@ class InvestmentController extends Controller
 	public function actionPostInvestment(object $record )
 	{
 		
+			$creditAccount = $this->actionListAccounts($record->Profits_Member_No);
+			if($creditAccount) 
+			{
+				$log = 'Credit Account: '.$creditAccount;
+				$this->imprestLogger($log);
 
+				$curl = curl_init();
 
-		$curl = curl_init();
+				$scalar = ($record->Amount < 0)?($record->Amount * -1):$record->Amount ;
 
-curl_setopt_array($curl, array(
-  CURLOPT_URL =>  env('PROFT_TEST_BASEURL'),
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => '',
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 0,
-  CURLOPT_FOLLOWLOCATION => true,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => 'POST',
-  CURLOPT_POSTFIELDS =>'<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prof="http://www.intrasoft-internatinal.com/GatewayService/ProfitsExt">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <prof:FEXS01_FundsTransferWithExchange>
-         <!--Optional:-->
- <prof:import>
-				<prof:Command>INSERT</prof:Command>
-				<prof:InAuthorIefSuppliedFlag>1</prof:InAuthorIefSuppliedFlag>
-				<prof:InBlackListIefSuppliedExchangePurchaseDocNo/>
-				<prof:InBoughtAmountIefSuppliedCheckDigit>0</prof:InBoughtAmountIefSuppliedCheckDigit>
-				<prof:InBoughtAmountIefSuppliedPayableAmount>'.$record->Amount.'</prof:InBoughtAmountIefSuppliedPayableAmount>
-				<prof:InBoughtProfitsAccountNumber>'.$record->Profits_Debit_Account.'</prof:InBoughtProfitsAccountNumber>
-				<prof:InBoughtProfitsAccountCd>0</prof:InBoughtProfitsAccountCd>
-				<prof:InBoughtProfitsAccountPrftSystem>3</prof:InBoughtProfitsAccountPrftSystem>
-				<prof:InBoughtDepositAccountDesignation/>
-				<prof:InBoughtDepositAccountEntryStatus/>
-				<prof:InBoughtIbanWorkSetChar37/>
-				<prof:InBoughtJustificIdJustific>34001</prof:InBoughtJustificIdJustific>
-				<prof:InBoughtPrftTransactionIdTransact>3191</prof:InBoughtPrftTransactionIdTransact>
-				<prof:InBoughtRepCustomerCDigit>0</prof:InBoughtRepCustomerCDigit>
-				<prof:InBoughtRepCustomerCustId>0</prof:InBoughtRepCustomerCustId>
-				<prof:InBoughtValueDaysIefSuppliedValueDays>0</prof:InBoughtValueDaysIefSuppliedValueDays>
-				<prof:InBoughtValueWorkDatesProductionDate>0001-01-01T00:00:00</prof:InBoughtValueWorkDatesProductionDate>
-				<prof:InChargesAccountIefSuppliedFlag>1</prof:InChargesAccountIefSuppliedFlag>
-				<prof:InChargesDiscountIefSuppliedGenPercentage>0</prof:InChargesDiscountIefSuppliedGenPercentage>
-				<prof:InChequeBookItemIssueDate>0001-01-01T00:00:00</prof:InChequeBookItemIssueDate>
-				<prof:InChequeBookItemItemSerialNumber>0</prof:InChequeBookItemItemSerialNumber>
-				<prof:InCommentsGenericDetailDescription>REF_NUMBER</prof:InCommentsGenericDetailDescription>
-				<prof:InCommentsGenericDetailSerialNum>0</prof:InCommentsGenericDetailSerialNum>
-				<prof:InCommissionsDiscountIefSuppliedGenPercentage>0</prof:InCommissionsDiscountIefSuppliedGenPercentage>
-				<prof:InCreditDepTrxRecordingIComments>AGENCY WITHDRAWAL</prof:InCreditDepTrxRecordingIComments>
-				<prof:InCustAdditionalCustomerTelephone1/>
-				<prof:InCustAddressAddress1/>
-				<prof:InCustAddressAddress2/>
-				<prof:InCustAddressCity/>
-				<prof:InCustAddressZipCode/>
-				<prof:InCustCountryGenericDetailDescription/>
-				<prof:InCustCountryGenericDetailSerialNum>0</prof:InCustCountryGenericDetailSerialNum>
-				<prof:InCustListSetDescription/>
-				<prof:InCustNationalityGenericDetailDescription/>
-				<prof:InCustNationalityGenericDetailParameterType/>
-				<prof:InCustNationalityGenericDetailSerialNum>0</prof:InCustNationalityGenericDetailSerialNum>
-				<prof:InCustOtherAfmAfmNo/>
-				<prof:InCustomerCDigit>0</prof:InCustomerCDigit>
-				<prof:InCustomerCustId>47267</prof:InCustomerCustId>
-				<prof:InDealerPenaltyUsrCode/>
-				<prof:InDealerSpecialRateDealerRefNo/>
-				<prof:InDealerUsrCode/>
-				<prof:InDebitDepTrxRecordingIComments>AGENCY WITHDRAWAL</prof:InDebitDepTrxRecordingIComments>
-				<prof:InDepositCDigitIefSuppliedCheckDigit>0</prof:InDepositCDigitIefSuppliedCheckDigit>
-				<prof:InFwdSwapContractsContractDate>0001-01-01T00:00:00</prof:InFwdSwapContractsContractDate>
-				<prof:InFwdSwapContractsCurrencyRate>0</prof:InFwdSwapContractsCurrencyRate>
-				<prof:InFwdSwapContractsDealerRefNo/>
-				<prof:InFwdSwapContractsEntryComments/>
-				<prof:InFwdSwapContractsEntryStatus/>
-				<prof:InFwdSwapContractsExecDate>0001-01-01T00:00:00</prof:InFwdSwapContractsExecDate>
-				<prof:InFwdSwapContractsMaturityDate>0001-01-01T00:00:00</prof:InFwdSwapContractsMaturityDate>
-				<prof:InFwdSwapContractsNotificationDate>0001-01-01T00:00:00</prof:InFwdSwapContractsNotificationDate>
-				<prof:InFwdSwapContractsOrgSourceAmount>0</prof:InFwdSwapContractsOrgSourceAmount>
-				<prof:InFwdSwapContractsOrgTargetAmount>0</prof:InFwdSwapContractsOrgTargetAmount>
-				<prof:InFwdSwapContractsReferenceNo>0</prof:InFwdSwapContractsReferenceNo>
-				<prof:InFwdSwapContractsSourceUtilBal>0</prof:InFwdSwapContractsSourceUtilBal>
-				<prof:InFwdSwapContractsStartDate>0001-01-01T00:00:00</prof:InFwdSwapContractsStartDate>
-				<prof:InFwdSwapContractsTargetUtilBal>0</prof:InFwdSwapContractsTargetUtilBal>
-				<prof:InFwdSwapContractsWayOfUtilization/>
-				<prof:InGenericIdIefSuppliedIdentificationType/>
-				<prof:InGenericIdIefSuppliedIdentityPassportNo/>
-				<prof:InGenericIdIefSuppliedIssueAuthority/>
-				<prof:InGrpParametersInGrmBankParametersMaxAmntRateTbl>0</prof:InGrpParametersInGrmBankParametersMaxAmntRateTbl>
-				<prof:InGrpParametersInGrmGenericDetailSerialNum>0</prof:InGrpParametersInGrmGenericDetailSerialNum>
-				<prof:InGrpParametersInGrmTerminalTerminalNumber>10.1.1.18</prof:InGrpParametersInGrmTerminalTerminalNumber>
-				<prof:InGrpParametersInGrmTrxCountTrxCounter>0</prof:InGrpParametersInGrmTrxCountTrxCounter>
-				<prof:InGrpParametersInGrmWorkDaysWorkDatesProductionDate>0001-01-01T00:00:00</prof:InGrpParametersInGrmWorkDaysWorkDatesProductionDate>
-				<prof:InIdentCountryGenericDetailDescription/>
-				<prof:InIdentCountryGenericDetailSerialNum>0</prof:InIdentCountryGenericDetailSerialNum>
-				<prof:InJustificIdJustific>9108</prof:InJustificIdJustific>
-				<prof:InOtherIdIdNo/>
-				<prof:InPenaltyDealerSpecialRateDealerRefNo/>
-				<prof:InPostIefSuppliedFlag>Y</prof:InPostIefSuppliedFlag>
-				<prof:InPrftTransactionIdTransact>11041</prof:InPrftTransactionIdTransact>
-				<prof:InProductIdProduct>9102</prof:InProductIdProduct>
-				<prof:InResidentIefSuppliedFlag/>
-				<prof:InSoldAmountIefSuppliedPayableAmount>0</prof:InSoldAmountIefSuppliedPayableAmount>
-				<prof:InSoldAvailabilityDaysIefSuppliedValueDays>0</prof:InSoldAvailabilityDaysIefSuppliedValueDays>
-				<prof:InSoldAvailabilityWorkDatesProductionDate>2020-06-03T00:00:00</prof:InSoldAvailabilityWorkDatesProductionDate>
-				<prof:InSoldProfitsAccountNumber>'.$record->Integration_Account.'</prof:InSoldProfitsAccountNumber>
-				<prof:InSoldProfitsAccountCd>0</prof:InSoldProfitsAccountCd>
-				<prof:InSoldProfitsAccountPrftSystem>3</prof:InSoldProfitsAccountPrftSystem>
-				<prof:InSoldDepositAccountDesignation/>
-				<prof:InSoldDepositAccountEntryStatus/>
-				<prof:InSoldIbanWorkSetChar37/>
-				<prof:InSoldJustificIdJustific>33100</prof:InSoldJustificIdJustific>
-				<prof:InSoldPrftTransactionIdTransact>3181</prof:InSoldPrftTransactionIdTransact>
-				<prof:InSoldRepCustomerCDigit>0</prof:InSoldRepCustomerCDigit>
-				<prof:InSoldRepCustomerCustId>0</prof:InSoldRepCustomerCustId>
-				<prof:InSoldValueDaysIefSuppliedValueDays>0</prof:InSoldValueDaysIefSuppliedValueDays>
-				<prof:InSoldValueWorkDatesProductionDate>2020-06-03T00:00:00</prof:InSoldValueWorkDatesProductionDate>
-				<prof:InSpecialRateTableIefSuppliedFlag/>
-				<prof:InTrxFxFtRecordingSourceTrnType/>
-				<prof:InTrxFxFtRecordingTargetTrnType/>
-				<prof:InUseWayIefSuppliedFlag/>
-				<prof:InGrpAuth>
-					<prof:FEXS01InGrpAuthItem>
-						<prof:InGrpAuthInGrmTeamInformationSuper1Code/>
-						<prof:InGrpAuthInGrmTeamInformationSuper2Code/>
-						<prof:InGrpAuthInGrmTeamInformationTransactionId>0</prof:InGrpAuthInGrmTeamInformationTransactionId>
-					</prof:FEXS01InGrpAuthItem>
-					<prof:FEXS01InGrpAuthItem>
-						<prof:InGrpAuthInGrmTeamInformationSuper1Code/>
-						<prof:InGrpAuthInGrmTeamInformationSuper2Code/>
-						<prof:InGrpAuthInGrmTeamInformationTransactionId>0</prof:InGrpAuthInGrmTeamInformationTransactionId>
-					</prof:FEXS01InGrpAuthItem>
-				</prof:InGrpAuth>
-				<prof:InGrpChargesRecording>
-					<prof:FEXS01InGrpChargesRecordingItem>
-						<prof:InGrpChargesRecordingInGrmChargesRecordingChargeCode>0</prof:InGrpChargesRecordingInGrmChargesRecordingChargeCode>
-						<prof:InGrpChargesRecordingInGrmChargesRecordingChargeType/>
-						<prof:InGrpChargesRecordingInGrmChargesRecordingChargedAmn>0</prof:InGrpChargesRecordingInGrmChargesRecordingChargedAmn>
-						<prof:InGrpChargesRecordingInGrmChargesRecordingChargesCurrId>0</prof:InGrpChargesRecordingInGrmChargesRecordingChargesCurrId>
-						<prof:InGrpChargesRecordingInGrmChargesRecordingDbCrFlg/>
-						<prof:InGrpChargesRecordingInGrmChargesRecordingDiscountedAmn>0</prof:InGrpChargesRecordingInGrmChargesRecordingDiscountedAmn>
-					</prof:FEXS01InGrpChargesRecordingItem>
-					<prof:FEXS01InGrpChargesRecordingItem>
-						<prof:InGrpChargesRecordingInGrmChargesRecordingChargeCode>0</prof:InGrpChargesRecordingInGrmChargesRecordingChargeCode>
-						<prof:InGrpChargesRecordingInGrmChargesRecordingChargeType/>
-						<prof:InGrpChargesRecordingInGrmChargesRecordingChargedAmn>0</prof:InGrpChargesRecordingInGrmChargesRecordingChargedAmn>
-						<prof:InGrpChargesRecordingInGrmChargesRecordingChargesCurrId>0</prof:InGrpChargesRecordingInGrmChargesRecordingChargesCurrId>
-						<prof:InGrpChargesRecordingInGrmChargesRecordingDbCrFlg/>
-						<prof:InGrpChargesRecordingInGrmChargesRecordingDiscountedAmn>0</prof:InGrpChargesRecordingInGrmChargesRecordingDiscountedAmn>
-					</prof:FEXS01InGrpChargesRecordingItem>
-				</prof:InGrpChargesRecording>
-				<prof:InSoldCurrencyIdCurrency>0</prof:InSoldCurrencyIdCurrency>
-				<prof:InBoughtCurrencyIdCurrency>0</prof:InBoughtCurrencyIdCurrency>
-				<prof:InChkFlagIefSuppliedFxFlag/>
-			</prof:import>
+			curl_setopt_array($curl, array(
+			CURLOPT_URL =>  env('PROFT_TEST_BASEURL'),
+			CURLOPT_RETURNTRANSFER => true,
+			CURLOPT_ENCODING => '',
+			CURLOPT_MAXREDIRS => 10,
+			CURLOPT_TIMEOUT => 0,
+			CURLOPT_FOLLOWLOCATION => true,
+			CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+			CURLOPT_CUSTOMREQUEST => 'POST',
+			CURLOPT_POSTFIELDS =>'<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prof="http://www.intrasoft-internatinal.com/GatewayService/ProfitsExt">
+			<soapenv:Header/>
+			<soapenv:Body>
+				<prof:FEXS01_FundsTransferWithExchange>
+					<!--Optional:-->
+			<prof:import>
+							<prof:Command>INSERT</prof:Command>
+							<prof:InAuthorIefSuppliedFlag>1</prof:InAuthorIefSuppliedFlag>
+							<prof:InBlackListIefSuppliedExchangePurchaseDocNo/>
+							<prof:InBoughtAmountIefSuppliedCheckDigit>0</prof:InBoughtAmountIefSuppliedCheckDigit>
+							<prof:InBoughtAmountIefSuppliedPayableAmount>'.$scalar.'</prof:InBoughtAmountIefSuppliedPayableAmount>
+							<prof:InBoughtProfitsAccountNumber>'.$record->Profits_Debit_Account.'</prof:InBoughtProfitsAccountNumber>
+							<prof:InBoughtProfitsAccountCd>0</prof:InBoughtProfitsAccountCd>
+							<prof:InBoughtProfitsAccountPrftSystem>3</prof:InBoughtProfitsAccountPrftSystem>
+							<prof:InBoughtDepositAccountDesignation/>
+							<prof:InBoughtDepositAccountEntryStatus/>
+							<prof:InBoughtIbanWorkSetChar37/>
+							<prof:InBoughtJustificIdJustific>34001</prof:InBoughtJustificIdJustific>
+							<prof:InBoughtPrftTransactionIdTransact>3191</prof:InBoughtPrftTransactionIdTransact>
+							<prof:InBoughtRepCustomerCDigit>0</prof:InBoughtRepCustomerCDigit>
+							<prof:InBoughtRepCustomerCustId>0</prof:InBoughtRepCustomerCustId>
+							<prof:InBoughtValueDaysIefSuppliedValueDays>0</prof:InBoughtValueDaysIefSuppliedValueDays>
+							<prof:InBoughtValueWorkDatesProductionDate>0001-01-01T00:00:00</prof:InBoughtValueWorkDatesProductionDate>
+							<prof:InChargesAccountIefSuppliedFlag>1</prof:InChargesAccountIefSuppliedFlag>
+							<prof:InChargesDiscountIefSuppliedGenPercentage>0</prof:InChargesDiscountIefSuppliedGenPercentage>
+							<prof:InChequeBookItemIssueDate>0001-01-01T00:00:00</prof:InChequeBookItemIssueDate>
+							<prof:InChequeBookItemItemSerialNumber>0</prof:InChequeBookItemItemSerialNumber>
+							<prof:InCommentsGenericDetailDescription>REF_NUMBER</prof:InCommentsGenericDetailDescription>
+							<prof:InCommentsGenericDetailSerialNum>0</prof:InCommentsGenericDetailSerialNum>
+							<prof:InCommissionsDiscountIefSuppliedGenPercentage>0</prof:InCommissionsDiscountIefSuppliedGenPercentage>
+							<prof:InCreditDepTrxRecordingIComments>AGENCY WITHDRAWAL</prof:InCreditDepTrxRecordingIComments>
+							<prof:InCustAdditionalCustomerTelephone1/>
+							<prof:InCustAddressAddress1/>
+							<prof:InCustAddressAddress2/>
+							<prof:InCustAddressCity/>
+							<prof:InCustAddressZipCode/>
+							<prof:InCustCountryGenericDetailDescription/>
+							<prof:InCustCountryGenericDetailSerialNum>0</prof:InCustCountryGenericDetailSerialNum>
+							<prof:InCustListSetDescription/>
+							<prof:InCustNationalityGenericDetailDescription/>
+							<prof:InCustNationalityGenericDetailParameterType/>
+							<prof:InCustNationalityGenericDetailSerialNum>0</prof:InCustNationalityGenericDetailSerialNum>
+							<prof:InCustOtherAfmAfmNo/>
+							<prof:InCustomerCDigit>0</prof:InCustomerCDigit>
+							<prof:InCustomerCustId>47267</prof:InCustomerCustId>
+							<prof:InDealerPenaltyUsrCode/>
+							<prof:InDealerSpecialRateDealerRefNo/>
+							<prof:InDealerUsrCode/>
+							<prof:InDebitDepTrxRecordingIComments>AGENCY WITHDRAWAL</prof:InDebitDepTrxRecordingIComments>
+							<prof:InDepositCDigitIefSuppliedCheckDigit>0</prof:InDepositCDigitIefSuppliedCheckDigit>
+							<prof:InFwdSwapContractsContractDate>0001-01-01T00:00:00</prof:InFwdSwapContractsContractDate>
+							<prof:InFwdSwapContractsCurrencyRate>0</prof:InFwdSwapContractsCurrencyRate>
+							<prof:InFwdSwapContractsDealerRefNo/>
+							<prof:InFwdSwapContractsEntryComments/>
+							<prof:InFwdSwapContractsEntryStatus/>
+							<prof:InFwdSwapContractsExecDate>0001-01-01T00:00:00</prof:InFwdSwapContractsExecDate>
+							<prof:InFwdSwapContractsMaturityDate>0001-01-01T00:00:00</prof:InFwdSwapContractsMaturityDate>
+							<prof:InFwdSwapContractsNotificationDate>0001-01-01T00:00:00</prof:InFwdSwapContractsNotificationDate>
+							<prof:InFwdSwapContractsOrgSourceAmount>0</prof:InFwdSwapContractsOrgSourceAmount>
+							<prof:InFwdSwapContractsOrgTargetAmount>0</prof:InFwdSwapContractsOrgTargetAmount>
+							<prof:InFwdSwapContractsReferenceNo>0</prof:InFwdSwapContractsReferenceNo>
+							<prof:InFwdSwapContractsSourceUtilBal>0</prof:InFwdSwapContractsSourceUtilBal>
+							<prof:InFwdSwapContractsStartDate>0001-01-01T00:00:00</prof:InFwdSwapContractsStartDate>
+							<prof:InFwdSwapContractsTargetUtilBal>0</prof:InFwdSwapContractsTargetUtilBal>
+							<prof:InFwdSwapContractsWayOfUtilization/>
+							<prof:InGenericIdIefSuppliedIdentificationType/>
+							<prof:InGenericIdIefSuppliedIdentityPassportNo/>
+							<prof:InGenericIdIefSuppliedIssueAuthority/>
+							<prof:InGrpParametersInGrmBankParametersMaxAmntRateTbl>0</prof:InGrpParametersInGrmBankParametersMaxAmntRateTbl>
+							<prof:InGrpParametersInGrmGenericDetailSerialNum>0</prof:InGrpParametersInGrmGenericDetailSerialNum>
+							<prof:InGrpParametersInGrmTerminalTerminalNumber>10.1.1.18</prof:InGrpParametersInGrmTerminalTerminalNumber>
+							<prof:InGrpParametersInGrmTrxCountTrxCounter>0</prof:InGrpParametersInGrmTrxCountTrxCounter>
+							<prof:InGrpParametersInGrmWorkDaysWorkDatesProductionDate>0001-01-01T00:00:00</prof:InGrpParametersInGrmWorkDaysWorkDatesProductionDate>
+							<prof:InIdentCountryGenericDetailDescription/>
+							<prof:InIdentCountryGenericDetailSerialNum>0</prof:InIdentCountryGenericDetailSerialNum>
+							<prof:InJustificIdJustific>9108</prof:InJustificIdJustific>
+							<prof:InOtherIdIdNo/>
+							<prof:InPenaltyDealerSpecialRateDealerRefNo/>
+							<prof:InPostIefSuppliedFlag>Y</prof:InPostIefSuppliedFlag>
+							<prof:InPrftTransactionIdTransact>11041</prof:InPrftTransactionIdTransact>
+							<prof:InProductIdProduct>9102</prof:InProductIdProduct>
+							<prof:InResidentIefSuppliedFlag/>
+							<prof:InSoldAmountIefSuppliedPayableAmount>0</prof:InSoldAmountIefSuppliedPayableAmount>
+							<prof:InSoldAvailabilityDaysIefSuppliedValueDays>0</prof:InSoldAvailabilityDaysIefSuppliedValueDays>
+							<prof:InSoldAvailabilityWorkDatesProductionDate>0001-01-01T00:00:00</prof:InSoldAvailabilityWorkDatesProductionDate>
+							<prof:InSoldProfitsAccountNumber>'.$creditAccount.'</prof:InSoldProfitsAccountNumber>
+							<prof:InSoldProfitsAccountCd>0</prof:InSoldProfitsAccountCd>
+							<prof:InSoldProfitsAccountPrftSystem>3</prof:InSoldProfitsAccountPrftSystem>
+							<prof:InSoldDepositAccountDesignation/>
+							<prof:InSoldDepositAccountEntryStatus/>
+							<prof:InSoldIbanWorkSetChar37/>
+							<prof:InSoldJustificIdJustific>33100</prof:InSoldJustificIdJustific>
+							<prof:InSoldPrftTransactionIdTransact>3181</prof:InSoldPrftTransactionIdTransact>
+							<prof:InSoldRepCustomerCDigit>0</prof:InSoldRepCustomerCDigit>
+							<prof:InSoldRepCustomerCustId>0</prof:InSoldRepCustomerCustId>
+							<prof:InSoldValueDaysIefSuppliedValueDays>0</prof:InSoldValueDaysIefSuppliedValueDays>
+							<prof:InSoldValueWorkDatesProductionDate>0001-01-01T00:00:00</prof:InSoldValueWorkDatesProductionDate>
+							<prof:InSpecialRateTableIefSuppliedFlag/>
+							<prof:InTrxFxFtRecordingSourceTrnType/>
+							<prof:InTrxFxFtRecordingTargetTrnType/>
+							<prof:InUseWayIefSuppliedFlag/>
+							<prof:InGrpAuth>
+								<prof:FEXS01InGrpAuthItem>
+									<prof:InGrpAuthInGrmTeamInformationSuper1Code/>
+									<prof:InGrpAuthInGrmTeamInformationSuper2Code/>
+									<prof:InGrpAuthInGrmTeamInformationTransactionId>0</prof:InGrpAuthInGrmTeamInformationTransactionId>
+								</prof:FEXS01InGrpAuthItem>
+								<prof:FEXS01InGrpAuthItem>
+									<prof:InGrpAuthInGrmTeamInformationSuper1Code/>
+									<prof:InGrpAuthInGrmTeamInformationSuper2Code/>
+									<prof:InGrpAuthInGrmTeamInformationTransactionId>0</prof:InGrpAuthInGrmTeamInformationTransactionId>
+								</prof:FEXS01InGrpAuthItem>
+							</prof:InGrpAuth>
+							<prof:InGrpChargesRecording>
+								<prof:FEXS01InGrpChargesRecordingItem>
+									<prof:InGrpChargesRecordingInGrmChargesRecordingChargeCode>0</prof:InGrpChargesRecordingInGrmChargesRecordingChargeCode>
+									<prof:InGrpChargesRecordingInGrmChargesRecordingChargeType/>
+									<prof:InGrpChargesRecordingInGrmChargesRecordingChargedAmn>0</prof:InGrpChargesRecordingInGrmChargesRecordingChargedAmn>
+									<prof:InGrpChargesRecordingInGrmChargesRecordingChargesCurrId>0</prof:InGrpChargesRecordingInGrmChargesRecordingChargesCurrId>
+									<prof:InGrpChargesRecordingInGrmChargesRecordingDbCrFlg/>
+									<prof:InGrpChargesRecordingInGrmChargesRecordingDiscountedAmn>0</prof:InGrpChargesRecordingInGrmChargesRecordingDiscountedAmn>
+								</prof:FEXS01InGrpChargesRecordingItem>
+								<prof:FEXS01InGrpChargesRecordingItem>
+									<prof:InGrpChargesRecordingInGrmChargesRecordingChargeCode>0</prof:InGrpChargesRecordingInGrmChargesRecordingChargeCode>
+									<prof:InGrpChargesRecordingInGrmChargesRecordingChargeType/>
+									<prof:InGrpChargesRecordingInGrmChargesRecordingChargedAmn>0</prof:InGrpChargesRecordingInGrmChargesRecordingChargedAmn>
+									<prof:InGrpChargesRecordingInGrmChargesRecordingChargesCurrId>0</prof:InGrpChargesRecordingInGrmChargesRecordingChargesCurrId>
+									<prof:InGrpChargesRecordingInGrmChargesRecordingDbCrFlg/>
+									<prof:InGrpChargesRecordingInGrmChargesRecordingDiscountedAmn>0</prof:InGrpChargesRecordingInGrmChargesRecordingDiscountedAmn>
+								</prof:FEXS01InGrpChargesRecordingItem>
+							</prof:InGrpChargesRecording>
+							<prof:InSoldCurrencyIdCurrency>0</prof:InSoldCurrencyIdCurrency>
+							<prof:InBoughtCurrencyIdCurrency>0</prof:InBoughtCurrencyIdCurrency>
+							<prof:InChkFlagIefSuppliedFxFlag/>
+						</prof:import>
 
-         <!--Optional:-->
-         <prof:executionParameters>
-            <prof:ChannelId>'.env('CHANNEL_ID').'</prof:ChannelId>
-            <!--Optional:-->
-            <prof:Password>'.env('PROF_PASSWORD').'</prof:Password>
-            <!--Optional:-->
-            <prof:UniqueId>'.$this->token().'</prof:UniqueId>
-            <!--Optional:-->
-            <prof:CultureName>en</prof:CultureName>
-            <prof:ForcastFlag>false</prof:ForcastFlag>
-            <!--Optional:-->
-            <prof:ReferenceKey>'.time().'</prof:ReferenceKey>
-            <!--Optional:-->
-            <prof:SotfOtp></prof:SotfOtp>
-            <!--Optional:-->
-            <prof:BranchCode></prof:BranchCode>
-            <!--Optional:-->
-            <prof:ExtUniqueUserId>'.env('NAV_USER').'</prof:ExtUniqueUserId>
-            <!--Optional:-->
-            <prof:ExtDeviceAuthCode></prof:ExtDeviceAuthCode>
-         </prof:executionParameters>
-      </prof:FEXS01_FundsTransferWithExchange>
-   </soapenv:Body>
-</soapenv:Envelope>',
-  CURLOPT_HTTPHEADER => array(
-    'Content-Type: text/xml'
-  ),
-));
+					<!--Optional:-->
+					<prof:executionParameters>
+						<prof:ChannelId>'.env('CHANNEL_ID').'</prof:ChannelId>
+						<!--Optional:-->
+						<prof:Password>'.env('PROF_PASSWORD').'</prof:Password>
+						<!--Optional:-->
+						<prof:UniqueId>'.$this->token().'</prof:UniqueId>
+						<!--Optional:-->
+						<prof:CultureName>en</prof:CultureName>
+						<prof:ForcastFlag>false</prof:ForcastFlag>
+						<!--Optional:-->
+						<prof:ReferenceKey>'.time().'</prof:ReferenceKey>
+						<!--Optional:-->
+						<prof:SotfOtp></prof:SotfOtp>
+						<!--Optional:-->
+						<prof:BranchCode></prof:BranchCode>
+						<!--Optional:-->
+						<prof:ExtUniqueUserId>'.env('NAV_USER').'</prof:ExtUniqueUserId>
+						<!--Optional:-->
+						<prof:ExtDeviceAuthCode></prof:ExtDeviceAuthCode>
+					</prof:executionParameters>
+				</prof:FEXS01_FundsTransferWithExchange>
+			</soapenv:Body>
+			</soapenv:Envelope>',
+			CURLOPT_HTTPHEADER => array(
+				'Content-Type: text/xml'
+			),
+			));
 
-$response = curl_exec($curl);
+			$response = curl_exec($curl);
 
-curl_close($curl);
-//echo $response;
-
+			curl_close($curl);
 
 				if(!empty($response))
 				{
@@ -347,6 +351,8 @@ curl_close($curl);
 					// return ($nodes[0]->G0501V_GlAccountValidationResponse->G0501V_GlAccountValidationResult->Result->Message);
 					return json_encode($nodes[0]->FEXS01_FundsTransferWithExchangeResponse->FEXS01_FundsTransferWithExchangeResult);
 				}
+			} // End Condition on resolution of crediting account
+			
 		
 
 	
@@ -384,19 +390,21 @@ curl_close($curl);
 						// Update Imprest Transaction on ERP
 						$params = [
 							'Key' => $account->Key,
-							'TrxDate' => $this->processDate($result->OutDuplicateFxFtRecordingTrxDate) ,
-							'TrxSn' => $result->OutDuplicateFxFtRecordingTrxSn ,
-							'TrxUnit' => $result->OutDuplicateFxFtRecordingTrxUnit ,
-							'TrxUsr' => $result->OutDuplicateFxFtRecordingTrxUsr,
+							'TrxDate' => $this->processDate($result->Tun->TrxDate),
+							'TrxSn' => $result->Tun->TrxUserSn ,
+							'TrxUnit' => $result->Tun->TrxUnit ,
+							'TrxUsr' => $result->Tun->TrxUser,
 							'Sent' => 'Sent',
 							'Posted' => true, 
 							
 						];
 						
 						$update = Yii::$app->investment->updateData($service, $params);
-						print '<pre>';
-						print_r($update);
-						$this->imprestLogger($update);
+						
+
+						print '<pre>'; print_r($update);
+						$log = print_r($update, true);
+						$this->imprestLogger($log);
 					}elseif($result->Result->Type == 'Error')
 					{
 						
@@ -412,9 +420,9 @@ curl_close($curl);
 						];
 						
 						$update = Yii::$app->investment->updateData($service, $params);
-						print '<pre>';
-						print_r($update);
-						$this->imprestLogger($update);
+						print '<pre>'; print_r($update);
+						$log = print_r($update, true);
+						$this->imprestLogger($log);
 					}				
 					
 					exit;	

@@ -349,7 +349,7 @@ curl_close($curl);
 	
 	
 	
-	public function actionPostImprest($record = '')
+	public function actionPostImprest(object $record)
 	{
 		
 
@@ -814,7 +814,7 @@ curl_close($curl);
 	
 	// Post Reversal
 	
-	public function actionPostReversal($record = '')
+	public function actionPostReversal(object $record)
 	{
 		
 
@@ -907,12 +907,8 @@ curl_close($curl);
 	
 	/*Reversal function V2*/
 	
-	public function actionReverse($record = '')
+	public function actionReverse(object $record)
 	{
-		
-
-							
-
 				$curl = curl_init();
 
 				curl_setopt_array($curl, array(
