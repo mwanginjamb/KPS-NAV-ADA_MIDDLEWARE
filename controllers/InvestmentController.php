@@ -28,7 +28,7 @@ class InvestmentController extends Controller
                         'roles' => ['@'],
                     ],
 					[
-                        'actions' => ['index','investments','fetch-vendor','vendors','sync-vendor','token','list-accounts'],
+                        'actions' => ['index','investments','fetch-vendor','vendors','sync-vendor','token','list-accounts','sync-reversal'],
                         'allow' => true,
                         'roles' => ['?'],
                     ],
@@ -79,8 +79,8 @@ class InvestmentController extends Controller
 		
 		$filter = [
 			'Int_Direction' => 'Outgoing',
-			'Sent' => 'Failed', //"Pending",
-			'Posted' => false
+			'Sent' => 'Pending',
+			'Posted' => 1
 		];
 		$result = Yii::$app->investment->getData($service, $filter);
 		
@@ -390,12 +390,13 @@ class InvestmentController extends Controller
 						// Update Imprest Transaction on ERP
 						$params = [
 							'Key' => $account->Key,
-							'TrxDate' => $this->processDate($result->Tun->TrxDate),
-							'TrxSn' => $result->Tun->TrxUserSn ,
-							'TrxUnit' => $result->Tun->TrxUnit ,
-							'TrxUsr' => $result->Tun->TrxUser,
+							'TrxDate' => $this->processDate($result->OutSuccessfulTransactionWorkTrxDate),
+							'TrxSn' => $result->OutSuccessfulTransactionWorkTrxUsrSn ,
+							'TrxUnit' => $result->OutSuccessfulTransactionWorkTrxUnit,
+							'TrxUsr' => $result->OutSuccessfulTransactionWorkTrxUser,
 							'Sent' => 'Sent',
-							'Posted' => true, 
+							//'Posted' => true,
+							//'Reversal' => true, // Only For Test Reversals 
 							
 						];
 						
@@ -411,10 +412,6 @@ class InvestmentController extends Controller
 						// Update Imprest Transaction on ERP
 						$params = [
 							'Key' => $account->Key,
-							'TrxDate' => $this->processDate($result->Tun->TrxDate) ,
-							'TrxSn' => $result->Tun->TunInternalSn ,
-							'TrxUnit' => $result->Tun->TrxUnit ,
-							'TrxUsr' => $result->Tun->TrxUser,
 							'Sent' => 'Failed', 
 							
 						];
@@ -438,13 +435,15 @@ class InvestmentController extends Controller
 	
 	public function actionGetReversals()
 	{
-		$service = Yii::$app->params['ServiceName']['Imprest_Profits'];
+		$service = Yii::$app->params['INV_ServiceName']['FosaTransactions'];
 		
 		$filter = [
+			'Sent' => 'Sent',
+			'Reversed' => 'Pending',
 			'Reversal' => true,
-			'Reversed' => "Pending"
+			'Posted' => true
 		];
-		$result = Yii::$app->navHelper->getData($service,$filter);
+		$result = Yii::$app->investment->getData($service,$filter);
 		
 		/*print '<pre>';
 		print_r($result);
@@ -456,9 +455,9 @@ class InvestmentController extends Controller
 	
 	// Sync and Process Reversals
 	
-		public function actionSyncReversal()
+	public function actionSyncReversal()
 	{
-		$service = Yii::$app->params['ServiceName']['Imprest_Profits'];
+		$service = Yii::$app->params['INV_ServiceName']['FosaTransactions'];
 		$ImprestRecords = $this->actionGetReversals();
 		/*print '<pre>';
 		print_r($ImprestRecords);
@@ -467,11 +466,12 @@ class InvestmentController extends Controller
 		if(is_array($ImprestRecords)) {
 				foreach($ImprestRecords as $account) {
 					
-					$account->Posting_Desricption = property_exists($account,'Posting_Desricption')?$account->Posting_Desricption:'';
+					$account->Posting_Description = property_exists($account,'Posting_Description')?$account->Posting_Description:'Not Set';
 				
 					$result = json_decode($this->actionReverse($account));
 					
-					/*print '<pre>';
+					
+				/*	print '<pre>';
 					print_r($result);
 					exit;*/
 					
@@ -489,7 +489,7 @@ class InvestmentController extends Controller
 									
 								];
 								
-								$update = Yii::$app->navHelper->updateData($service, $params);
+								$update = Yii::$app->investment->updateData($service, $params);
 								print '<pre>';
 								print_r($update);
 								$this->reversalLogger($update);
@@ -503,7 +503,7 @@ class InvestmentController extends Controller
 									
 								];
 								
-								$update = Yii::$app->navHelper->updateData($service, $params);
+								$update = Yii::$app->investment->updateData($service, $params);
 								print '<pre>';
 								print_r($update);
 								$this->reversalLogger($update);
@@ -516,7 +516,7 @@ class InvestmentController extends Controller
 									
 								];
 								
-						$account = Yii::$app->navHelper->updateData($service, $params);
+						$account = Yii::$app->investment->updateData($service, $params);
 						
 						print '<pre>';
 						print_r($result);
@@ -538,172 +538,87 @@ class InvestmentController extends Controller
 	
 	// Post Reversal
 	
-	public function actionPostReversal(object $record)
-	{
-		
-
-							
-
-				$curl = curl_init();
-
-				curl_setopt_array($curl, array(
-				  CURLOPT_URL => 'http://10.1.4.12/iProfits2.GatewayService/ProfitsExtGateway.asmx',
-				  CURLOPT_RETURNTRANSFER => true,
-				  CURLOPT_ENCODING => '',
-				  CURLOPT_MAXREDIRS => 10,
-				  CURLOPT_TIMEOUT => 0,
-				  CURLOPT_FOLLOWLOCATION => true,
-				  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-				  CURLOPT_CUSTOMREQUEST => 'POST',
-				  CURLOPT_POSTFIELDS =>'<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prof="http://www.intrasoft-internatinal.com/GatewayService/ProfitsExt">
-					<soapenv:Header/>
-					<soapenv:Body>
-						<prof:ADDS03_CancelAdditionalTransactions>
-							<!--Optional:-->
-							<prof:import>
-								<!--Optional:-->
-								<prof:Command>INSERT</prof:Command>
-								<!--Optional:-->
-								<prof:InCommandIefSuppliedCommand/>
-								<!--Optional:-->
-								<prof:InFxFtRecordingComments />
-								<prof:InFxFtRecordingTrxDate>'.$this->processProfitsDate($record->TrxDate).'</prof:InFxFtRecordingTrxDate>
-								<prof:InFxFtRecordingTrxSn>'.$record->TrxSn.'</prof:InFxFtRecordingTrxSn>
-								<prof:InFxFtRecordingTrxUnit>'.$record->TrxUnit.'</prof:InFxFtRecordingTrxUnit>
-								<!--Optional:-->
-								<prof:InFxFtRecordingTrxUsr>'.$record->TrxUsr.'</prof:InFxFtRecordingTrxUsr>
-								<prof:InPrftTransactionIdTransact>12511</prof:InPrftTransactionIdTransact>
-								<!--Optional:-->
-								<prof:InTerminalTerminalNumber></prof:InTerminalTerminalNumber>
-							</prof:import>
-							<!--Optional:-->
-							<prof:executionParameters>
-								<prof:ChannelId>'.env('CHANNEL_ID').'</prof:ChannelId>
-								<!--Optional:-->
-								<prof:Password>'.env('PROF_PASSWORD').'</prof:Password>
-								<!--Optional:-->
-								<prof:UniqueId>'.$this->token().'</prof:UniqueId>
-								<!--Optional:-->
-								<prof:CultureName>en</prof:CultureName>
-								<prof:ForcastFlag>false</prof:ForcastFlag>
-								<!--Optional:-->
-								<prof:ReferenceKey>J888888BaX8$*8*8W</prof:ReferenceKey>
-								<!--Optional:-->
-								<prof:SotfOtp/>
-								<!--Optional:-->
-								<prof:BranchCode/>
-								<!--Optional:-->
-								<prof:ExtUniqueUserId>'.env('NAV_USER').'</prof:ExtUniqueUserId>
-								<!--Optional:-->
-								<prof:ExtDeviceAuthCode/>
-							</prof:executionParameters>
-						</prof:ADDS03_CancelAdditionalTransactions>
-					</soapenv:Body>
-				</soapenv:Envelope>',
-				  CURLOPT_HTTPHEADER => array(
-					'Content-Type: text/xml'
-				  ),
-				));
-
-				$response = curl_exec($curl);
-
-				curl_close($curl);
-				echo $response;
-
-
-				
-				
-				if(!empty($response))
-				{
-					$xml_object = simplexml_load_string($response); 
-
-					// register your used namespace prefixes
-					$xml_object->registerXPathNamespace('xsi', 'http://www.w3.org/2001/XMLSchema-instance'); 
-					$xml_object->registerXPathNamespace('soap', 'http://schemas.xmlsoap.org/soap/envelope'); 
-					$nodes = $xml_object->xpath("/soap:Envelope/soap:Body");
-					// $nodes[0]->ADDS03_CancelAdditionalTransactionsResponse->ADDS03_CancelAdditionalTransactionsResult
-			return json_encode($nodes[0]->ADDS03_CancelAdditionalTransactionsResponse->ADDS03_CancelAdditionalTransactionsResult);
-				}
-
-	
-	}
-	
-	
-	/*Reversal function V2*/
-	
 	public function actionReverse(object $record)
 	{
+	
+
+		$curl = curl_init();
+		
+		curl_setopt_array($curl, array(
+		  CURLOPT_URL => env('PROFT_TEST_BASEURL'),
+		  CURLOPT_RETURNTRANSFER => true,
+		  CURLOPT_ENCODING => '',
+		  CURLOPT_MAXREDIRS => 10,
+		  CURLOPT_TIMEOUT => 0,
+		  CURLOPT_FOLLOWLOCATION => true,
+		  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+		  CURLOPT_CUSTOMREQUEST => 'POST',
+		  CURLOPT_POSTFIELDS =>'<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prof="http://www.intrasoft-internatinal.com/GatewayService/ProfitsExt">
+		   <soapenv:Header/>
+		   <soapenv:Body>
+			  <prof:FEXS23_OutgoingOrderIssuanceCancellation>
+				 <!--Optional:-->
+				 <prof:import>
+					<!--Optional:-->
+					<prof:Command>INSERT</prof:Command>
+					<!--Optional:-->
+					<prof:InAuthorIefSuppliedFlag>1</prof:InAuthorIefSuppliedFlag>
+					<!--Optional:-->
+					<prof:InFxFtRecordingComments>'.htmlspecialchars($record->Posting_Description).'</prof:InFxFtRecordingComments>
+					<prof:InFxFtRecordingTrxDate>'.$this->processProfitsDate($record->TrxDate).'</prof:InFxFtRecordingTrxDate>
+					<prof:InFxFtRecordingTrxSn>'.$record->TrxSn.'</prof:InFxFtRecordingTrxSn>
+					<prof:InFxFtRecordingTrxUnit>'.$record->TrxUnit.'</prof:InFxFtRecordingTrxUnit>
+					<!--Optional:-->
+					<prof:InFxFtRecordingTrxUsr>'.$record->TrxUsr.'</prof:InFxFtRecordingTrxUsr>
+					<!--Optional:-->
+					<prof:InParametersInBankParametersRateUsage>1</prof:InParametersInBankParametersRateUsage>
+					<prof:InParametersInGenericDetailSerialNum>0</prof:InParametersInGenericDetailSerialNum>
+					<!--Optional:-->
+					<prof:InParametersInTerminalTerminalNumber>10.240.228.52</prof:InParametersInTerminalTerminalNumber>
+					<prof:InPrftTransactionIdTransact>11161</prof:InPrftTransactionIdTransact>
+					<prof:InSecPrftTransactionIdTransact>11161</prof:InSecPrftTransactionIdTransact>
+				 </prof:import>
+				 <!--Optional:-->
+				 <prof:executionParameters>
+				<prof:ChannelId>'.env('CHANNEL_ID').'</prof:ChannelId>
+				<prof:Password>'.env('PROF_PASSWORD').'</prof:Password>
+				<prof:UniqueId>'.$this->token().'</prof:UniqueId>
+				<prof:CultureName>en</prof:CultureName>
+				<prof:ForcastFlag>false</prof:ForcastFlag>
+				<prof:ReferenceKey>'.time().'</prof:ReferenceKey>
+				<prof:SotfOtp/>
+				<prof:BranchCode/>
+				<prof:ExtUniqueUserId>'.env('NAV_USER').'</prof:ExtUniqueUserId>
+				<prof:ExtDeviceAuthCode/>
+			  </prof:executionParameters>
+			  </prof:FEXS23_OutgoingOrderIssuanceCancellation>
+		   </soapenv:Body>
+		</soapenv:Envelope>',
+		  CURLOPT_HTTPHEADER => array(
+			'Content-Type: text/xml'
+		  ),
+		));
+		
+		$response = curl_exec($curl);
+		
+		$err = curl_error($curl);
+
+
+		if($err) 
+		{
+			return $err;
+		}
+
+		curl_close($curl);
+		echo $response;
+		
 		
 
-							
-
-				$curl = curl_init();
-
-				curl_setopt_array($curl, array(
-				  CURLOPT_URL => env('PROFT_TEST_BASEURL'),
-				  CURLOPT_RETURNTRANSFER => true,
-				  CURLOPT_ENCODING => '',
-				  CURLOPT_MAXREDIRS => 10,
-				  CURLOPT_TIMEOUT => 0,
-				  CURLOPT_FOLLOWLOCATION => true,
-				  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-				  CURLOPT_CUSTOMREQUEST => 'POST',
-				  CURLOPT_POSTFIELDS =>'<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prof="http://www.intrasoft-internatinal.com/GatewayService/ProfitsExt">
-								<soapenv:Header/>
-								<soapenv:Body>
-									<prof:ADDS03_CancelAdditionalTransactions>
-										<!--Optional:-->
-										<prof:import>
-											<!--Optional:-->
-											<prof:Command>INSERT</prof:Command>
-											<!--Optional:-->
-											<prof:InCommandIefSuppliedCommand/>
-											<!--Optional:-->
-											<prof:InFxFtRecordingComments>'.$record->Posting_Desricption.'</prof:InFxFtRecordingComments>
-											<prof:InFxFtRecordingTrxDate>'.$this->processProfitsDate($record->TrxDate).'</prof:InFxFtRecordingTrxDate>
-											<prof:InFxFtRecordingTrxSn>'.$record->TrxSn.'</prof:InFxFtRecordingTrxSn>
-											<prof:InFxFtRecordingTrxUnit>'.$record->TrxUnit.'</prof:InFxFtRecordingTrxUnit>
-											<!--Optional:-->
-											<prof:InFxFtRecordingTrxUsr>'.$record->TrxUsr.'</prof:InFxFtRecordingTrxUsr>
-											<prof:InPrftTransactionIdTransact>12511</prof:InPrftTransactionIdTransact>
-											<!--Optional:-->
-											<prof:InTerminalTerminalNumber></prof:InTerminalTerminalNumber>
-										</prof:import>
-										<!--Optional:-->
-										<prof:executionParameters>
-											<prof:ChannelId>'.env('CHANNEL_ID').'</prof:ChannelId>
-											<!--Optional:-->
-											<prof:Password>'.env('PROF_PASSWORD').'</prof:Password>
-											<!--Optional:-->
-											<prof:UniqueId>'.$this->token().'</prof:UniqueId>
-											<!--Optional:-->
-											<prof:CultureName>en</prof:CultureName>
-											<prof:ForcastFlag>false</prof:ForcastFlag>
-											<!--Optional:-->
-											<prof:ReferenceKey>J8888888BaX8$*8*8W</prof:ReferenceKey>
-											<!--Optional:-->
-											<prof:SotfOtp/>
-											<!--Optional:-->
-											<prof:BranchCode/>
-											<!--Optional:-->
-											<prof:ExtUniqueUserId>'.env('NAV_USER').'</prof:ExtUniqueUserId>
-											<!--Optional:-->
-											<prof:ExtDeviceAuthCode/>
-										</prof:executionParameters>
-									</prof:ADDS03_CancelAdditionalTransactions>
-								</soapenv:Body>
-							</soapenv:Envelope>',
-				  CURLOPT_HTTPHEADER => array(
-					'Content-Type: text/xml'
-				  ),
-				));
-
-				$response = curl_exec($curl);
-
-				curl_close($curl);
-				echo $response;
-
-
+		
+		
+		
+		
+			
 				
 				
 				if(!empty($response))
@@ -715,13 +630,14 @@ class InvestmentController extends Controller
 					$xml_object->registerXPathNamespace('soap', 'http://schemas.xmlsoap.org/soap/envelope'); 
 					$nodes = $xml_object->xpath("/soap:Envelope/soap:Body");
 					// $nodes[0]->ADDS03_CancelAdditionalTransactionsResponse->ADDS03_CancelAdditionalTransactionsResult
-					return json_encode($nodes[0]->ADDS03_CancelAdditionalTransactionsResponse->ADDS03_CancelAdditionalTransactionsResult);
+					return json_encode($nodes[0]->FEXS23_OutgoingOrderIssuanceCancellationResponse->FEXS23_OutgoingOrderIssuanceCancellationResult);
 				}
-				
-				
 
 	
 	}
+	
+	
+// Get Member Credit Account
 
 	public function actionListAccounts($memberNo)
 	{
@@ -831,7 +747,7 @@ class InvestmentController extends Controller
 	
 	private function reversalLogger($message)
 	{
-		$filename = 'log/reversal.txt';
+		$filename = 'log/reversal_imprest.txt';
 		$req_dump = print_r($message, TRUE);
 		$fp = fopen($filename, 'a');
 		fwrite($fp, $req_dump);

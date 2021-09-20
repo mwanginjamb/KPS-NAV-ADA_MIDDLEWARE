@@ -1,0 +1,1336 @@
+null{"State":"No Reversal transactions to synchronize."}{"State":"No Reversal transactions to synchronize."}stdClass Object
+(
+    [Tun] => stdClass Object
+        (
+            [TrxDate] => 0001-01-01T00:00:00
+            [TrxUnit] => 0
+            [TrxUserSn] => 0
+            [TunInternalSn] => 0
+        )
+
+    [Result] => stdClass Object
+        (
+            [Type] => Exception
+            [Id] => Profits Gateway -> System.Exception
+            [Message] => PROFITS®_-_THE_REFERENCE_SENT_BY_THE_EXTERNAL_CHANNEL_IS_NOT_UNIQUE
+            [StackTrace] =>    at ProfitsExt.ProfitsBridge.BaseProfitsExtBridge`2.ExtBind()
+   at ProfitsExt.ProfitsBridge.Bridge.FEXS23_OutgoingOrderIssuanceCancellationBridge.Execute()
+   at iProfits2.Gateway.BaseBridge.InternalExtExecution(BaseImport import, ExtExecParameters executionParameters)
+        )
+
+    [OutCollaborationBanksBankId] => 0
+    [OutCurrPrintLineDate] => 0001-01-01T00:00:00
+    [OutDomesticCurrencyIdCurrency] => 0
+    [OutDomesticCurrencyMinNegotUnit] => 0
+    [OutFromUnitCode] => 0
+    [OutFxSuccessfulTransactionWorkAdviceCounter] => 0
+    [OutFxSuccessfulTransactionWorkTrxDate] => 0001-01-01T00:00:00
+    [OutFxSuccessfulTransactionWorkTrxUnit] => 0
+    [OutFxSuccessfulTransactionWorkTrxUsrSn] => 0
+    [OutFxSuccessfulTransactionWorkTunInternalSn] => 0
+    [OutSuccessfulTransactionWorkAdviceCounter] => 0
+    [OutSuccessfulTransactionWorkTrxDate] => 0001-01-01T00:00:00
+    [OutSuccessfulTransactionWorkTrxUnit] => 0
+    [OutSuccessfulTransactionWorkTrxUsrSn] => 0
+    [OutSuccessfulTransactionWorkTunInternalSn] => 0
+    [OutTimeFxFtRecordingProductionTime] => 0001-01-01T00:00:00
+    [OutToUnitCode] => 0
+    [OutTrxCountTrxCounter] => 0
+    [OutGrpUserTotalList] => stdClass Object
+        (
+        )
+
+    [OutDetailsList] => stdClass Object
+        (
+        )
+
+    [OutGroupTcPrintList] => stdClass Object
+        (
+        )
+
+    [OutGroupList] => stdClass Object
+        (
+        )
+
+    [OutFxGrpUserTotalList] => stdClass Object
+        (
+        )
+
+)
+stdClass Object
+(
+    [Key] => 40;3F8BAAJ7/0IAUgBEAC0AMAAwADAAMgAAAACHfCU=9;1454119890;
+    [Entry_No] => 9596
+    [Document_No] => BRD-0002
+    [Posting_Date] => 2020-06-02
+    [Member_No] => 05084
+    [Member_Name] => STANLEY OBIMBO GAIGAI  
+    [ID_Number] => 8079333
+    [Posting_Description] => DINNER & BREAKFAST ALLOWANCE
+    [Amount] => -3600
+    [Source_Code] => BRDPAY
+    [Memo] => BRDPAY
+    [Created_On] => 2020-06-03T06:29:31.283Z
+    [Created_By] => POLICESACCO0\MESHACK.ODHIAMBO
+    [Posted] => 1
+    [Posted_On] => 0001-01-01T00:00:00
+    [Integration_Account] => L02-05084
+    [Int_Direction] => Outgoing
+    [Sent] => Sent
+    [Integration_Source] => KPS_CBS
+    [Profits_Member_No] => 83919
+    [Profits_Debit_Account] => 50304389900
+    [Reversal] => 1
+    [TrxDate] => 2021-06-03
+    [TrxSn] => 2428
+    [TrxUnit] => 1
+    [TrxUsr] => 99120003
+    [Reversed] => Failed
+)
+stdClass Object
+(
+    [Tun] => stdClass Object
+        (
+            [TrxDate] => 0001-01-01T00:00:00
+            [TrxUnit] => 0
+            [TrxUserSn] => 0
+            [TunInternalSn] => 0
+        )
+
+    [Result] => stdClass Object
+        (
+            [Type] => Exception
+            [Id] => Profits Gateway -> System.Exception
+            [Message] => PROFITS®_-_THE_REFERENCE_SENT_BY_THE_EXTERNAL_CHANNEL_IS_NOT_UNIQUE
+            [StackTrace] =>    at ProfitsExt.ProfitsBridge.BaseProfitsExtBridge`2.ExtBind()
+   at ProfitsExt.ProfitsBridge.Bridge.FEXS23_OutgoingOrderIssuanceCancellationBridge.Execute()
+   at iProfits2.Gateway.BaseBridge.InternalExtExecution(BaseImport import, ExtExecParameters executionParameters)
+        )
+
+    [OutCollaborationBanksBankId] => 0
+    [OutCurrPrintLineDate] => 0001-01-01T00:00:00
+    [OutDomesticCurrencyIdCurrency] => 0
+    [OutDomesticCurrencyMinNegotUnit] => 0
+    [OutFromUnitCode] => 0
+    [OutFxSuccessfulTransactionWorkAdviceCounter] => 0
+    [OutFxSuccessfulTransactionWorkTrxDate] => 0001-01-01T00:00:00
+    [OutFxSuccessfulTransactionWorkTrxUnit] => 0
+    [OutFxSuccessfulTransactionWorkTrxUsrSn] => 0
+    [OutFxSuccessfulTransactionWorkTunInternalSn] => 0
+    [OutSuccessfulTransactionWorkAdviceCounter] => 0
+    [OutSuccessfulTransactionWorkTrxDate] => 0001-01-01T00:00:00
+    [OutSuccessfulTransactionWorkTrxUnit] => 0
+    [OutSuccessfulTransactionWorkTrxUsrSn] => 0
+    [OutSuccessfulTransactionWorkTunInternalSn] => 0
+    [OutTimeFxFtRecordingProductionTime] => 0001-01-01T00:00:00
+    [OutToUnitCode] => 0
+    [OutTrxCountTrxCounter] => 0
+    [OutGrpUserTotalList] => stdClass Object
+        (
+        )
+
+    [OutDetailsList] => stdClass Object
+        (
+        )
+
+    [OutGroupTcPrintList] => stdClass Object
+        (
+        )
+
+    [OutGroupList] => stdClass Object
+        (
+        )
+
+    [OutFxGrpUserTotalList] => stdClass Object
+        (
+        )
+
+)
+stdClass Object
+(
+    [Key] => 40;3F8BAAJ7/0IAUgBEAC0AMAAwADAAMgAAAACHfCU=9;1454119890;
+    [Entry_No] => 9596
+    [Document_No] => BRD-0002
+    [Posting_Date] => 2020-06-02
+    [Member_No] => 05084
+    [Member_Name] => STANLEY OBIMBO GAIGAI  
+    [ID_Number] => 8079333
+    [Posting_Description] => DINNER & BREAKFAST ALLOWANCE
+    [Amount] => -3600
+    [Source_Code] => BRDPAY
+    [Memo] => BRDPAY
+    [Created_On] => 2020-06-03T06:29:31.283Z
+    [Created_By] => POLICESACCO0\MESHACK.ODHIAMBO
+    [Posted] => 1
+    [Posted_On] => 0001-01-01T00:00:00
+    [Integration_Account] => L02-05084
+    [Int_Direction] => Outgoing
+    [Sent] => Sent
+    [Integration_Source] => KPS_CBS
+    [Profits_Member_No] => 83919
+    [Profits_Debit_Account] => 50304389900
+    [Reversal] => 1
+    [TrxDate] => 2021-06-03
+    [TrxSn] => 2428
+    [TrxUnit] => 1
+    [TrxUsr] => 99120003
+    [Reversed] => Failed
+)
+nullstdClass Object
+(
+    [Tun] => stdClass Object
+        (
+            [TrxDate] => 0001-01-01T00:00:00
+            [TrxUnit] => 0
+            [TrxUserSn] => 0
+            [TunInternalSn] => 0
+        )
+
+    [Result] => stdClass Object
+        (
+            [Type] => Exception
+            [Id] => Profits Gateway -> System.Exception
+            [Message] => PROFITS®_-_THE_REFERENCE_SENT_BY_THE_EXTERNAL_CHANNEL_IS_NOT_UNIQUE
+            [StackTrace] =>    at ProfitsExt.ProfitsBridge.BaseProfitsExtBridge`2.ExtBind()
+   at ProfitsExt.ProfitsBridge.Bridge.FEXS23_OutgoingOrderIssuanceCancellationBridge.Execute()
+   at iProfits2.Gateway.BaseBridge.InternalExtExecution(BaseImport import, ExtExecParameters executionParameters)
+        )
+
+    [OutCollaborationBanksBankId] => 0
+    [OutCurrPrintLineDate] => 0001-01-01T00:00:00
+    [OutDomesticCurrencyIdCurrency] => 0
+    [OutDomesticCurrencyMinNegotUnit] => 0
+    [OutFromUnitCode] => 0
+    [OutFxSuccessfulTransactionWorkAdviceCounter] => 0
+    [OutFxSuccessfulTransactionWorkTrxDate] => 0001-01-01T00:00:00
+    [OutFxSuccessfulTransactionWorkTrxUnit] => 0
+    [OutFxSuccessfulTransactionWorkTrxUsrSn] => 0
+    [OutFxSuccessfulTransactionWorkTunInternalSn] => 0
+    [OutSuccessfulTransactionWorkAdviceCounter] => 0
+    [OutSuccessfulTransactionWorkTrxDate] => 0001-01-01T00:00:00
+    [OutSuccessfulTransactionWorkTrxUnit] => 0
+    [OutSuccessfulTransactionWorkTrxUsrSn] => 0
+    [OutSuccessfulTransactionWorkTunInternalSn] => 0
+    [OutTimeFxFtRecordingProductionTime] => 0001-01-01T00:00:00
+    [OutToUnitCode] => 0
+    [OutTrxCountTrxCounter] => 0
+    [OutGrpUserTotalList] => stdClass Object
+        (
+        )
+
+    [OutDetailsList] => stdClass Object
+        (
+        )
+
+    [OutGroupTcPrintList] => stdClass Object
+        (
+        )
+
+    [OutGroupList] => stdClass Object
+        (
+        )
+
+    [OutFxGrpUserTotalList] => stdClass Object
+        (
+        )
+
+)
+stdClass Object
+(
+    [Key] => 40;3F8BAAJ7/0IAUgBEAC0AMAAwADAAMgAAAACHfCU=9;1454119890;
+    [Entry_No] => 9596
+    [Document_No] => BRD-0002
+    [Posting_Date] => 2020-06-02
+    [Member_No] => 05084
+    [Member_Name] => STANLEY OBIMBO GAIGAI  
+    [ID_Number] => 8079333
+    [Posting_Description] => DINNER & BREAKFAST ALLOWANCE
+    [Amount] => -3600
+    [Source_Code] => BRDPAY
+    [Memo] => BRDPAY
+    [Created_On] => 2020-06-03T06:29:31.283Z
+    [Created_By] => POLICESACCO0\MESHACK.ODHIAMBO
+    [Posted] => 1
+    [Posted_On] => 0001-01-01T00:00:00
+    [Integration_Account] => L02-05084
+    [Int_Direction] => Outgoing
+    [Sent] => Sent
+    [Integration_Source] => KPS_CBS
+    [Profits_Member_No] => 83919
+    [Profits_Debit_Account] => 50304389900
+    [Reversal] => 1
+    [TrxDate] => 2021-06-03
+    [TrxSn] => 2428
+    [TrxUnit] => 1
+    [TrxUsr] => 99120003
+    [Reversed] => Failed
+)
+stdClass Object
+(
+    [Tun] => stdClass Object
+        (
+            [TrxDate] => 2021-06-03T00:00:00
+            [TrxUnit] => 1
+            [TrxUser] => 99120003
+            [TrxUserSn] => 0
+            [TunInternalSn] => 0
+        )
+
+    [Result] => stdClass Object
+        (
+            [Type] => Unknown
+            [Id] => 12001
+            [Message] => ALREADY_CANCELLED
+            [StackTrace] => stdClass Object
+                (
+                )
+
+        )
+
+    [OutCollaborationBanksBankId] => 0
+    [OutCurrPrintLineDate] => 0001-01-01T00:00:00
+    [OutDomesticCurrencyIdCurrency] => 0
+    [OutDomesticCurrencyMinNegotUnit] => 0
+    [OutFromUnitCode] => 0
+    [OutFxSuccessfulTransactionWorkAdviceCounter] => 0
+    [OutFxSuccessfulTransactionWorkTrxDate] => 0001-01-01T00:00:00
+    [OutFxSuccessfulTransactionWorkTrxUnit] => 0
+    [OutFxSuccessfulTransactionWorkTrxUsrSn] => 0
+    [OutFxSuccessfulTransactionWorkTunInternalSn] => 0
+    [OutSuccessfulTransactionWorkAdviceCounter] => 0
+    [OutSuccessfulTransactionWorkTrxDate] => 0001-01-01T00:00:00
+    [OutSuccessfulTransactionWorkTrxUnit] => 0
+    [OutSuccessfulTransactionWorkTrxUsrSn] => 0
+    [OutSuccessfulTransactionWorkTunInternalSn] => 0
+    [OutTimeFxFtRecordingProductionTime] => 0001-01-01T00:00:00
+    [OutToUnitCode] => 0
+    [OutTrxCountTrxCounter] => 0
+    [OutGrpUserTotalList] => stdClass Object
+        (
+        )
+
+    [OutDetailsList] => stdClass Object
+        (
+        )
+
+    [OutGroupTcPrintList] => stdClass Object
+        (
+        )
+
+    [OutGroupList] => stdClass Object
+        (
+        )
+
+    [OutFxGrpUserTotalList] => stdClass Object
+        (
+        )
+
+)
+stdClass Object
+(
+    [Key] => 40;3F8BAAJ7/0IAUgBEAC0AMAAwADAAMgAAAACHfCU=9;1454119890;
+    [Entry_No] => 9596
+    [Document_No] => BRD-0002
+    [Posting_Date] => 2020-06-02
+    [Member_No] => 05084
+    [Member_Name] => STANLEY OBIMBO GAIGAI  
+    [ID_Number] => 8079333
+    [Posting_Description] => DINNER & BREAKFAST ALLOWANCE
+    [Amount] => -3600
+    [Source_Code] => BRDPAY
+    [Memo] => BRDPAY
+    [Created_On] => 2020-06-03T06:29:31.283Z
+    [Created_By] => POLICESACCO0\MESHACK.ODHIAMBO
+    [Posted] => 1
+    [Posted_On] => 0001-01-01T00:00:00
+    [Integration_Account] => L02-05084
+    [Int_Direction] => Outgoing
+    [Sent] => Sent
+    [Integration_Source] => KPS_CBS
+    [Profits_Member_No] => 83919
+    [Profits_Debit_Account] => 50304389900
+    [Reversal] => 1
+    [TrxDate] => 2021-06-03
+    [TrxSn] => 2428
+    [TrxUnit] => 1
+    [TrxUsr] => 99120003
+    [Reversed] => Failed
+)
+stdClass Object
+(
+    [Tun] => stdClass Object
+        (
+            [TrxDate] => 2021-06-03T00:00:00
+            [TrxUnit] => 1
+            [TrxUser] => 99120003
+            [TrxUserSn] => 0
+            [TunInternalSn] => 0
+        )
+
+    [Result] => stdClass Object
+        (
+            [Type] => Unknown
+            [Id] => 12001
+            [Message] => ALREADY_CANCELLED
+            [StackTrace] => stdClass Object
+                (
+                )
+
+        )
+
+    [OutCollaborationBanksBankId] => 0
+    [OutCurrPrintLineDate] => 0001-01-01T00:00:00
+    [OutDomesticCurrencyIdCurrency] => 0
+    [OutDomesticCurrencyMinNegotUnit] => 0
+    [OutFromUnitCode] => 0
+    [OutFxSuccessfulTransactionWorkAdviceCounter] => 0
+    [OutFxSuccessfulTransactionWorkTrxDate] => 0001-01-01T00:00:00
+    [OutFxSuccessfulTransactionWorkTrxUnit] => 0
+    [OutFxSuccessfulTransactionWorkTrxUsrSn] => 0
+    [OutFxSuccessfulTransactionWorkTunInternalSn] => 0
+    [OutSuccessfulTransactionWorkAdviceCounter] => 0
+    [OutSuccessfulTransactionWorkTrxDate] => 0001-01-01T00:00:00
+    [OutSuccessfulTransactionWorkTrxUnit] => 0
+    [OutSuccessfulTransactionWorkTrxUsrSn] => 0
+    [OutSuccessfulTransactionWorkTunInternalSn] => 0
+    [OutTimeFxFtRecordingProductionTime] => 0001-01-01T00:00:00
+    [OutToUnitCode] => 0
+    [OutTrxCountTrxCounter] => 0
+    [OutGrpUserTotalList] => stdClass Object
+        (
+        )
+
+    [OutDetailsList] => stdClass Object
+        (
+        )
+
+    [OutGroupTcPrintList] => stdClass Object
+        (
+        )
+
+    [OutGroupList] => stdClass Object
+        (
+        )
+
+    [OutFxGrpUserTotalList] => stdClass Object
+        (
+        )
+
+)
+stdClass Object
+(
+    [Key] => 40;3F8BAAJ7/0IAUgBEAC0AMAAwADAAMgAAAACHfCU=9;1454119890;
+    [Entry_No] => 9596
+    [Document_No] => BRD-0002
+    [Posting_Date] => 2020-06-02
+    [Member_No] => 05084
+    [Member_Name] => STANLEY OBIMBO GAIGAI  
+    [ID_Number] => 8079333
+    [Posting_Description] => DINNER & BREAKFAST ALLOWANCE
+    [Amount] => -3600
+    [Source_Code] => BRDPAY
+    [Memo] => BRDPAY
+    [Created_On] => 2020-06-03T06:29:31.283Z
+    [Created_By] => POLICESACCO0\MESHACK.ODHIAMBO
+    [Posted] => 1
+    [Posted_On] => 0001-01-01T00:00:00
+    [Integration_Account] => L02-05084
+    [Int_Direction] => Outgoing
+    [Sent] => Sent
+    [Integration_Source] => KPS_CBS
+    [Profits_Member_No] => 83919
+    [Profits_Debit_Account] => 50304389900
+    [Reversal] => 1
+    [TrxDate] => 2021-06-03
+    [TrxSn] => 2428
+    [TrxUnit] => 1
+    [TrxUsr] => 99120003
+    [Reversed] => Failed
+)
+nullstdClass Object
+(
+    [Tun] => stdClass Object
+        (
+            [TrxDate] => 2021-06-03T00:00:00
+            [TrxUnit] => 1
+            [TrxUser] => 99120004
+            [TrxUserSn] => 0
+            [TunInternalSn] => 0
+        )
+
+    [Result] => stdClass Object
+        (
+            [Type] => Success
+            [Id] => 10958
+            [Message] => success
+            [StackTrace] => stdClass Object
+                (
+                )
+
+        )
+
+    [OutChargesAccountIefSuppliedFlag] => 1
+    [OutCollaborationBanksBankId] => 0
+    [OutCollaborationBanksBankName] => stdClass Object
+        (
+        )
+
+    [OutCurrPrintLineDate] => 2021-09-20T00:00:00
+    [OutDomesticCurrencyIdCurrency] => 22
+    [OutDomesticCurrencyMinNegotUnit] => 0
+    [OutDomesticCurrencyNationalFlag] => 1
+    [OutDomesticCurrencyShortDescr] => KES  
+    [OutFromUnitCode] => 0
+    [OutFromUnitUnitName] => stdClass Object
+        (
+        )
+
+    [OutFxParVoucherRunVoucherLine] => stdClass Object
+        (
+        )
+
+    [OutFxSuccessfulTransactionWorkAdviceCounter] => 0
+    [OutFxSuccessfulTransactionWorkAdviceTitle] => stdClass Object
+        (
+        )
+
+    [OutFxSuccessfulTransactionWorkDatetimestamp] => stdClass Object
+        (
+        )
+
+    [OutFxSuccessfulTransactionWorkTrxDate] => 0001-01-01T00:00:00
+    [OutFxSuccessfulTransactionWorkTrxUnit] => 0
+    [OutFxSuccessfulTransactionWorkTrxUser] => stdClass Object
+        (
+        )
+
+    [OutFxSuccessfulTransactionWorkTrxUsrSn] => 0
+    [OutFxSuccessfulTransactionWorkTunInternalSn] => 0
+    [OutParVoucherRunVoucherLine] =>  # #Purch And Sale Of Foreign Banknotes-can #????S????      / UNIT  :          1#??????????     / DATE  :        03/06/2021#???S??S        / USER  :        99120004#A/A S??????G?S / TRS NO:            1439# # # #INITIAL TRX : 0000103-06-202199120003Sn :  00002428                             #
+    [OutStatusIefSuppliedActionEntryDesc] => OK                  
+    [OutStatusIefSuppliedSrvStatus] => srvok 
+    [OutSuccessfulTransactionWorkAdviceCounter] => 135
+    [OutSuccessfulTransactionWorkAdviceTitle] => stdClass Object
+        (
+        )
+
+    [OutSuccessfulTransactionWorkDatetimestamp] => stdClass Object
+        (
+        )
+
+    [OutSuccessfulTransactionWorkTrxDate] => 2021-06-03T00:00:00
+    [OutSuccessfulTransactionWorkTrxUnit] => 1
+    [OutSuccessfulTransactionWorkTrxUser] => 99120004
+    [OutSuccessfulTransactionWorkTrxUsrSn] => 1439
+    [OutSuccessfulTransactionWorkTunInternalSn] => 1
+    [OutTimeFxFtRecordingProductionTime] => 0001-01-01T17:50:32
+    [OutToUnitCode] => 0
+    [OutToUnitUnitName] => stdClass Object
+        (
+        )
+
+    [OutTrxCountTrxCounter] => 1439
+    [OutGrpUserTotalList] => stdClass Object
+        (
+        )
+
+    [OutDetailsList] => stdClass Object
+        (
+        )
+
+    [OutGroupTcPrintList] => stdClass Object
+        (
+        )
+
+    [OutGroupList] => stdClass Object
+        (
+            [FEXS23OutGroupItem] => stdClass Object
+                (
+                    [OutGroupOutGrpDebitProfitsAccountAccountNumber] => 50200775100                             
+                    [OutGroupOutGrpDebitProfitsAccountAccountCd] => 0
+                    [OutGroupOutGrpCreditProfitsAccountAccountNumber] => 50304389900                             
+                    [OutGroupOutGrpCreditProfitsAccountAccountCd] => 0
+                    [OutGroupOutGrpDepositIbanWorkSetChar37] => KE0706100010000000000059960          
+                    [OutGroupOutGrpWithdrawIbanWorkSetChar37] => KE4606100010000000000602264          
+                    [OutGroupOutGrpTrsCharSuppliedChar20] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpTrsCharSuppliedChar5] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpTrsSellCollaborationBanksBankId] => 0
+                    [OutGroupOutGrpTrsSellCollaborationBanksBankName] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpTrsBuyCollaborationBanksBankId] => 0
+                    [OutGroupOutGrpTrsBuyCollaborationBanksBankName] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpTrsUsrCode] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpChaTaxIefSuppliedPayableAmount] => 0
+                    [OutGroupOutGrpComTaxIefSuppliedPayableAmount] => 0
+                    [OutGroupOutGrpDepChequeBookItemItemSerialNumber] => 0
+                    [OutGroupOutGrpWithChequeBookItemItemSerialNumber] => 0
+                    [OutGroupOutGrp1JustificIdJustific] => 9108
+                    [OutGroupOutGrp1JustificDescription] => Transfer From/to Account (insurance)
+                    [OutGroupOutGrpDepDepositAccountDesignation] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpWithDepositAccountDesignation] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpTargetCurrencyDisplayedDecimalPlaces] => 2
+                    [OutGroupOutGrpTargetCurrencyIdCurrency] => 22
+                    [OutGroupOutGrpTargetCurrencyShortDescr] => KES  
+                    [OutGroupOutGrpSourceCurrencyDisplayedDecimalPlaces] => 2
+                    [OutGroupOutGrpSourceCurrencyIdCurrency] => 22
+                    [OutGroupOutGrpSourceCurrencyShortDescr] => KES  
+                    [OutGroupOutGrpServiceTrxjustSourceTrnType] => 4
+                    [OutGroupOutGrpServiceTrxjustTargetTrnType] => 3
+                    [OutGroupOutGrpWithUnitCode] => 1
+                    [OutGroupOutGrpDepUnitCode] => 1
+                    [OutGroupOutWithProductIdProduct] => 32003
+                    [OutGroupOutWithProductDescription] => GROUP BUSINESS DEPOSIT
+                    [OutGroupOutDepProductIdProduct] => 32401
+                    [OutGroupOutDepProductDescription] => FOSA MAIN SAVINGS ACCOUNT
+                    [OutGroupOutGrpFxFtRecordingAccAmount30] => 0
+                    [OutGroupOutGrpFxFtRecordingAccAmount1] => 3600
+                    [OutGroupOutGrpFxFtRecordingAccAmount3] => 3600
+                    [OutGroupOutGrpFxFtRecordingSourceCurrency] => 22
+                    [OutGroupOutGrpFxFtRecordingTargetCurrency] => 22
+                    [OutGroupOutGrpFxFtRecordingComChaTaxCurr] => 22
+                    [OutGroupOutGrpFxFtRecordingDealerCurrencyRa] => 1
+                    [OutGroupOutGrpFxFtRecordingRateTableNumber] => 0
+                    [OutGroupOutGrpFxFtRecordingDealerRefNo] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingSourceDepAccount] => 60226
+                    [OutGroupOutGrpFxFtRecordingTargetDepAccount] => 5996
+                    [OutGroupOutGrpFxFtRecordingSourceValueDate] => 2021-06-03T00:00:00
+                    [OutGroupOutGrpFxFtRecordingTargetValueDate] => 2021-06-03T00:00:00
+                    [OutGroupOutGrpFxFtRecordingAvailabilityDate] => 2021-06-03T00:00:00
+                    [OutGroupOutGrpFxFtRecordingBordereauNum] => 0
+                    [OutGroupOutGrpFxFtRecordingContractRefNo] => 0
+                    [OutGroupOutGrpFxFtRecordingOrderNumber] => 0
+                    [OutGroupOutGrpFxFtRecordingBankDraftNum1] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingTrxCustomerCode] => 47267
+                    [OutGroupOutGrpFxFtRecordingCustName] => JOYCE JEPCHUMBA KOECH
+                    [OutGroupOutGrpFxFtRecordingCustAddress1] => UNKNOWN
+                    [OutGroupOutGrpFxFtRecordingCustAddress2] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingCustZipcode] => 00000     
+                    [OutGroupOutGrpFxFtRecordingCustCity] => UNKNOWN
+                    [OutGroupOutGrpFxFtRecordingTrxDebitSn] => 2429
+                    [OutGroupOutGrpFxFtRecordingTrxCreditSn] => 2430
+                    [OutGroupOutGrpFxFtRecordingSourceCustomerTy] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingTargetCustomerTy] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingRateIndicator] => N
+                    [OutGroupOutGrpFxFtRecordingDealerCode] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingFxDocNo] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingCustTaxRegNum] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingPrintFlag] => 3
+                    [OutGroupOutGrpFxFtRecordingCustCountry] => KENYA
+                    [OutGroupOutGrpFxFtRecordingOutgoingOrderNum] => 0
+                    [OutGroupOutGrpFxFtRecordingDispatchNumber] => 0
+                    [OutGroupOutGrpFxFtRecordingInterbranchNumber] => 0
+                    [OutGroupOutGrpFxFtRecordingInterbankNumber] => 0
+                    [OutGroupOutGrpFxFtRecordingOutgoingDraftNo] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingIncomingDraftNo] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingPayBankName] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingSourceFwdContrac] => 0
+                    [OutGroupOutGrpFxFtRecordingTargetFwdContrac] => 0
+                    [OutGroupOutGrpFxFtRecordingRateFlag] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingUserTotalDocInd] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingCustIdPasspNum] => 30849734
+                    [OutGroupOutGrpFxFtRecordingCustIdIssueAuth] => KENYA
+                    [OutGroupOutGrpFxFtRecordingDestinationCntry] => 0
+                    [OutGroupOutGrpFxFtRecordingChequeNumber1] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingChequeAmount1] => 0
+                    [OutGroupOutGrpFxFtRecordingChequeIssueDate1] => 0001-01-01T00:00:00
+                    [OutGroupOutGrpFxFtRecordingAccAmount2] => 3600
+                    [OutGroupOutGrpFxFtRecordingAccAmount4] => 3600
+                    [OutGroupOutGrpFxFtRecordingSourceBuyRate] => 1
+                    [OutGroupOutGrpFxFtRecordingTargetSellRate] => 1
+                    [OutGroupOutGrpFxFtRecordingBenefCustIdNum] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingCustIdType] => I
+                    [OutGroupOutGrpFxFtRecordingBenefCustCode] => 0
+                    [OutGroupOutGrpFxFtRecordingBenefCustName] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingBenefCustAddres1] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingBenefCustZipcode] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingBenefCustCity] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingBenefTaxRegNo] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingIncomingOrderNum] => 0
+                    [OutGroupOutGrpFxFtRecordingBenefCustIdIssu] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingBenefCustIdType] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingChequeNumber1To] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingChequeNumber2] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingChequeNumber3] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingChequeNumber4] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingChequeNumber5] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingChequeNumber6] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingChequeNumber7] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingChequeNumber8] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingChequeNumber9] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingChequeNumber10] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingChequeNumber2To] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingChequeAmount2] => 0
+                    [OutGroupOutGrpFxFtRecordingChequeNumber3To] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingChequeAmount3] => 0
+                    [OutGroupOutGrpFxFtRecordingChequeNumber4To] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingChequeAmount4] => 0
+                    [OutGroupOutGrpFxFtRecordingChequeNumber5To] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingChequeAmount5] => 0
+                    [OutGroupOutGrpFxFtRecordingChequeNumber6To] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingChequeAmount6] => 0
+                    [OutGroupOutGrpFxFtRecordingChequeNumber7To] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingChequeAmount7] => 0
+                    [OutGroupOutGrpFxFtRecordingChequeNumber8To] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingChequeAmount8] => 0
+                    [OutGroupOutGrpFxFtRecordingChequeNumber9To] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingChequeAmount9] => 0
+                    [OutGroupOutGrpFxFtRecordingChequeNumber10To] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingChequeAmount10] => 0
+                    [OutGroupOutGrpFxFtRecordingAccAmount31] => 0
+                    [OutGroupOutGrpFxFtRecordingAccAmount32] => 0
+                    [OutGroupOutGrpFxFtRecordingAccAmount39] => 0
+                    [OutGroupOutGrpFxFtRecordingNewStatus] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingBenefCustAddres2] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpFxFtRecordingResidentInd] => 0
+                    [OutGroupOutGrpFxFtRecordingAccAmount41] => 0
+                    [OutGroupOutGrpProductIdProduct] => 0
+                    [OutGroupOutGrpProductDescription] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpTeamInformationProductId] => 0
+                    [OutGroupOutGrpTeamInformationProductDescription] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpTeamInformationTransactionId] => 0
+                    [OutGroupOutGrpTeamInformationTransactionDescription] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpTeamInformationJustificationId] => 0
+                    [OutGroupOutGrpTeamInformationJustificationDescription] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpTeamInformationCustomerCode] => 0
+                    [OutGroupOutGrpTeamInformationCustomerSurname] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpTeamInformationAccountCode] => 0
+                    [OutGroupOutGrpTeamInformationRequiredProfile1] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpTeamInformationRequiredProfile2] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpTeamInformationAuthorizationType] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpTeamInformationSuper1Code] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpTeamInformationSuper1TerminalId] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpTeamInformationSuper2Code] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpTeamInformationSuper2TerminalId] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpTeamInformationAuthorizationResult] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpTeamInformationEvaluationResult] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpTeamInformationValueDateSpread] => 0
+                    [OutGroupOutGrpTeamInformationAvailableDateSpread] => 0
+                    [OutGroupOutGrpTeamInformationTrsAmount] => 0
+                    [OutGroupOutGrpTeamInformationUnitCode] => 0
+                    [OutGroupOutGrpTeamInformationUserCode] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpTeamInformationUserProfile1] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpTeamInformationUserProfile2] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpTeamInformationUserProfile3] => stdClass Object
+                        (
+                        )
+
+                    [OutGroupOutGrpWithDepTrxjustTrnType] => 4
+                    [OutGroupOutGrpWithJustificIdJustific] => 34001
+                    [OutGroupOutGrpWithJustificDescription] => Journal Debit
+                    [OutGroupOutGrpWithDepTrxRecordingTrxUsrSn] => 1437
+                    [OutGroupOutGrpDepDepTrxRecordingTrxUsrSn] => 1438
+                    [OutGroupOutGrpDepJustificIdJustific] => 33100
+                    [OutGroupOutGrpDepJustificDescription] => Journal Credit
+                    [OutGroupOutGrpDepDepTrxjustTrnType] => 3
+                    [OutGroupOutGrpDomChargetaxIefSuppliedGenAmount] => 0
+                    [OutGroupOutGrpDomComTaxIefSuppliedGenAmount] => 0
+                    [OutGroupOutGrpDomComchataxIefSuppliedFinalCommission] => 0
+                    [OutGroupOutGrpDomComchataxIefSuppliedGenAmount] => 0
+                    [OutGroupOutGrpDomComchataxIefSuppliedFinalCharges] => 0
+                    [OutGroupOutGrpAmountsIefSuppliedGenAmount] => 0
+                    [OutGroupOutGrpAmountsIefSuppliedFinalCommission] => 0
+                    [OutGroupOutGrpAmountsIefSuppliedFinalCharges] => 0
+                )
+
+        )
+
+    [OutFxGrpUserTotalList] => stdClass Object
+        (
+        )
+
+)
+stdClass Object
+(
+    [Key] => 40;3F8BAAJ7/0IAUgBEAC0AMAAwADAAMgAAAACHfCU=9;1454122390;
+    [Entry_No] => 9596
+    [Document_No] => BRD-0002
+    [Posting_Date] => 2020-06-02
+    [Member_No] => 05084
+    [Member_Name] => STANLEY OBIMBO GAIGAI  
+    [ID_Number] => 8079333
+    [Posting_Description] => DINNER & BREAKFAST ALLOWANCE
+    [Amount] => -3600
+    [Source_Code] => BRDPAY
+    [Memo] => BRDPAY
+    [Created_On] => 2020-06-03T06:29:31.283Z
+    [Created_By] => POLICESACCO0\MESHACK.ODHIAMBO
+    [Posted] => 1
+    [Posted_On] => 0001-01-01T00:00:00
+    [Integration_Account] => L02-05084
+    [Int_Direction] => Outgoing
+    [Sent] => Sent
+    [Integration_Source] => KPS_CBS
+    [Profits_Member_No] => 83919
+    [Profits_Debit_Account] => 50304389900
+    [Reversal] => 1
+    [TrxDate] => 2021-06-03
+    [TrxSn] => 2428
+    [TrxUnit] => 1
+    [TrxUsr] => 99120003
+    [Reversed] => Sent
+)
+stdClass Object
+(
+    [Tun] => stdClass Object
+        (
+            [TrxDate] => 2021-06-03T00:00:00
+            [TrxUnit] => 1
+            [TrxUser] => 99120004
+            [TrxUserSn] => 0
+            [TunInternalSn] => 0
+        )
+
+    [Result] => stdClass Object
+        (
+            [Type] => Unknown
+            [Id] => 12001
+            [Message] => ALREADY_CANCELLED
+            [StackTrace] => stdClass Object
+                (
+                )
+
+        )
+
+    [OutCollaborationBanksBankId] => 0
+    [OutCurrPrintLineDate] => 0001-01-01T00:00:00
+    [OutDomesticCurrencyIdCurrency] => 0
+    [OutDomesticCurrencyMinNegotUnit] => 0
+    [OutFromUnitCode] => 0
+    [OutFxSuccessfulTransactionWorkAdviceCounter] => 0
+    [OutFxSuccessfulTransactionWorkTrxDate] => 0001-01-01T00:00:00
+    [OutFxSuccessfulTransactionWorkTrxUnit] => 0
+    [OutFxSuccessfulTransactionWorkTrxUsrSn] => 0
+    [OutFxSuccessfulTransactionWorkTunInternalSn] => 0
+    [OutSuccessfulTransactionWorkAdviceCounter] => 0
+    [OutSuccessfulTransactionWorkTrxDate] => 0001-01-01T00:00:00
+    [OutSuccessfulTransactionWorkTrxUnit] => 0
+    [OutSuccessfulTransactionWorkTrxUsrSn] => 0
+    [OutSuccessfulTransactionWorkTunInternalSn] => 0
+    [OutTimeFxFtRecordingProductionTime] => 0001-01-01T00:00:00
+    [OutToUnitCode] => 0
+    [OutTrxCountTrxCounter] => 0
+    [OutGrpUserTotalList] => stdClass Object
+        (
+        )
+
+    [OutDetailsList] => stdClass Object
+        (
+        )
+
+    [OutGroupTcPrintList] => stdClass Object
+        (
+        )
+
+    [OutGroupList] => stdClass Object
+        (
+        )
+
+    [OutFxGrpUserTotalList] => stdClass Object
+        (
+        )
+
+)
+stdClass Object
+(
+    [Key] => 40;3F8BAAJ7/0IAUgBEAC0AMAAwADAAMgAAAACHfCU=9;1454122760;
+    [Entry_No] => 9596
+    [Document_No] => BRD-0002
+    [Posting_Date] => 2020-06-02
+    [Member_No] => 05084
+    [Member_Name] => STANLEY OBIMBO GAIGAI  
+    [ID_Number] => 8079333
+    [Posting_Description] => DINNER & BREAKFAST ALLOWANCE
+    [Amount] => -3600
+    [Source_Code] => BRDPAY
+    [Memo] => BRDPAY
+    [Created_On] => 2020-06-03T06:29:31.283Z
+    [Created_By] => POLICESACCO0\MESHACK.ODHIAMBO
+    [Posted] => 1
+    [Posted_On] => 0001-01-01T00:00:00
+    [Integration_Account] => L02-05084
+    [Int_Direction] => Outgoing
+    [Sent] => Sent
+    [Integration_Source] => KPS_CBS
+    [Profits_Member_No] => 83919
+    [Profits_Debit_Account] => 50304389900
+    [Reversal] => 1
+    [TrxDate] => 2021-06-03
+    [TrxSn] => 2428
+    [TrxUnit] => 1
+    [TrxUsr] => 99120003
+    [Reversed] => Failed
+)
+stdClass Object
+(
+    [Tun] => stdClass Object
+        (
+            [TrxDate] => 2021-06-03T00:00:00
+            [TrxUnit] => 1
+            [TrxUser] => 99120003
+            [TrxUserSn] => 0
+            [TunInternalSn] => 0
+        )
+
+    [Result] => stdClass Object
+        (
+            [Type] => Unknown
+            [Id] => 12001
+            [Message] => ALREADY_CANCELLED
+            [StackTrace] => stdClass Object
+                (
+                )
+
+        )
+
+    [OutCollaborationBanksBankId] => 0
+    [OutCurrPrintLineDate] => 0001-01-01T00:00:00
+    [OutDomesticCurrencyIdCurrency] => 0
+    [OutDomesticCurrencyMinNegotUnit] => 0
+    [OutFromUnitCode] => 0
+    [OutFxSuccessfulTransactionWorkAdviceCounter] => 0
+    [OutFxSuccessfulTransactionWorkTrxDate] => 0001-01-01T00:00:00
+    [OutFxSuccessfulTransactionWorkTrxUnit] => 0
+    [OutFxSuccessfulTransactionWorkTrxUsrSn] => 0
+    [OutFxSuccessfulTransactionWorkTunInternalSn] => 0
+    [OutSuccessfulTransactionWorkAdviceCounter] => 0
+    [OutSuccessfulTransactionWorkTrxDate] => 0001-01-01T00:00:00
+    [OutSuccessfulTransactionWorkTrxUnit] => 0
+    [OutSuccessfulTransactionWorkTrxUsrSn] => 0
+    [OutSuccessfulTransactionWorkTunInternalSn] => 0
+    [OutTimeFxFtRecordingProductionTime] => 0001-01-01T00:00:00
+    [OutToUnitCode] => 0
+    [OutTrxCountTrxCounter] => 0
+    [OutGrpUserTotalList] => stdClass Object
+        (
+        )
+
+    [OutDetailsList] => stdClass Object
+        (
+        )
+
+    [OutGroupTcPrintList] => stdClass Object
+        (
+        )
+
+    [OutGroupList] => stdClass Object
+        (
+        )
+
+    [OutFxGrpUserTotalList] => stdClass Object
+        (
+        )
+
+)
+stdClass Object
+(
+    [Key] => 40;3F8BAAJ7/0IAUgBEAC0AMAAwADAAMgAAAACHfCU=9;1454122760;
+    [Entry_No] => 9596
+    [Document_No] => BRD-0002
+    [Posting_Date] => 2020-06-02
+    [Member_No] => 05084
+    [Member_Name] => STANLEY OBIMBO GAIGAI  
+    [ID_Number] => 8079333
+    [Posting_Description] => DINNER & BREAKFAST ALLOWANCE
+    [Amount] => -3600
+    [Source_Code] => BRDPAY
+    [Memo] => BRDPAY
+    [Created_On] => 2020-06-03T06:29:31.283Z
+    [Created_By] => POLICESACCO0\MESHACK.ODHIAMBO
+    [Posted] => 1
+    [Posted_On] => 0001-01-01T00:00:00
+    [Integration_Account] => L02-05084
+    [Int_Direction] => Outgoing
+    [Sent] => Sent
+    [Integration_Source] => KPS_CBS
+    [Profits_Member_No] => 83919
+    [Profits_Debit_Account] => 50304389900
+    [Reversal] => 1
+    [TrxDate] => 2021-06-03
+    [TrxSn] => 2428
+    [TrxUnit] => 1
+    [TrxUsr] => 99120003
+    [Reversed] => Failed
+)
+{"State":"No Reversal transactions to synchronize."}{"State":"No Reversal transactions to synchronize."}stdClass Object
+(
+    [Tun] => stdClass Object
+        (
+            [TrxDate] => 2021-06-03T00:00:00
+            [TrxUnit] => 1
+            [TrxUser] => 99120004
+            [TrxUserSn] => 0
+            [TunInternalSn] => 0
+        )
+
+    [Result] => stdClass Object
+        (
+            [Type] => Unknown
+            [Id] => 12001
+            [Message] => ALREADY_CANCELLED
+            [StackTrace] => stdClass Object
+                (
+                )
+
+        )
+
+    [OutCollaborationBanksBankId] => 0
+    [OutCurrPrintLineDate] => 0001-01-01T00:00:00
+    [OutDomesticCurrencyIdCurrency] => 0
+    [OutDomesticCurrencyMinNegotUnit] => 0
+    [OutFromUnitCode] => 0
+    [OutFxSuccessfulTransactionWorkAdviceCounter] => 0
+    [OutFxSuccessfulTransactionWorkTrxDate] => 0001-01-01T00:00:00
+    [OutFxSuccessfulTransactionWorkTrxUnit] => 0
+    [OutFxSuccessfulTransactionWorkTrxUsrSn] => 0
+    [OutFxSuccessfulTransactionWorkTunInternalSn] => 0
+    [OutSuccessfulTransactionWorkAdviceCounter] => 0
+    [OutSuccessfulTransactionWorkTrxDate] => 0001-01-01T00:00:00
+    [OutSuccessfulTransactionWorkTrxUnit] => 0
+    [OutSuccessfulTransactionWorkTrxUsrSn] => 0
+    [OutSuccessfulTransactionWorkTunInternalSn] => 0
+    [OutTimeFxFtRecordingProductionTime] => 0001-01-01T00:00:00
+    [OutToUnitCode] => 0
+    [OutTrxCountTrxCounter] => 0
+    [OutGrpUserTotalList] => stdClass Object
+        (
+        )
+
+    [OutDetailsList] => stdClass Object
+        (
+        )
+
+    [OutGroupTcPrintList] => stdClass Object
+        (
+        )
+
+    [OutGroupList] => stdClass Object
+        (
+        )
+
+    [OutFxGrpUserTotalList] => stdClass Object
+        (
+        )
+
+)
+stdClass Object
+(
+    [Key] => 40;3F8BAAJ7/0IAUgBEAC0AMAAwADAAMgAAAACHfCU=9;1454122760;
+    [Entry_No] => 9596
+    [Document_No] => BRD-0002
+    [Posting_Date] => 2020-06-02
+    [Member_No] => 05084
+    [Member_Name] => STANLEY OBIMBO GAIGAI  
+    [ID_Number] => 8079333
+    [Posting_Description] => DINNER & BREAKFAST ALLOWANCE
+    [Amount] => -3600
+    [Source_Code] => BRDPAY
+    [Memo] => BRDPAY
+    [Created_On] => 2020-06-03T06:29:31.283Z
+    [Created_By] => POLICESACCO0\MESHACK.ODHIAMBO
+    [Posted] => 1
+    [Posted_On] => 0001-01-01T00:00:00
+    [Integration_Account] => L02-05084
+    [Int_Direction] => Outgoing
+    [Sent] => Sent
+    [Integration_Source] => KPS_CBS
+    [Profits_Member_No] => 83919
+    [Profits_Debit_Account] => 50304389900
+    [Reversal] => 1
+    [TrxDate] => 2021-06-03
+    [TrxSn] => 2428
+    [TrxUnit] => 1
+    [TrxUsr] => 99120003
+    [Reversed] => Failed
+)
+stdClass Object
+(
+    [Tun] => stdClass Object
+        (
+            [TrxDate] => 2021-06-03T00:00:00
+            [TrxUnit] => 1
+            [TrxUser] => 99120003
+            [TrxUserSn] => 0
+            [TunInternalSn] => 0
+        )
+
+    [Result] => stdClass Object
+        (
+            [Type] => Unknown
+            [Id] => 12001
+            [Message] => ALREADY_CANCELLED
+            [StackTrace] => stdClass Object
+                (
+                )
+
+        )
+
+    [OutCollaborationBanksBankId] => 0
+    [OutCurrPrintLineDate] => 0001-01-01T00:00:00
+    [OutDomesticCurrencyIdCurrency] => 0
+    [OutDomesticCurrencyMinNegotUnit] => 0
+    [OutFromUnitCode] => 0
+    [OutFxSuccessfulTransactionWorkAdviceCounter] => 0
+    [OutFxSuccessfulTransactionWorkTrxDate] => 0001-01-01T00:00:00
+    [OutFxSuccessfulTransactionWorkTrxUnit] => 0
+    [OutFxSuccessfulTransactionWorkTrxUsrSn] => 0
+    [OutFxSuccessfulTransactionWorkTunInternalSn] => 0
+    [OutSuccessfulTransactionWorkAdviceCounter] => 0
+    [OutSuccessfulTransactionWorkTrxDate] => 0001-01-01T00:00:00
+    [OutSuccessfulTransactionWorkTrxUnit] => 0
+    [OutSuccessfulTransactionWorkTrxUsrSn] => 0
+    [OutSuccessfulTransactionWorkTunInternalSn] => 0
+    [OutTimeFxFtRecordingProductionTime] => 0001-01-01T00:00:00
+    [OutToUnitCode] => 0
+    [OutTrxCountTrxCounter] => 0
+    [OutGrpUserTotalList] => stdClass Object
+        (
+        )
+
+    [OutDetailsList] => stdClass Object
+        (
+        )
+
+    [OutGroupTcPrintList] => stdClass Object
+        (
+        )
+
+    [OutGroupList] => stdClass Object
+        (
+        )
+
+    [OutFxGrpUserTotalList] => stdClass Object
+        (
+        )
+
+)
+stdClass Object
+(
+    [Key] => 40;3F8BAAJ7/0IAUgBEAC0AMAAwADAAMgAAAACHfCU=9;1454122760;
+    [Entry_No] => 9596
+    [Document_No] => BRD-0002
+    [Posting_Date] => 2020-06-02
+    [Member_No] => 05084
+    [Member_Name] => STANLEY OBIMBO GAIGAI  
+    [ID_Number] => 8079333
+    [Posting_Description] => DINNER & BREAKFAST ALLOWANCE
+    [Amount] => -3600
+    [Source_Code] => BRDPAY
+    [Memo] => BRDPAY
+    [Created_On] => 2020-06-03T06:29:31.283Z
+    [Created_By] => POLICESACCO0\MESHACK.ODHIAMBO
+    [Posted] => 1
+    [Posted_On] => 0001-01-01T00:00:00
+    [Integration_Account] => L02-05084
+    [Int_Direction] => Outgoing
+    [Sent] => Sent
+    [Integration_Source] => KPS_CBS
+    [Profits_Member_No] => 83919
+    [Profits_Debit_Account] => 50304389900
+    [Reversal] => 1
+    [TrxDate] => 2021-06-03
+    [TrxSn] => 2428
+    [TrxUnit] => 1
+    [TrxUsr] => 99120003
+    [Reversed] => Failed
+)
+{"State":"No Reversal transactions to synchronize."}{"State":"No Reversal transactions to synchronize."}{"State":"No Reversal transactions to synchronize."}{"State":"No Reversal transactions to synchronize."}{"State":"No Reversal transactions to synchronize."}{"State":"No Reversal transactions to synchronize."}{"State":"No Reversal transactions to synchronize."}{"State":"No Reversal transactions to synchronize."}{"State":"No Reversal transactions to synchronize."}{"State":"No Reversal transactions to synchronize."}{"State":"No Reversal transactions to synchronize."}{"State":"No Reversal transactions to synchronize."}
