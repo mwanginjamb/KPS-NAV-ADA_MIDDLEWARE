@@ -80,7 +80,8 @@ class InvestmentController extends Controller
 		$filter = [
 			'Int_Direction' => 'Outgoing',
 			'Sent' => 'Pending',
-			'Posted' => 1
+			'Posted' => 1,
+			
 		];
 		$result = Yii::$app->investment->getData($service, $filter);
 		
@@ -156,7 +157,7 @@ class InvestmentController extends Controller
 			$creditAccount = $this->actionListAccounts($record->Profits_Member_No);
 			if($creditAccount) 
 			{
-				$log = 'Credit Account: '.$creditAccount;
+				$log = 'Credit Account: '.$creditAccount.'<br />';
 				$this->imprestLogger($log);
 
 				$curl = curl_init();
@@ -353,9 +354,6 @@ class InvestmentController extends Controller
 				}
 			} // End Condition on resolution of crediting account
 			
-		
-
-	
 	}
 	
 	
@@ -376,7 +374,9 @@ class InvestmentController extends Controller
 				foreach($ImprestRecords as $account) {
 				
 							
-				
+					if(empty($account->Profits_Debit_Account)){
+							continue;
+					}
 					
 					$result = json_decode($this->actionPostInvestment($account));
 					/*print '<pre>';
@@ -412,7 +412,8 @@ class InvestmentController extends Controller
 						// Update Imprest Transaction on ERP
 						$params = [
 							'Key' => $account->Key,
-							'Sent' => 'Failed', 
+							'Sent' => 'Failed',
+							'Comments' => $result->Result->Message 
 							
 						];
 						
@@ -425,6 +426,9 @@ class InvestmentController extends Controller
 					exit;	
 				}
 		}
+
+		$log = print_r('No Investment transactions to synchronize.', true);
+		$this->imprestLogger($log);
 		
 		return Json_encode(['State' => 'No Investment transactions to synchronize.']);
 			
@@ -499,7 +503,8 @@ class InvestmentController extends Controller
 								// Update Imprest Transaction on ERP
 								$params = [
 									'Key' => $account->Key,
-									'Reversed' => 'Failed', 
+									'Reversed' => 'Failed',
+									'Comments' => $result->Result->Message  
 									
 								];
 								
@@ -747,7 +752,7 @@ class InvestmentController extends Controller
 	
 	private function reversalLogger($message)
 	{
-		$filename = 'log/reversal_imprest.txt';
+		$filename = 'log/reversal_investment.txt';
 		$req_dump = print_r($message, TRUE);
 		$fp = fopen($filename, 'a');
 		fwrite($fp, $req_dump);
