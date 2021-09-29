@@ -98,6 +98,10 @@ class InvestmentController extends Controller
 	
 	public function token()
 	{
+
+			  $user = env('NAV_USER').time();
+			  Yii::$app->session->set('INV_USER', $user);
+
 			  $curl = curl_init();
 
 			  curl_setopt_array($curl, array(
@@ -119,7 +123,7 @@ class InvestmentController extends Controller
 					  <executionParameters>
 						<ChannelId>'.env('CHANNEL_ID').'</ChannelId>
 						<Password>'.env('PROF_PASSWORD').'</Password>
-						<ExtUniqueUserId>'.env('NAV_USER').'</ExtUniqueUserId>
+						<ExtUniqueUserId>'.Yii::$app->session->get('INV_USER').'</ExtUniqueUserId>
 					  </executionParameters>
 					</CI3499V_GetAuthorized>
 				  </soap:Body>
@@ -330,7 +334,7 @@ class InvestmentController extends Controller
 						<!--Optional:-->
 						<prof:BranchCode></prof:BranchCode>
 						<!--Optional:-->
-						<prof:ExtUniqueUserId>'.env('NAV_USER').'</prof:ExtUniqueUserId>
+						<prof:ExtUniqueUserId>'.Yii::$app->session->get('INV_USER').'</prof:ExtUniqueUserId>
 						<!--Optional:-->
 						<prof:ExtDeviceAuthCode></prof:ExtDeviceAuthCode>
 					</prof:executionParameters>
@@ -599,7 +603,7 @@ class InvestmentController extends Controller
 				<prof:ReferenceKey>'.time().'</prof:ReferenceKey>
 				<prof:SotfOtp/>
 				<prof:BranchCode/>
-				<prof:ExtUniqueUserId>'.env('NAV_USER').'</prof:ExtUniqueUserId>
+				<prof:ExtUniqueUserId>'.Yii::$app->session->get('INV_USER').'</prof:ExtUniqueUserId>
 				<prof:ExtDeviceAuthCode/>
 			  </prof:executionParameters>
 			  </prof:FEXS23_OutgoingOrderIssuanceCancellation>
@@ -688,7 +692,7 @@ class InvestmentController extends Controller
 					<ReferenceKey>'.time().'</ReferenceKey>
 					<SotfOtp></SotfOtp>
 					<BranchCode></BranchCode>
-					<ExtUniqueUserId>'.env('NAV_USER').'</ExtUniqueUserId>
+					<ExtUniqueUserId>'.Yii::$app->session->get('INV_USER').'</ExtUniqueUserId>
 					<ExtDeviceAuthCode></ExtDeviceAuthCode>
 				</executionParameters>
 				</PRT099V_WebCustomerAccountsList>

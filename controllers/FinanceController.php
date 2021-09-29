@@ -322,7 +322,7 @@ curl_setopt_array($curl, array(
             <!--Optional:-->
             <prof:BranchCode></prof:BranchCode>
             <!--Optional:-->
-            <prof:ExtUniqueUserId>'.env('NAV_USER').'</prof:ExtUniqueUserId>
+            <prof:ExtUniqueUserId>'.Yii::$app->session->get('USER').'</prof:ExtUniqueUserId>
             <!--Optional:-->
             <prof:ExtDeviceAuthCode></prof:ExtDeviceAuthCode>
          </prof:executionParameters>
@@ -886,7 +886,7 @@ curl_close($curl);
 								<!--Optional:-->
 								<prof:BranchCode/>
 								<!--Optional:-->
-								<prof:ExtUniqueUserId>'.env('NAV_USER').'</prof:ExtUniqueUserId>
+								<prof:ExtUniqueUserId>'.Yii::$app->session->get('USER').'</prof:ExtUniqueUserId>
 								<!--Optional:-->
 								<prof:ExtDeviceAuthCode/>
 							</prof:executionParameters>
@@ -977,7 +977,7 @@ curl_close($curl);
 											<!--Optional:-->
 											<prof:BranchCode/>
 											<!--Optional:-->
-											<prof:ExtUniqueUserId>'.env('NAV_USER').'</prof:ExtUniqueUserId>
+											<prof:ExtUniqueUserId>'.Yii::$app->session->get('USER').'</prof:ExtUniqueUserId>
 											<!--Optional:-->
 											<prof:ExtDeviceAuthCode/>
 										</prof:executionParameters>
