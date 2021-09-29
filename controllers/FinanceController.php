@@ -665,9 +665,9 @@ curl_close($curl);
 		if(is_array($ImprestRecords)) {
 				foreach($ImprestRecords as $account) {
 				
-				$account->Posting_Desricption = '';// property_exists($account,'Posting_Desricption')?$account->Posting_Desricption:'';
+				$account->Posting_Desricption = property_exists($account,'Posting_Desricption')?$account->Posting_Desricption:'';
 				
-				$account->Comments = '';// property_exists($account,'Comments')?$account->Comments:'Comments Not Set';
+				$account->Comments = property_exists($account,'Comments')?$account->Comments:'Comments Not Set';
 					
 					$result = json_decode($this->actionPostImprest($account));
 					
