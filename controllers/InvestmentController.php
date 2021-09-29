@@ -101,13 +101,15 @@ class InvestmentController extends Controller
 			  $curl = curl_init();
 
 			  curl_setopt_array($curl, array(
-			  CURLOPT_URL => env('PROFT_TEST_BASEURL'),
+			  CURLOPT_URL => env('PROFITS_LIVE_BASEURL'),
 			  CURLOPT_RETURNTRANSFER => true,
 			  CURLOPT_ENCODING => '',
 			  CURLOPT_MAXREDIRS => 10,
 			  CURLOPT_TIMEOUT => 0,
 			  CURLOPT_FOLLOWLOCATION => true,
 			  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+			  CURLOPT_SSL_VERIFYPEER => false, // DON'T VERIFY SSL CERTIFICATE
+			  CURLOPT_SSL_VERIFYHOST => 0, // DON'T VERIFY HOST NAME
 			  CURLOPT_CUSTOMREQUEST => 'POST',
 			  CURLOPT_POSTFIELDS =>'<?xml version="1.0" encoding="utf-8"?>
 				<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
@@ -165,13 +167,15 @@ class InvestmentController extends Controller
 				$scalar = ($record->Amount < 0)?($record->Amount * -1):$record->Amount ;
 
 			curl_setopt_array($curl, array(
-			CURLOPT_URL =>  env('PROFT_TEST_BASEURL'),
+			CURLOPT_URL =>  env('PROFITS_LIVE_BASEURL'),
 			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_ENCODING => '',
 			CURLOPT_MAXREDIRS => 10,
 			CURLOPT_TIMEOUT => 0,
 			CURLOPT_FOLLOWLOCATION => true,
 			CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+			CURLOPT_SSL_VERIFYPEER => false, // DON'T VERIFY SSL CERTIFICATE
+			CURLOPT_SSL_VERIFYHOST => 0, // DON'T VERIFY HOST NAME
 			CURLOPT_CUSTOMREQUEST => 'POST',
 			CURLOPT_POSTFIELDS =>'<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prof="http://www.intrasoft-internatinal.com/GatewayService/ProfitsExt">
 			<soapenv:Header/>
@@ -550,13 +554,15 @@ class InvestmentController extends Controller
 		$curl = curl_init();
 		
 		curl_setopt_array($curl, array(
-		  CURLOPT_URL => env('PROFT_TEST_BASEURL'),
+		  CURLOPT_URL => env('PROFITS_LIVE_BASEURL'),
 		  CURLOPT_RETURNTRANSFER => true,
 		  CURLOPT_ENCODING => '',
 		  CURLOPT_MAXREDIRS => 10,
 		  CURLOPT_TIMEOUT => 0,
 		  CURLOPT_FOLLOWLOCATION => true,
 		  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+		  CURLOPT_SSL_VERIFYPEER => false, // DON'T VERIFY SSL CERTIFICATE
+		  CURLOPT_SSL_VERIFYHOST => 0, // DON'T VERIFY HOST NAME
 		  CURLOPT_CUSTOMREQUEST => 'POST',
 		  CURLOPT_POSTFIELDS =>'<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prof="http://www.intrasoft-internatinal.com/GatewayService/ProfitsExt">
 		   <soapenv:Header/>
@@ -651,13 +657,15 @@ class InvestmentController extends Controller
 			$curl = curl_init();
 
 			curl_setopt_array($curl, array(
-			CURLOPT_URL => env('PROFT_TEST_BASEURL'),
+			CURLOPT_URL => env('PROFITS_LIVE_BASEURL'),
 			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_ENCODING => '',
 			CURLOPT_MAXREDIRS => 10,
 			CURLOPT_TIMEOUT => 0,
 			CURLOPT_FOLLOWLOCATION => true,
 			CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+			CURLOPT_SSL_VERIFYPEER => false, // DON'T VERIFY SSL CERTIFICATE
+			CURLOPT_SSL_VERIFYHOST => 0, // DON'T VERIFY HOST NAME
 			CURLOPT_CUSTOMREQUEST => 'POST',
 			CURLOPT_POSTFIELDS =>'<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
 			<soap:Body>

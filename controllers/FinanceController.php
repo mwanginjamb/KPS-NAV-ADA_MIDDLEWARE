@@ -77,16 +77,22 @@ class FinanceController extends Controller
 	
 	public function token()
 	{
+
+			$user = env('NAV_USER').time();
+			Yii::$app->session->set('USER', $user);
+
 			  $curl = curl_init();
 
 			  curl_setopt_array($curl, array(
-			  CURLOPT_URL => 'http://10.1.4.12/iProfits2.GatewayService/ProfitsExtGateway.asmx',
+			  CURLOPT_URL => env('PROFITS_LIVE_BASEURL'),
 			  CURLOPT_RETURNTRANSFER => true,
 			  CURLOPT_ENCODING => '',
 			  CURLOPT_MAXREDIRS => 10,
 			  CURLOPT_TIMEOUT => 0,
 			  CURLOPT_FOLLOWLOCATION => true,
 			  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+			  CURLOPT_SSL_VERIFYPEER => false, // DON'T VERIFY SSL CERTIFICATE
+			  CURLOPT_SSL_VERIFYHOST => 0, // DON'T VERIFY HOST NAME
 			  CURLOPT_CUSTOMREQUEST => 'POST',
 			  CURLOPT_POSTFIELDS =>'<?xml version="1.0" encoding="utf-8"?>
 				<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
@@ -96,7 +102,7 @@ class FinanceController extends Controller
 					  <executionParameters>
 						<ChannelId>'.env('CHANNEL_ID').'</ChannelId>
 						<Password>'.env('PROF_PASSWORD').'</Password>
-						<ExtUniqueUserId>'.env('NAV_USER').'</ExtUniqueUserId>
+						<ExtUniqueUserId>'.Yii::$app->session->get('USER').'</ExtUniqueUserId>
 					  </executionParameters>
 					</CI3499V_GetAuthorized>
 				  </soap:Body>
@@ -122,9 +128,7 @@ class FinanceController extends Controller
 
 			return ($nodes[0]->CI3499V_GetAuthorizedResponse->CI3499V_GetAuthorizedResult->UniqueId);
 			}
-			
-			
-			
+					
 
 	}
 	
@@ -138,13 +142,15 @@ class FinanceController extends Controller
 			$curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'http://10.1.4.12/iProfits2.GatewayService/ProfitsExtGateway.asmx',
+  CURLOPT_URL => env('PROFITS_LIVE_BASEURL'),
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => '',
   CURLOPT_MAXREDIRS => 10,
   CURLOPT_TIMEOUT => 0,
   CURLOPT_FOLLOWLOCATION => true,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_SSL_VERIFYPEER => false, // DON'T VERIFY SSL CERTIFICATE
+  CURLOPT_SSL_VERIFYHOST => 0, // DON'T VERIFY HOST NAME
   CURLOPT_CUSTOMREQUEST => 'POST',
   CURLOPT_POSTFIELDS =>'<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prof="http://www.intrasoft-internatinal.com/GatewayService/ProfitsExt">
    <soapenv:Header/>
@@ -356,13 +362,15 @@ curl_close($curl);
 				$curl = curl_init();
 
 				curl_setopt_array($curl, array(
-				  CURLOPT_URL => env('PROFT_TEST_BASEURL'),
+				  CURLOPT_URL => env('PROFITS_LIVE_BASEURL'),
 				  CURLOPT_RETURNTRANSFER => true,
 				  CURLOPT_ENCODING => '',
 				  CURLOPT_MAXREDIRS => 10,
 				  CURLOPT_TIMEOUT => 0,
 				  CURLOPT_FOLLOWLOCATION => true,
 				  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+				  CURLOPT_SSL_VERIFYPEER => false, // DON'T VERIFY SSL CERTIFICATE
+				  CURLOPT_SSL_VERIFYHOST => 0, // DON'T VERIFY HOST NAME
 				  CURLOPT_CUSTOMREQUEST => 'POST',
 				  CURLOPT_POSTFIELDS =>'<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prof="http://www.intrasoft-internatinal.com/GatewayService/ProfitsExt">
 				   <soapenv:Header/>
@@ -511,7 +519,7 @@ curl_close($curl);
 							<!--Optional:-->
 							<prof:BranchCode></prof:BranchCode>
 							<!--Optional:-->
-							<prof:ExtUniqueUserId>'.env('NAV_USER').'</prof:ExtUniqueUserId>
+							<prof:ExtUniqueUserId>'.Yii::$app->session->get('USER').'</prof:ExtUniqueUserId>
 							<!--Optional:-->
 							<prof:ExtDeviceAuthCode></prof:ExtDeviceAuthCode>
 						 </prof:executionParameters>
@@ -524,6 +532,11 @@ curl_close($curl);
 				));
 
 				$response = curl_exec($curl);
+
+				if (curl_errno($curl)) {
+					$error_msg = curl_error($curl);
+					echo $error_msg;
+				}
 
 				curl_close($curl);
 				
@@ -652,14 +665,15 @@ curl_close($curl);
 		if(is_array($ImprestRecords)) {
 				foreach($ImprestRecords as $account) {
 				
-				$account->Posting_Desricption = property_exists($account,'Posting_Desricption')?$account->Posting_Desricption:'';
+				$account->Posting_Desricption = '';// property_exists($account,'Posting_Desricption')?$account->Posting_Desricption:'';
 				
-				$account->Comments = property_exists($account,'Comments')?$account->Comments:'Comments Not Set';
+				$account->Comments = '';// property_exists($account,'Comments')?$account->Comments:'Comments Not Set';
 					
 					$result = json_decode($this->actionPostImprest($account));
+					
 					/*print '<pre>';
-					print_r($result->Result->Message);
-					print_r($result->Tun->TrxDate);
+					print_r($result);
+					
 					exit;*/
 					$this->imprestLogger($result);
 					
@@ -681,7 +695,7 @@ curl_close($curl);
 						print '<pre>';
 						print_r($update);
 						$this->imprestLogger($update);
-					}elseif($result->Result->Type == 'Error')
+					}elseif($result->Result->Type == 'Error' || $result->Result->Type == 'Unknown')
 					{
 						
 						// Update Imprest Transaction on ERP
@@ -691,7 +705,8 @@ curl_close($curl);
 							'TrxSn' => $result->Tun->TunInternalSn ,
 							'TrxUnit' => $result->Tun->TrxUnit ,
 							'TrxUsr' => $result->Tun->TrxUser,
-							'Status' => 'Failed', 
+							'Status' => 'Failed',
+							'Comments' =>  $result->Result->Message
 							
 						];
 						
@@ -823,13 +838,15 @@ curl_close($curl);
 				$curl = curl_init();
 
 				curl_setopt_array($curl, array(
-				  CURLOPT_URL => 'http://10.1.4.12/iProfits2.GatewayService/ProfitsExtGateway.asmx',
+				  CURLOPT_URL => env('PROFITS_LIVE_BASEURL'),
 				  CURLOPT_RETURNTRANSFER => true,
 				  CURLOPT_ENCODING => '',
 				  CURLOPT_MAXREDIRS => 10,
 				  CURLOPT_TIMEOUT => 0,
 				  CURLOPT_FOLLOWLOCATION => true,
 				  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+				  CURLOPT_SSL_VERIFYPEER => false, // DON'T VERIFY SSL CERTIFICATE
+				  CURLOPT_SSL_VERIFYHOST => 0, // DON'T VERIFY HOST NAME
 				  CURLOPT_CUSTOMREQUEST => 'POST',
 				  CURLOPT_POSTFIELDS =>'<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prof="http://www.intrasoft-internatinal.com/GatewayService/ProfitsExt">
 					<soapenv:Header/>
@@ -912,13 +929,15 @@ curl_close($curl);
 				$curl = curl_init();
 
 				curl_setopt_array($curl, array(
-				  CURLOPT_URL => env('PROFT_TEST_BASEURL'),
+				  CURLOPT_URL => env('PROFITS_LIVE_BASEURL'),
 				  CURLOPT_RETURNTRANSFER => true,
 				  CURLOPT_ENCODING => '',
 				  CURLOPT_MAXREDIRS => 10,
 				  CURLOPT_TIMEOUT => 0,
 				  CURLOPT_FOLLOWLOCATION => true,
 				  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+				  CURLOPT_SSL_VERIFYPEER => false, // DON'T VERIFY SSL CERTIFICATE
+				  CURLOPT_SSL_VERIFYHOST => 0, // DON'T VERIFY HOST NAME
 				  CURLOPT_CUSTOMREQUEST => 'POST',
 				  CURLOPT_POSTFIELDS =>'<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prof="http://www.intrasoft-internatinal.com/GatewayService/ProfitsExt">
 								<soapenv:Header/>
@@ -1038,6 +1057,57 @@ curl_close($curl);
 		
 	}
 	
+
+
+	public function actionToken()
+	{
+		
+
+		
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://igateway.policesacco.com/iProfits2.GatewayService/ProfitsExtGateway.asmx',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_SSL_VERIFYPEER => false, // DON'T VERIFY SSL CERTIFICATE
+  CURLOPT_SSL_VERIFYHOST => 0, // DON'T VERIFY HOST NAME
+  CURLOPT_CUSTOMREQUEST => 'POST',
+  CURLOPT_POSTFIELDS =>'<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <CI3499V_GetAuthorized xmlns="http://www.intrasoft-internatinal.com/GatewayService/ProfitsExt">
+      <import />
+      <executionParameters>
+        <ChannelId>9912</ChannelId>
+        <Password>!*#IANSOFT*#!</Password>
+        <ExtUniqueUserId>ERPPRDAPP01\\KPSADMIN</ExtUniqueUserId>
+      </executionParameters>
+    </CI3499V_GetAuthorized>
+  </soap:Body>
+</soap:Envelope>',
+  CURLOPT_HTTPHEADER => array(
+    'Content-Type: text/xml'
+  ),
+));
+
+$response = curl_exec($curl);
+
+if (curl_errno($curl)) {
+    $error_msg = curl_error($curl);
+	echo $error_msg;
+}
+
+curl_close($curl);
+echo $response;
+
+
+	}
 	
 	
 	

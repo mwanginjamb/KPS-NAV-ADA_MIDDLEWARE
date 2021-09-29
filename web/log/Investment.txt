@@ -1,1 +1,809 @@
-No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.
+Credit Account: 50201788700                             <br />stdClass Object
+(
+    [Tun] => stdClass Object
+        (
+            [TrxDate] => 2021-09-28T00:00:00
+            [TrxUnit] => 1
+            [TrxUser] => 99120003
+            [TrxUserSn] => 112
+            [TunInternalSn] => 1
+        )
+
+    [Result] => stdClass Object
+        (
+            [Type] => Success
+            [Id] => 282
+            [Message] => success
+            [StackTrace] => stdClass Object
+                (
+                )
+
+        )
+
+    [OutAlertCustomerAlertMsg] => stdClass Object
+        (
+        )
+
+    [OutAvailabilityWorkDatesProductionDate] => 2021-09-28T00:00:00
+    [OutCharCurrencyIdCurrency] => 22
+    [OutCharCurrencyShortDescr] => stdClass Object
+        (
+        )
+
+    [OutComCurrencyIdCurrency] => 22
+    [OutComCurrencyShortDescr] => stdClass Object
+        (
+        )
+
+    [OutCustCustAddressAddress1] => UNKNOWN
+    [OutCustCustAddressAddress2] => stdClass Object
+        (
+        )
+
+    [OutCustCustAddressCity] => UNKNOWN                       
+    [OutCustCustAddressTelephone] => +254715627278  
+    [OutCustCustAddressZipCode] => 00000     
+    [OutCustListSetDescription] => JOYCE JEPCHUMBA KOECH                                                                     
+    [OutCustomerAlertMsg] => stdClass Object
+        (
+        )
+
+    [OutCustomerCustId] => 47267
+    [OutDomComchataxIefSuppliedFinalCharges] => 0
+    [OutDomComchataxIefSuppliedFinalCommission] => 0
+    [OutDomComchataxIefSuppliedGenAmount] => 0
+    [OutDomCurrencyIdCurrency] => 0
+    [OutDomCurrencyShortDescr] => stdClass Object
+        (
+        )
+
+    [OutFwdSwapContractsContractDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsCurrencyRate] => 0
+    [OutFwdSwapContractsDealerRefNo] => stdClass Object
+        (
+        )
+
+    [OutFwdSwapContractsEntryComments] => stdClass Object
+        (
+        )
+
+    [OutFwdSwapContractsEntryStatus] => stdClass Object
+        (
+        )
+
+    [OutFwdSwapContractsMaturityDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsNotificationDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsOrgSourceAmount] => 0
+    [OutFwdSwapContractsOrgTargetAmount] => 0
+    [OutFwdSwapContractsReferenceNo] => 0
+    [OutFwdSwapContractsSourceUtilBal] => 0
+    [OutFwdSwapContractsSourceValueDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsStartDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsTargetAvailDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsTargetValueDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsWayOfUtilization] => stdClass Object
+        (
+        )
+
+    [OutParVoucherRunVoucherLine] =>  #                                    Journal                                 #                                    Transfers Between Accounts              # #    BRANCH             1  NAIROBI                          DATE                       28/09/2021#    USER           99120003                                  SN                            112#    PRODUCT         9102  TRANSFER BETWEEN ACCOUNTS               #    TRANSACTION    11041  Transfers Between Accounts              #    JUSTIFICATION   9108  Transfer From/to Account (ins           # # #    CUSTOMER       JOYCE JEPCHUMBA KOECH                     ID NO.        30849734            #    ADDRESS        UNKNOWN                                 #                                                           # #    REF. NO              0#    RATE           noCONVERTION            1.000000#    ---------------------------------------------------------------------------------------------# #    DEBIT A/C    50304389900-00     AMOUNT         3,600.00  KES       VALUE   28/09/2021#                                EQUIVALENT         3,600.00  KES  #                        LESS    COMMISSION             0.00  KES  #                                  EXPENCES             0.00  KES  #                                       TAX             0.00  KES  # #    CRED. A/C :  50201788700-00     AMOUNT         3,600.00  KES       VALUE   28/09/2021#                                EQUIVALENT         3,600.00  KES  # #    IN F/O    :                                                              # #    ROUNDED AMOUNT :             0.00  KES    (PAYABLE TO BENEFICIARY)# #    COMMENTS :    REF_NUMBER                              # # #                   CUSTOMER                                             CASHIER#
+    [OutPayFlgIefSuppliedFlag] => stdClass Object
+        (
+        )
+
+    [OutRoundingFxFtRecordingAccAmount29] => 0
+    [OutRoundingFxFtRecordingAccAmount30] => 0
+    [OutRoundingFxFtRecordingAccAmount43] => 0
+    [OutRoundingFxFtRecordingAccAmount44] => 0
+    [OutSourceIefSuppliedPayableAmount] => 3600
+    [OutSourceRateWorkDatesProductionDate] => 2021-09-28T00:00:00
+    [OutStatusIefSuppliedActionEntryDesc] => OK                  
+    [OutStatusIefSuppliedSrvStatus] => srvok 
+    [OutSuccessfulTransactionWorkAdviceCounter] => 26
+    [OutSuccessfulTransactionWorkAdviceTitle] => stdClass Object
+        (
+        )
+
+    [OutSuccessfulTransactionWorkDatetimestamp] => 2021-09-28-16.51.57.456000
+    [OutSuccessfulTransactionWorkTrxDate] => 2021-09-28T00:00:00
+    [OutSuccessfulTransactionWorkTrxUnit] => 1
+    [OutSuccessfulTransactionWorkTrxUser] => 99120003
+    [OutSuccessfulTransactionWorkTrxUsrSn] => 112
+    [OutSuccessfulTransactionWorkTunInternalSn] => 1
+    [OutTargetIefSuppliedPayableAmount] => 3600
+    [OutTaxCharTotIefSuppliedFinalCharges] => 0
+    [OutTaxCharTotIefSuppliedFinalCommission] => 0
+    [OutTaxCharTotIefSuppliedGenAmount] => 0
+    [OutTaxCharTotIefSuppliedRate] => 1
+    [OutTaxCurrencyIdCurrency] => 22
+    [OutTaxCurrencyShortDescr] => stdClass Object
+        (
+        )
+
+    [OutTrxTrxCountTrxCounter] => 0
+    [OutValueWorkDatesProductionDate] => 2021-09-28T00:00:00
+    [OutAuthGrp] => stdClass Object
+        (
+        )
+
+    [OutDetailGroup] => stdClass Object
+        (
+        )
+
+    [OutGrpCustomerActAppr] => stdClass Object
+        (
+        )
+
+    [OutGrpUserTotal] => stdClass Object
+        (
+            [FEXS01OutGrpUserTotalItem] => stdClass Object
+                (
+                    [OutGrpUserTotalOutGrmCurrencyIdCurrency] => 22
+                    [OutGrpUserTotalOutGrmCurrencyShortDescr] => stdClass Object
+                        (
+                        )
+
+                    [OutGrpUserTotalOutGrmIefSuppliedSelectChar] => stdClass Object
+                        (
+                        )
+
+                    [OutGrpUserTotalOutGrmUserTotalCashCrDocNum] => 0
+                    [OutGrpUserTotalOutGrmUserTotalCashCrTotAmnt] => 0
+                    [OutGrpUserTotalOutGrmUserTotalCashDbDocNum] => 0
+                    [OutGrpUserTotalOutGrmUserTotalCashDbTotAmnt] => 0
+                    [OutGrpUserTotalOutGrmUserTotalJournalCrDocNum] => 1
+                    [OutGrpUserTotalOutGrmUserTotalJournalCrTotAmn] => 3600
+                    [OutGrpUserTotalOutGrmUserTotalJournalDbDocNum] => 1
+                    [OutGrpUserTotalOutGrmUserTotalJournalDbTotAmn] => 3600
+                    [OutGrpUserTotalOutGrmUserTotalMemoCrDocNum] => 0
+                    [OutGrpUserTotalOutGrmUserTotalMemoCrTotAmnt] => 0
+                    [OutGrpUserTotalOutGrmUserTotalMemoDbDocNum] => 0
+                    [OutGrpUserTotalOutGrmUserTotalMemoDbTotAmnt] => 0
+                    [OutGrpUserTotalOutGrmUserTotalRevcashCrDocNum] => 0
+                    [OutGrpUserTotalOutGrmUserTotalRevcashCrTotAmn] => 0
+                    [OutGrpUserTotalOutGrmUserTotalRevcashDbDocNum] => 0
+                    [OutGrpUserTotalOutGrmUserTotalRevcashDbTotAmn] => 0
+                )
+
+        )
+
+    [DebitCurrency] => KES  
+    [CreditCurrency] => KES  
+    [BeneficiaryName] => MESHACK  ODHIAMBO                                                                         
+    [CommisionCurrency] => KES
+    [ExpencesCurrency] => KES
+    [BankTransactionDate] => 2021-09-28T00:00:00
+)
+stdClass Object
+(
+    [Key] => 40;3F8BAAJ7/0IAUgBEAC0AMAAxADgANgAAAACHx3s=9;1525164160;
+    [Entry_No] => 31687
+    [Document_No] => BRD-0186
+    [Posting_Date] => 2021-09-28
+    [Member_No] => 02382
+    [Member_Name] => MESHACK ODHIAMBO  
+    [ID_Number] => 22497839
+    [Posting_Description] => DINNER
+    [Amount] => -3600
+    [Source_Code] => BRDPAY
+    [Memo] => BRDPAY
+    [Created_On] => 2021-09-28T12:27:43.163Z
+    [Created_By] => POLICESACCO0\STANLEY.OBIMBO
+    [Posted] => 1
+    [Posted_On] => 2021-09-28T09:31:21.17Z
+    [Our_Document_No] => F271953
+    [Integration_Account] => L02-02382
+    [Int_Direction] => Outgoing
+    [Sent] => Sent
+    [Comments] => DINNER
+    [Integration_Source] => KPS_CBS
+    [Profits_Member_No] => 102001
+    [Profits_Debit_Account] => 50304389900
+    [Reversal] => 
+)
+Credit Account: 50205024500                             <br />stdClass Object
+(
+    [Tun] => stdClass Object
+        (
+            [TrxDate] => 2021-09-28T00:00:00
+            [TrxUnit] => 1
+            [TrxUser] => 99120003
+            [TrxUserSn] => 121
+            [TunInternalSn] => 1
+        )
+
+    [Result] => stdClass Object
+        (
+            [Type] => Success
+            [Id] => 282
+            [Message] => success
+            [StackTrace] => stdClass Object
+                (
+                )
+
+        )
+
+    [OutAlertCustomerAlertMsg] => stdClass Object
+        (
+        )
+
+    [OutAvailabilityWorkDatesProductionDate] => 2021-09-28T00:00:00
+    [OutCharCurrencyIdCurrency] => 22
+    [OutCharCurrencyShortDescr] => stdClass Object
+        (
+        )
+
+    [OutComCurrencyIdCurrency] => 22
+    [OutComCurrencyShortDescr] => stdClass Object
+        (
+        )
+
+    [OutCustCustAddressAddress1] => UNKNOWN
+    [OutCustCustAddressAddress2] => stdClass Object
+        (
+        )
+
+    [OutCustCustAddressCity] => UNKNOWN                       
+    [OutCustCustAddressTelephone] => +254715627278  
+    [OutCustCustAddressZipCode] => 00000     
+    [OutCustListSetDescription] => JOYCE JEPCHUMBA KOECH                                                                     
+    [OutCustomerAlertMsg] => stdClass Object
+        (
+        )
+
+    [OutCustomerCustId] => 47267
+    [OutDomComchataxIefSuppliedFinalCharges] => 0
+    [OutDomComchataxIefSuppliedFinalCommission] => 0
+    [OutDomComchataxIefSuppliedGenAmount] => 0
+    [OutDomCurrencyIdCurrency] => 0
+    [OutDomCurrencyShortDescr] => stdClass Object
+        (
+        )
+
+    [OutFwdSwapContractsContractDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsCurrencyRate] => 0
+    [OutFwdSwapContractsDealerRefNo] => stdClass Object
+        (
+        )
+
+    [OutFwdSwapContractsEntryComments] => stdClass Object
+        (
+        )
+
+    [OutFwdSwapContractsEntryStatus] => stdClass Object
+        (
+        )
+
+    [OutFwdSwapContractsMaturityDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsNotificationDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsOrgSourceAmount] => 0
+    [OutFwdSwapContractsOrgTargetAmount] => 0
+    [OutFwdSwapContractsReferenceNo] => 0
+    [OutFwdSwapContractsSourceUtilBal] => 0
+    [OutFwdSwapContractsSourceValueDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsStartDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsTargetAvailDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsTargetValueDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsWayOfUtilization] => stdClass Object
+        (
+        )
+
+    [OutParVoucherRunVoucherLine] =>  #                                    Journal                                 #                                    Transfers Between Accounts              # #    BRANCH             1  NAIROBI                          DATE                       28/09/2021#    USER           99120003                                  SN                            121#    PRODUCT         9102  TRANSFER BETWEEN ACCOUNTS               #    TRANSACTION    11041  Transfers Between Accounts              #    JUSTIFICATION   9108  Transfer From/to Account (ins           # # #    CUSTOMER       JOYCE JEPCHUMBA KOECH                     ID NO.        30849734            #    ADDRESS        UNKNOWN                                 #                                                           # #    REF. NO              0#    RATE           noCONVERTION            1.000000#    ---------------------------------------------------------------------------------------------# #    DEBIT A/C    50304389900-00     AMOUNT         5,400.00  KES       VALUE   28/09/2021#                                EQUIVALENT         5,400.00  KES  #                        LESS    COMMISSION             0.00  KES  #                                  EXPENCES             0.00  KES  #                                       TAX             0.00  KES  # #    CRED. A/C :  50205024500-00     AMOUNT         5,400.00  KES       VALUE   28/09/2021#                                EQUIVALENT         5,400.00  KES  # #    IN F/O    :                                                              # #    ROUNDED AMOUNT :             0.00  KES    (PAYABLE TO BENEFICIARY)# #    COMMENTS :    REF_NUMBER                              # # #                   CUSTOMER                                             CASHIER#
+    [OutPayFlgIefSuppliedFlag] => stdClass Object
+        (
+        )
+
+    [OutRoundingFxFtRecordingAccAmount29] => 0
+    [OutRoundingFxFtRecordingAccAmount30] => 0
+    [OutRoundingFxFtRecordingAccAmount43] => 0
+    [OutRoundingFxFtRecordingAccAmount44] => 0
+    [OutSourceIefSuppliedPayableAmount] => 5400
+    [OutSourceRateWorkDatesProductionDate] => 2021-09-28T00:00:00
+    [OutStatusIefSuppliedActionEntryDesc] => OK                  
+    [OutStatusIefSuppliedSrvStatus] => srvok 
+    [OutSuccessfulTransactionWorkAdviceCounter] => 30
+    [OutSuccessfulTransactionWorkAdviceTitle] => stdClass Object
+        (
+        )
+
+    [OutSuccessfulTransactionWorkDatetimestamp] => 2021-09-28-16.53.18.772000
+    [OutSuccessfulTransactionWorkTrxDate] => 2021-09-28T00:00:00
+    [OutSuccessfulTransactionWorkTrxUnit] => 1
+    [OutSuccessfulTransactionWorkTrxUser] => 99120003
+    [OutSuccessfulTransactionWorkTrxUsrSn] => 121
+    [OutSuccessfulTransactionWorkTunInternalSn] => 1
+    [OutTargetIefSuppliedPayableAmount] => 5400
+    [OutTaxCharTotIefSuppliedFinalCharges] => 0
+    [OutTaxCharTotIefSuppliedFinalCommission] => 0
+    [OutTaxCharTotIefSuppliedGenAmount] => 0
+    [OutTaxCharTotIefSuppliedRate] => 1
+    [OutTaxCurrencyIdCurrency] => 22
+    [OutTaxCurrencyShortDescr] => stdClass Object
+        (
+        )
+
+    [OutTrxTrxCountTrxCounter] => 0
+    [OutValueWorkDatesProductionDate] => 2021-09-28T00:00:00
+    [OutAuthGrp] => stdClass Object
+        (
+        )
+
+    [OutDetailGroup] => stdClass Object
+        (
+        )
+
+    [OutGrpCustomerActAppr] => stdClass Object
+        (
+        )
+
+    [OutGrpUserTotal] => stdClass Object
+        (
+            [FEXS01OutGrpUserTotalItem] => stdClass Object
+                (
+                    [OutGrpUserTotalOutGrmCurrencyIdCurrency] => 22
+                    [OutGrpUserTotalOutGrmCurrencyShortDescr] => stdClass Object
+                        (
+                        )
+
+                    [OutGrpUserTotalOutGrmIefSuppliedSelectChar] => stdClass Object
+                        (
+                        )
+
+                    [OutGrpUserTotalOutGrmUserTotalCashCrDocNum] => 0
+                    [OutGrpUserTotalOutGrmUserTotalCashCrTotAmnt] => 0
+                    [OutGrpUserTotalOutGrmUserTotalCashDbDocNum] => 0
+                    [OutGrpUserTotalOutGrmUserTotalCashDbTotAmnt] => 0
+                    [OutGrpUserTotalOutGrmUserTotalJournalCrDocNum] => 1
+                    [OutGrpUserTotalOutGrmUserTotalJournalCrTotAmn] => 5400
+                    [OutGrpUserTotalOutGrmUserTotalJournalDbDocNum] => 1
+                    [OutGrpUserTotalOutGrmUserTotalJournalDbTotAmn] => 5400
+                    [OutGrpUserTotalOutGrmUserTotalMemoCrDocNum] => 0
+                    [OutGrpUserTotalOutGrmUserTotalMemoCrTotAmnt] => 0
+                    [OutGrpUserTotalOutGrmUserTotalMemoDbDocNum] => 0
+                    [OutGrpUserTotalOutGrmUserTotalMemoDbTotAmnt] => 0
+                    [OutGrpUserTotalOutGrmUserTotalRevcashCrDocNum] => 0
+                    [OutGrpUserTotalOutGrmUserTotalRevcashCrTotAmn] => 0
+                    [OutGrpUserTotalOutGrmUserTotalRevcashDbDocNum] => 0
+                    [OutGrpUserTotalOutGrmUserTotalRevcashDbTotAmn] => 0
+                )
+
+        )
+
+    [DebitCurrency] => KES  
+    [CreditCurrency] => KES  
+    [BeneficiaryName] => KINYAGU JOHN KINUTHIA                                                                     
+    [CommisionCurrency] => KES
+    [ExpencesCurrency] => KES
+    [BankTransactionDate] => 2021-09-28T00:00:00
+)
+stdClass Object
+(
+    [Key] => 40;3F8BAAJ7/0IAUgBEAC0AMAAxADgANgAAAACHyHs=9;1525164670;
+    [Entry_No] => 31688
+    [Document_No] => BRD-0186
+    [Posting_Date] => 2021-09-28
+    [Member_No] => 03738
+    [Member_Name] => KINYAGU JOHN KINUTHIA  
+    [ID_Number] => 27254382
+    [Posting_Description] => DINNER
+    [Amount] => -5400
+    [Source_Code] => BRDPAY
+    [Memo] => BRDPAY
+    [Created_On] => 2021-09-28T12:27:51.367Z
+    [Created_By] => POLICESACCO0\STANLEY.OBIMBO
+    [Posted] => 1
+    [Posted_On] => 2021-09-28T09:31:21.17Z
+    [Our_Document_No] => F271953
+    [Integration_Account] => L02-03738
+    [Int_Direction] => Outgoing
+    [Sent] => Sent
+    [Comments] => DINNER
+    [Integration_Source] => KPS_CBS
+    [Profits_Member_No] => 120865
+    [Profits_Debit_Account] => 50304389900
+    [Reversal] => 
+)
+Credit Account: 50201865700                             <br />stdClass Object
+(
+    [Tun] => stdClass Object
+        (
+            [TrxDate] => 2021-09-28T00:00:00
+            [TrxUnit] => 1
+            [TrxUser] => 99120003
+            [TrxUserSn] => 125
+            [TunInternalSn] => 1
+        )
+
+    [Result] => stdClass Object
+        (
+            [Type] => Success
+            [Id] => 282
+            [Message] => success
+            [StackTrace] => stdClass Object
+                (
+                )
+
+        )
+
+    [OutAlertCustomerAlertMsg] => stdClass Object
+        (
+        )
+
+    [OutAvailabilityWorkDatesProductionDate] => 2021-09-28T00:00:00
+    [OutCharCurrencyIdCurrency] => 22
+    [OutCharCurrencyShortDescr] => stdClass Object
+        (
+        )
+
+    [OutComCurrencyIdCurrency] => 22
+    [OutComCurrencyShortDescr] => stdClass Object
+        (
+        )
+
+    [OutCustCustAddressAddress1] => UNKNOWN
+    [OutCustCustAddressAddress2] => stdClass Object
+        (
+        )
+
+    [OutCustCustAddressCity] => UNKNOWN                       
+    [OutCustCustAddressTelephone] => +254715627278  
+    [OutCustCustAddressZipCode] => 00000     
+    [OutCustListSetDescription] => JOYCE JEPCHUMBA KOECH                                                                     
+    [OutCustomerAlertMsg] => stdClass Object
+        (
+        )
+
+    [OutCustomerCustId] => 47267
+    [OutDomComchataxIefSuppliedFinalCharges] => 0
+    [OutDomComchataxIefSuppliedFinalCommission] => 0
+    [OutDomComchataxIefSuppliedGenAmount] => 0
+    [OutDomCurrencyIdCurrency] => 0
+    [OutDomCurrencyShortDescr] => stdClass Object
+        (
+        )
+
+    [OutFwdSwapContractsContractDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsCurrencyRate] => 0
+    [OutFwdSwapContractsDealerRefNo] => stdClass Object
+        (
+        )
+
+    [OutFwdSwapContractsEntryComments] => stdClass Object
+        (
+        )
+
+    [OutFwdSwapContractsEntryStatus] => stdClass Object
+        (
+        )
+
+    [OutFwdSwapContractsMaturityDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsNotificationDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsOrgSourceAmount] => 0
+    [OutFwdSwapContractsOrgTargetAmount] => 0
+    [OutFwdSwapContractsReferenceNo] => 0
+    [OutFwdSwapContractsSourceUtilBal] => 0
+    [OutFwdSwapContractsSourceValueDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsStartDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsTargetAvailDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsTargetValueDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsWayOfUtilization] => stdClass Object
+        (
+        )
+
+    [OutParVoucherRunVoucherLine] =>  #                                    Journal                                 #                                    Transfers Between Accounts              # #    BRANCH             1  NAIROBI                          DATE                       28/09/2021#    USER           99120003                                  SN                            125#    PRODUCT         9102  TRANSFER BETWEEN ACCOUNTS               #    TRANSACTION    11041  Transfers Between Accounts              #    JUSTIFICATION   9108  Transfer From/to Account (ins           # # #    CUSTOMER       JOYCE JEPCHUMBA KOECH                     ID NO.        30849734            #    ADDRESS        UNKNOWN                                 #                                                           # #    REF. NO              0#    RATE           noCONVERTION            1.000000#    ---------------------------------------------------------------------------------------------# #    DEBIT A/C    50304389900-00     AMOUNT        54,150.00  KES       VALUE   28/09/2021#                                EQUIVALENT        54,150.00  KES  #                        LESS    COMMISSION             0.00  KES  #                                  EXPENCES             0.00  KES  #                                       TAX             0.00  KES  # #    CRED. A/C :  50201865700-00     AMOUNT        54,150.00  KES       VALUE   28/09/2021#                                EQUIVALENT        54,150.00  KES  # #    IN F/O    :                                                              # #    ROUNDED AMOUNT :             0.00  KES    (PAYABLE TO BENEFICIARY)# #    COMMENTS :    REF_NUMBER                              # # #                   CUSTOMER                                             CASHIER#
+    [OutPayFlgIefSuppliedFlag] => stdClass Object
+        (
+        )
+
+    [OutRoundingFxFtRecordingAccAmount29] => 0
+    [OutRoundingFxFtRecordingAccAmount30] => 0
+    [OutRoundingFxFtRecordingAccAmount43] => 0
+    [OutRoundingFxFtRecordingAccAmount44] => 0
+    [OutSourceIefSuppliedPayableAmount] => 54150
+    [OutSourceRateWorkDatesProductionDate] => 2021-09-28T00:00:00
+    [OutStatusIefSuppliedActionEntryDesc] => OK                  
+    [OutStatusIefSuppliedSrvStatus] => srvok 
+    [OutSuccessfulTransactionWorkAdviceCounter] => 33
+    [OutSuccessfulTransactionWorkAdviceTitle] => stdClass Object
+        (
+        )
+
+    [OutSuccessfulTransactionWorkDatetimestamp] => 2021-09-28-16.54.15.116000
+    [OutSuccessfulTransactionWorkTrxDate] => 2021-09-28T00:00:00
+    [OutSuccessfulTransactionWorkTrxUnit] => 1
+    [OutSuccessfulTransactionWorkTrxUser] => 99120003
+    [OutSuccessfulTransactionWorkTrxUsrSn] => 125
+    [OutSuccessfulTransactionWorkTunInternalSn] => 1
+    [OutTargetIefSuppliedPayableAmount] => 54150
+    [OutTaxCharTotIefSuppliedFinalCharges] => 0
+    [OutTaxCharTotIefSuppliedFinalCommission] => 0
+    [OutTaxCharTotIefSuppliedGenAmount] => 0
+    [OutTaxCharTotIefSuppliedRate] => 1
+    [OutTaxCurrencyIdCurrency] => 22
+    [OutTaxCurrencyShortDescr] => stdClass Object
+        (
+        )
+
+    [OutTrxTrxCountTrxCounter] => 0
+    [OutValueWorkDatesProductionDate] => 2021-09-28T00:00:00
+    [OutAuthGrp] => stdClass Object
+        (
+        )
+
+    [OutDetailGroup] => stdClass Object
+        (
+        )
+
+    [OutGrpCustomerActAppr] => stdClass Object
+        (
+        )
+
+    [OutGrpUserTotal] => stdClass Object
+        (
+            [FEXS01OutGrpUserTotalItem] => stdClass Object
+                (
+                    [OutGrpUserTotalOutGrmCurrencyIdCurrency] => 22
+                    [OutGrpUserTotalOutGrmCurrencyShortDescr] => stdClass Object
+                        (
+                        )
+
+                    [OutGrpUserTotalOutGrmIefSuppliedSelectChar] => stdClass Object
+                        (
+                        )
+
+                    [OutGrpUserTotalOutGrmUserTotalCashCrDocNum] => 0
+                    [OutGrpUserTotalOutGrmUserTotalCashCrTotAmnt] => 0
+                    [OutGrpUserTotalOutGrmUserTotalCashDbDocNum] => 0
+                    [OutGrpUserTotalOutGrmUserTotalCashDbTotAmnt] => 0
+                    [OutGrpUserTotalOutGrmUserTotalJournalCrDocNum] => 1
+                    [OutGrpUserTotalOutGrmUserTotalJournalCrTotAmn] => 54150
+                    [OutGrpUserTotalOutGrmUserTotalJournalDbDocNum] => 1
+                    [OutGrpUserTotalOutGrmUserTotalJournalDbTotAmn] => 54150
+                    [OutGrpUserTotalOutGrmUserTotalMemoCrDocNum] => 0
+                    [OutGrpUserTotalOutGrmUserTotalMemoCrTotAmnt] => 0
+                    [OutGrpUserTotalOutGrmUserTotalMemoDbDocNum] => 0
+                    [OutGrpUserTotalOutGrmUserTotalMemoDbTotAmnt] => 0
+                    [OutGrpUserTotalOutGrmUserTotalRevcashCrDocNum] => 0
+                    [OutGrpUserTotalOutGrmUserTotalRevcashCrTotAmn] => 0
+                    [OutGrpUserTotalOutGrmUserTotalRevcashDbDocNum] => 0
+                    [OutGrpUserTotalOutGrmUserTotalRevcashDbTotAmn] => 0
+                )
+
+        )
+
+    [DebitCurrency] => KES  
+    [CreditCurrency] => KES  
+    [BeneficiaryName] => AUSTINE EGOTHE OJWANG                                                                     
+    [CommisionCurrency] => KES
+    [ExpencesCurrency] => KES
+    [BankTransactionDate] => 2021-09-28T00:00:00
+)
+stdClass Object
+(
+    [Key] => 44;3F8BAAJ7/00AVwBJAFQAMAAwADQAOQAyAAAAAIe6ew==9;1525164780;
+    [Entry_No] => 31674
+    [Document_No] => MWIT00492
+    [Posting_Date] => 2021-09-28
+    [Member_No] => 00701
+    [Member_Name] => AUSTIN EGOHE OJWANG  
+    [ID_Number] => 9802725
+    [Posting_Description] => F271624
+    [Amount] => -54150
+    [Source_Code] => M/WITH
+    [Memo] => M/WITH
+    [Created_On] => 2021-09-28T07:36:02.287Z
+    [Created_By] => POLICESACCO0\STANLEY.OBIMBO
+    [Posted] => 1
+    [Posted_On] => 2021-09-28T07:36:32.647Z
+    [Our_Document_No] => F271624
+    [Integration_Account] => L02-00701
+    [Int_Direction] => Outgoing
+    [Sent] => Sent
+    [Comments] => Member Withdrawal By Speed
+    [Integration_Source] => KPS_CBS
+    [Profits_Member_No] => 81595
+    [Profits_Debit_Account] => 50304389900
+    [Reversal] => 
+)
+Credit Account: 50204370800                             <br />stdClass Object
+(
+    [Tun] => stdClass Object
+        (
+            [TrxDate] => 2021-09-28T00:00:00
+            [TrxUnit] => 1
+            [TrxUser] => 99120003
+            [TrxUserSn] => 129
+            [TunInternalSn] => 1
+        )
+
+    [Result] => stdClass Object
+        (
+            [Type] => Success
+            [Id] => 282
+            [Message] => success
+            [StackTrace] => stdClass Object
+                (
+                )
+
+        )
+
+    [OutAlertCustomerAlertMsg] => stdClass Object
+        (
+        )
+
+    [OutAvailabilityWorkDatesProductionDate] => 2021-09-28T00:00:00
+    [OutCharCurrencyIdCurrency] => 22
+    [OutCharCurrencyShortDescr] => stdClass Object
+        (
+        )
+
+    [OutComCurrencyIdCurrency] => 22
+    [OutComCurrencyShortDescr] => stdClass Object
+        (
+        )
+
+    [OutCustCustAddressAddress1] => UNKNOWN
+    [OutCustCustAddressAddress2] => stdClass Object
+        (
+        )
+
+    [OutCustCustAddressCity] => UNKNOWN                       
+    [OutCustCustAddressTelephone] => +254715627278  
+    [OutCustCustAddressZipCode] => 00000     
+    [OutCustListSetDescription] => JOYCE JEPCHUMBA KOECH                                                                     
+    [OutCustomerAlertMsg] => stdClass Object
+        (
+        )
+
+    [OutCustomerCustId] => 47267
+    [OutDomComchataxIefSuppliedFinalCharges] => 0
+    [OutDomComchataxIefSuppliedFinalCommission] => 0
+    [OutDomComchataxIefSuppliedGenAmount] => 0
+    [OutDomCurrencyIdCurrency] => 0
+    [OutDomCurrencyShortDescr] => stdClass Object
+        (
+        )
+
+    [OutFwdSwapContractsContractDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsCurrencyRate] => 0
+    [OutFwdSwapContractsDealerRefNo] => stdClass Object
+        (
+        )
+
+    [OutFwdSwapContractsEntryComments] => stdClass Object
+        (
+        )
+
+    [OutFwdSwapContractsEntryStatus] => stdClass Object
+        (
+        )
+
+    [OutFwdSwapContractsMaturityDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsNotificationDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsOrgSourceAmount] => 0
+    [OutFwdSwapContractsOrgTargetAmount] => 0
+    [OutFwdSwapContractsReferenceNo] => 0
+    [OutFwdSwapContractsSourceUtilBal] => 0
+    [OutFwdSwapContractsSourceValueDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsStartDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsTargetAvailDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsTargetValueDate] => 0001-01-01T00:00:00
+    [OutFwdSwapContractsWayOfUtilization] => stdClass Object
+        (
+        )
+
+    [OutParVoucherRunVoucherLine] =>  #                                    Journal                                 #                                    Transfers Between Accounts              # #    BRANCH             1  NAIROBI                          DATE                       28/09/2021#    USER           99120003                                  SN                            129#    PRODUCT         9102  TRANSFER BETWEEN ACCOUNTS               #    TRANSACTION    11041  Transfers Between Accounts              #    JUSTIFICATION   9108  Transfer From/to Account (ins           # # #    CUSTOMER       JOYCE JEPCHUMBA KOECH                     ID NO.        30849734            #    ADDRESS        UNKNOWN                                 #                                                           # #    REF. NO              0#    RATE           noCONVERTION            1.000000#    ---------------------------------------------------------------------------------------------# #    DEBIT A/C    50304389900-00     AMOUNT        56,050.00  KES       VALUE   28/09/2021#                                EQUIVALENT        56,050.00  KES  #                        LESS    COMMISSION             0.00  KES  #                                  EXPENCES             0.00  KES  #                                       TAX             0.00  KES  # #    CRED. A/C :  50204370800-00     AMOUNT        56,050.00  KES       VALUE   28/09/2021#                                EQUIVALENT        56,050.00  KES  # #    IN F/O    :                                                              # #    ROUNDED AMOUNT :             0.00  KES    (PAYABLE TO BENEFICIARY)# #    COMMENTS :    REF_NUMBER                              # # #                   CUSTOMER                                             CASHIER#
+    [OutPayFlgIefSuppliedFlag] => stdClass Object
+        (
+        )
+
+    [OutRoundingFxFtRecordingAccAmount29] => 0
+    [OutRoundingFxFtRecordingAccAmount30] => 0
+    [OutRoundingFxFtRecordingAccAmount43] => 0
+    [OutRoundingFxFtRecordingAccAmount44] => 0
+    [OutSourceIefSuppliedPayableAmount] => 56050
+    [OutSourceRateWorkDatesProductionDate] => 2021-09-28T00:00:00
+    [OutStatusIefSuppliedActionEntryDesc] => OK                  
+    [OutStatusIefSuppliedSrvStatus] => srvok 
+    [OutSuccessfulTransactionWorkAdviceCounter] => 36
+    [OutSuccessfulTransactionWorkAdviceTitle] => stdClass Object
+        (
+        )
+
+    [OutSuccessfulTransactionWorkDatetimestamp] => 2021-09-28-16.55.14.457000
+    [OutSuccessfulTransactionWorkTrxDate] => 2021-09-28T00:00:00
+    [OutSuccessfulTransactionWorkTrxUnit] => 1
+    [OutSuccessfulTransactionWorkTrxUser] => 99120003
+    [OutSuccessfulTransactionWorkTrxUsrSn] => 129
+    [OutSuccessfulTransactionWorkTunInternalSn] => 1
+    [OutTargetIefSuppliedPayableAmount] => 56050
+    [OutTaxCharTotIefSuppliedFinalCharges] => 0
+    [OutTaxCharTotIefSuppliedFinalCommission] => 0
+    [OutTaxCharTotIefSuppliedGenAmount] => 0
+    [OutTaxCharTotIefSuppliedRate] => 1
+    [OutTaxCurrencyIdCurrency] => 22
+    [OutTaxCurrencyShortDescr] => stdClass Object
+        (
+        )
+
+    [OutTrxTrxCountTrxCounter] => 0
+    [OutValueWorkDatesProductionDate] => 2021-09-28T00:00:00
+    [OutAuthGrp] => stdClass Object
+        (
+        )
+
+    [OutDetailGroup] => stdClass Object
+        (
+        )
+
+    [OutGrpCustomerActAppr] => stdClass Object
+        (
+        )
+
+    [OutGrpUserTotal] => stdClass Object
+        (
+            [FEXS01OutGrpUserTotalItem] => stdClass Object
+                (
+                    [OutGrpUserTotalOutGrmCurrencyIdCurrency] => 22
+                    [OutGrpUserTotalOutGrmCurrencyShortDescr] => stdClass Object
+                        (
+                        )
+
+                    [OutGrpUserTotalOutGrmIefSuppliedSelectChar] => stdClass Object
+                        (
+                        )
+
+                    [OutGrpUserTotalOutGrmUserTotalCashCrDocNum] => 0
+                    [OutGrpUserTotalOutGrmUserTotalCashCrTotAmnt] => 0
+                    [OutGrpUserTotalOutGrmUserTotalCashDbDocNum] => 0
+                    [OutGrpUserTotalOutGrmUserTotalCashDbTotAmnt] => 0
+                    [OutGrpUserTotalOutGrmUserTotalJournalCrDocNum] => 1
+                    [OutGrpUserTotalOutGrmUserTotalJournalCrTotAmn] => 56050
+                    [OutGrpUserTotalOutGrmUserTotalJournalDbDocNum] => 1
+                    [OutGrpUserTotalOutGrmUserTotalJournalDbTotAmn] => 56050
+                    [OutGrpUserTotalOutGrmUserTotalMemoCrDocNum] => 0
+                    [OutGrpUserTotalOutGrmUserTotalMemoCrTotAmnt] => 0
+                    [OutGrpUserTotalOutGrmUserTotalMemoDbDocNum] => 0
+                    [OutGrpUserTotalOutGrmUserTotalMemoDbTotAmnt] => 0
+                    [OutGrpUserTotalOutGrmUserTotalRevcashCrDocNum] => 0
+                    [OutGrpUserTotalOutGrmUserTotalRevcashCrTotAmn] => 0
+                    [OutGrpUserTotalOutGrmUserTotalRevcashDbDocNum] => 0
+                    [OutGrpUserTotalOutGrmUserTotalRevcashDbTotAmn] => 0
+                )
+
+        )
+
+    [DebitCurrency] => KES  
+    [CreditCurrency] => KES  
+    [BeneficiaryName] => CAROLINE WANJIRU NDICHU                                                                   
+    [CommisionCurrency] => KES
+    [ExpencesCurrency] => KES
+    [BankTransactionDate] => 2021-09-28T00:00:00
+)
+stdClass Object
+(
+    [Key] => 44;3F8BAAJ7/00AVwBJAFQAMAAwADQAOQA0AAAAAIe6ew==9;1525164890;
+    [Entry_No] => 31674
+    [Document_No] => MWIT00494
+    [Posting_Date] => 2021-09-28
+    [Member_No] => 03287
+    [Member_Name] => CAROLINE WANJIRU NDICHU  
+    [ID_Number] => 28788131
+    [Posting_Description] => F271831
+    [Amount] => -56050
+    [Source_Code] => M/WITH
+    [Memo] => M/WITH
+    [Created_On] => 2021-09-28T08:51:19.703Z
+    [Created_By] => POLICESACCO0\STANLEY.OBIMBO
+    [Posted] => 1
+    [Posted_On] => 2021-09-28T08:51:35.69Z
+    [Our_Document_No] => F271831
+    [Integration_Account] => L02-03287
+    [Int_Direction] => Outgoing
+    [Sent] => Sent
+    [Comments] => Member Withdrawal By Speed
+    [Integration_Source] => KPS_CBS
+    [Profits_Member_No] => 114544
+    [Profits_Debit_Account] => 50304389900
+    [Reversal] => 
+)
+No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.No Investment transactions to synchronize.
