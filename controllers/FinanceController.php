@@ -397,7 +397,7 @@ curl_close($curl);
 							<!--Optional:-->
 							<prof:InInputCurrencyShortDescr></prof:InInputCurrencyShortDescr>
 							<!--Optional:-->
-							<prof:InMainFxftFxFtRecordingComments>'.$record->Posting_Desricption.'</prof:InMainFxftFxFtRecordingComments>
+							<prof:InMainFxftFxFtRecordingComments>'.htmlspecialchars($record->Posting_Desricption).'</prof:InMainFxftFxFtRecordingComments>
 							<prof:InMainFxftPrftTransactionIdTransact>12501</prof:InMainFxftPrftTransactionIdTransact>
 							<prof:InRecordCaseFxFtRecordingIDrCrFlag>0</prof:InRecordCaseFxFtRecordingIDrCrFlag>
 							<prof:InRecordCaseFxFtRecordingISegmentType>0</prof:InRecordCaseFxFtRecordingISegmentType>
@@ -423,7 +423,7 @@ curl_close($curl);
 								  <prof:InExportPostingInGrpDpTrxSpecialAgrValueDateSpread>0</prof:InExportPostingInGrpDpTrxSpecialAgrValueDateSpread>
 								  <prof:InExportPostingInGrpFdValeurBalanceValueDate>0001-01-01T00:00:00</prof:InExportPostingInGrpFdValeurBalanceValueDate>
 								  <!--Optional:-->
-								  <prof:InExportPostingInGrpFxFtRecordingComments>'.$record->Posting_Desricption.'</prof:InExportPostingInGrpFxFtRecordingComments>
+								  <prof:InExportPostingInGrpFxFtRecordingComments>'.htmlspecialchars($record->Posting_Desricption).'</prof:InExportPostingInGrpFxFtRecordingComments>
 								  <!--Optional:-->
 								  <prof:InExportPostingInGrpFxFtRecordingGlAccount>'.$record->GL_Account.'</prof:InExportPostingInGrpFxFtRecordingGlAccount>
 								  <prof:InExportPostingInGrpFxFtRecordingIDomesticAmount>'.$record->Amount.' </prof:InExportPostingInGrpFxFtRecordingIDomesticAmount>
@@ -468,7 +468,7 @@ curl_close($curl);
 								  <prof:InExportPostingInGrpDpTrxSpecialAgrValueDateSpread>0</prof:InExportPostingInGrpDpTrxSpecialAgrValueDateSpread>
 								  <prof:InExportPostingInGrpFdValeurBalanceValueDate>0001-01-01T00:00:00</prof:InExportPostingInGrpFdValeurBalanceValueDate>
 								  <!--Optional:-->
-								  <prof:InExportPostingInGrpFxFtRecordingComments>'.$record->Posting_Desricption.'</prof:InExportPostingInGrpFxFtRecordingComments>
+								  <prof:InExportPostingInGrpFxFtRecordingComments>'.htmlspecialchars($record->Posting_Desricption).'</prof:InExportPostingInGrpFxFtRecordingComments>
 								  <!--Optional:-->
 								  <prof:InExportPostingInGrpFxFtRecordingGlAccount></prof:InExportPostingInGrpFxFtRecordingGlAccount>
 								  <prof:InExportPostingInGrpFxFtRecordingIDomesticAmount>'.$record->Amount.'</prof:InExportPostingInGrpFxFtRecordingIDomesticAmount>
@@ -671,10 +671,10 @@ curl_close($curl);
 					
 					$result = json_decode($this->actionPostImprest($account));
 					
-					/*print '<pre>';
+					print '<pre>';
 					print_r($result);
 					
-					exit;*/
+					
 					$this->imprestLogger($result);
 					
 					if($result->Result->Message == 'success')
