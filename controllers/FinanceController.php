@@ -666,6 +666,9 @@ curl_close($curl);
 				foreach($ImprestRecords as $account) {
 				
 				$account->Posting_Desricption = property_exists($account,'Posting_Desricption')?$account->Posting_Desricption:'';
+
+				// Trancate the posting Desc to a max of 40 chars
+				$account->Posting_Desricption = ($account->Posting_Desricption)?substr($account->Posting_Desricption,0,40):'';
 				
 				$account->Comments = property_exists($account,'Comments')?$account->Comments:'Comments Not Set';
 					
@@ -758,7 +761,7 @@ curl_close($curl);
 		if(is_array($ImprestRecords)) {
 				foreach($ImprestRecords as $account) {
 					
-					$account->Posting_Desricption = property_exists($account,'Posting_Desricption')?$account->Posting_Desricption:'';
+					$account->Posting_Desricption = property_exists($account,'Posting_Desricption')?htmlspecialchars($account->Posting_Desricption):'';
 				
 					$result = json_decode($this->actionReverse($account));
 					
@@ -791,6 +794,7 @@ curl_close($curl);
 								$params = [
 									'Key' => $account->Key,
 									'Reversed' => 'Failed', 
+									'Comments' =>  $result->Result->Message
 									
 								];
 								
